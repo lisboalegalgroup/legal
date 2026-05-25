@@ -83,6 +83,17 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <style>
+        /* Force dark header since there is no hero image anymore */
+        header {
+            background-color: var(--primary-blue) !important;
+            height: 90px !important; /* Force scrolled height for a tighter fit */
+        }
+        body {
+            overflow: hidden; /* Prevent page scrolling entirely */
+        }
+    </style>
+
     <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;">Calculadora de Liquidación Laboral Ecuador</h1>
     <div style="padding-top: 90px; height: 100vh; width: 100vw; display: flex; flex-direction: column; background: #f4f7fb;">
         <iframe src="nueva calculadora laboral.html" style="flex-grow: 1; width: 100%; border: none;"></iframe>

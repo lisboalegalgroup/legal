@@ -1079,3 +1079,193 @@
             animation: icon-bounce 0.5s ease-in-out;
             display: inline-block;
         }
+/* --- SUBPAGE SPECIFIC STYLES --- */
+.area-hero {
+    background: linear-gradient(rgba(5, 20, 42, 0.85), rgba(5, 20, 42, 0.85)), url('../oficina-aerea.webp');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+    padding: 160px 0 60px 0;
+    text-align: center;
+}
+
+.area-hero h1 {
+    color: var(--white);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.area-hero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.content-section {
+    background-color: var(--white);
+    color: var(--text-dark);
+    padding: 80px 0;
+}
+
+.grid-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 50px;
+    align-items: start;
+}
+
+.main-text h2 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.main-text h2:first-child {
+    margin-top: 0;
+}
+
+.main-text p {
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.main-text strong {
+    color: var(--primary-blue);
+}
+
+/* Sub-services grid */
+.sub-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.sub-service-card {
+    background: var(--white);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.sub-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.sub-service-img-wrapper {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.sub-service-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.sub-service-card:hover .sub-service-img {
+    transform: scale(1.05);
+}
+
+.sub-service-content {
+    padding: 20px;
+}
+
+.sub-service-content h4 {
+    color: var(--primary-blue);
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    font-family: 'Golos Text', sans-serif;
+    font-weight: 700;
+}
+
+.sub-service-content p {
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 120px;
+}
+
+.sidebar h3 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.services-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.services-menu li {
+    margin-bottom: 5px;
+}
+
+.services-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: #444;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.services-menu a:hover,
+.services-menu a.active {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent-gold);
+    padding-left: 20px;
+}
+
+/* Feature list (for pages that still use it) */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.feature-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e0e0e0;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list i {
+    color: var(--accent-gold);
+    font-size: 1rem;
+}
+
+@media (max-width: 900px) {
+    .grid-content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .area-hero h1 {
+        font-size: 2rem;
+    }
+}
