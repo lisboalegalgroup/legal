@@ -113,7 +113,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            height: 125px;
+            height: 100px;
             display: flex;
             align-items: center;
         }
@@ -123,11 +123,11 @@
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            height: 90px;
+            height: 75px;
         }
 
         header.scrolled .logo-img {
-            height: 70px;
+            height: 55px;
         }
 
         .navbar {
@@ -145,7 +145,7 @@
         }
 
         .logo-img {
-            height: 105px;
+            height: 80px;
             width: auto;
             transition: transform 0.3s ease;
         }
@@ -1110,7 +1110,7 @@
     background-size: cover;
     background-position: center;
     color: var(--white);
-    padding: 160px 0 60px 0;
+    padding: 140px 0 40px 0;
     text-align: center;
 }
 
@@ -1291,7 +1291,7 @@
     }
 
     .area-hero {
-        padding: 100px 0 40px 0;
+        padding: 90px 0 30px 0;
     }
 
     .area-hero h1 {
