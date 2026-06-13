@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -223,30 +223,49 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <!-- Logo pequeño en el footer opcional para resaltar la marca -->
-            <img loading="lazy" src="logo-full.png" alt="Lisboa Legal Group" class="footer-logo">
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank" aria-label="LinkedIn Lisboa Legal Group">
-                    <i class="fab fa-linkedin">
-                    </i>
-                </a>
-                <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank" aria-label="Instagram Lisboa Legal Group">
-                    <i class="fab fa-instagram">
-                    </i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank" aria-label="Facebook Lisboa Legal Group">
-                    <i class="fab fa-facebook-square">
-                    </i>
-                </a>
+    <footer class="new-footer">
+        <video autoplay loop muted playsinline class="footer-video" style="background-color: var(--primary-blue);">
+            <source src="videolisboa.mp4" type="video/mp4">
+        </video>
+        <div class="footer-overlay"></div>
+        <div class="container footer-content-wrapper">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img loading="lazy" src="logo-full.png" alt="Lisboa Legal Group" class="footer-logo-new">
+                </div>
+                <div class="footer-locations">
+                    <div class="footer-location-title">
+                        <h3>Ubicación</h3>
+                        <div class="line"></div>
+                    </div>
+                    <div class="footer-location-cols">
+                        <div class="location-col">
+                            <h4>MATRIZ GUAYAQUIL</h4>
+                            <ul>
+                                <li><i class="fas fa-map-marker-alt"></i> <span>Vélez 220 entre Chile y Chimborazo.<br>Edificio Finanza</span></li>
+                                <li><i class="fas fa-phone-alt"></i> <span>(+593) 9 90967952</span></li>
+                                <li><i class="fas fa-envelope"></i> <span>lisboalegalgroup@gmail.com</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-links">
-                <a onclick="openModal('legalModal')">Aviso Legal</a>
-                <a href="privacidad.html">Política de Privacidad</a>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <div class="footer-empty"></div>
+                <div class="footer-copy">
+                    <p>2026. Todos los derechos reservados</p>
+                    <div class="footer-links-new">
+                        <a onclick="openModal('legalModal')">Aviso Legal</a> | <a href="privacidad.html">Política de Privacidad</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank" aria-label="Facebook" class="social-square"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank" aria-label="Instagram" class="social-square"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank" aria-label="LinkedIn" class="social-square"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/593990967952" target="_blank" aria-label="WhatsApp" class="social-square"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <p>&copy;
-                2026 Lisboa Legal Group. Todos los derechos reservados.</p>
         </div>
     </footer>
     <div id="legalModal" class="modal">
