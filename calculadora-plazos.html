@@ -13,9 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calculadora interactiva gratuita para determinar plazos y términos procesales en Ecuador. Materias civil, penal, laboral, familia y más.">
     <title>Calculadora de Plazos Procesales | Lisboa Legal Group</title>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -806,6 +804,16 @@
             font-weight: 600;
             line-height: 1.3;
             white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(15px);
+            transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+        }
+
+        .whatsapp-wrapper:hover .whatsapp-label {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
         }
 
         .whatsapp-label span {
@@ -1309,7 +1317,7 @@
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Calculadora de Plazos Procesales | Lisboa Legal Group">
     <meta property="og:description" content="Calculadora de liquidación laboral gratuita y en línea para Ecuador. Calcule fácilmente beneficios e indemnizaciones.">
-    <meta property="og:image" content="https://lisboalegalgroup.github.io/legal/Abg.%20Daniel.webp">
+    <meta property="og:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
     <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/calculadora-plazos.html">
     <meta property="og:type" content="website">
 

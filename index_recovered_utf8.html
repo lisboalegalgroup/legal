@@ -1,0 +1,1997 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="canonical" href="https://lisboalegalgroup.github.io/legal/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="icon" href="https://lisboalegalgroup.github.io/legal/favicon.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="https://lisboalegalgroup.github.io/legal/favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="shortcut icon" href="https://lisboalegalgroup.github.io/legal/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Estudio JurÃ­dico en Guayaquil con experiencia en derecho penal, civil, corporativo y mÃ¡s. San Andrés Legal Group, excelencia y compromiso con su caso.">
+    <title>San Andrés Legal Group | Abogados en Guayaquil, Ecuador</title>
+    
+    <!-- Site Name for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "San Andrés Legal Group",
+      "alternateName": "San Andrés Legal",
+      "url": "https://lisboalegalgroup.github.io/legal/",
+      "logo": "https://lisboalegalgroup.github.io/legal/logo-full.png"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABLES --- */
+        :root {
+            --primary-blue: #05142a;
+            /* Azul marino profundo */
+            --dark-bg: #030a15;
+            --accent-gold: #d4af37;
+            /* Dorado metÃ¡lico elegante */
+            --accent-gold-hover: #b5952f;
+            --overlay-color: rgba(5, 20, 42, 0.65);
+            --overlay-hover: rgba(5, 20, 42, 0.80);
+            --text-dark: #1F2937;
+            --white: #FFFFFF;
+            --bg-light: #FAFAFA;
+        }
+
+        .bg-marble {
+            background-color: var(--bg-light);
+            background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
+        }
+
+        /* --- BASE --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-top: 0;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary-blue);
+        }
+
+        a {
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* --- UTILIDADES --- */
+        .container {
+            max-width: 1250px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            border: none;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+        }
+
+        .btn-gold {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-gold:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.6);
+        }
+
+        .section-padding {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title .line {
+            width: 70px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            margin: 0 auto;
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: transparent;
+            box-shadow: none;
+            transition: background-color 0.4s ease, box-shadow 0.4s ease, height 0.4s ease;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 125px;
+            display: flex;
+            align-items: center;
+        }
+
+        header.scrolled {
+            background-color: rgba(5, 20, 42, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            height: 90px;
+        }
+
+        header.scrolled .logo-img {
+            height: 70px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* Destacando el logo */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 105px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-weight: 700;
+            text-transform: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .lang-switch {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--white);
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+        .lang-switch a {
+            color: var(--white);
+            opacity: 0.6;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .lang-switch a.active,
+        .lang-switch a:hover {
+            color: var(--accent-gold);
+            opacity: 1;
+        }
+
+        .hero {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            min-height: 85vh;
+            padding: 160px 0 100px 0;
+            /* Added padding to prevent content from touching bottom */
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(5, 20, 42, 0.7) 100%);
+            z-index: 1;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero-text {
+            position: relative;
+        }
+
+        /* Logo destacado en el hero opcional */
+        .hero-logo-large {
+            max-width: 250px;
+            margin: 0 auto 15px auto;
+            display: block;
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+        }
+
+        .hero-text h1 {
+            text-align: center;
+            color: var(--white);
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero-text p {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 0 auto 15px auto;
+            opacity: 0.9;
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 2px solid rgba(197, 160, 89, 0.4);
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .hero-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            background-color: var(--primary-blue);
+        }
+
+        /* --- SERVICIOS CON DISEÃ‘O TIPO TARJETA / CUADRO --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .service-link {
+            display: block;
+            text-decoration: none;
+            height: 100%;
+        }
+
+        .service-card {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 280px;
+            /* Altura ideal para la descripciÃ³n */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.8s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Capa oscura/rojo encima de la imagen de fondo */
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--overlay-color);
+            z-index: 1;
+            transition: all 0.8s ease;
+        }
+
+        .service-link:hover .service-card {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .service-link:hover .service-card::before {
+            background: var(--overlay-hover);
+        }
+
+        .service-content {
+            position: relative;
+            z-index: 2;
+            padding: 25px 20px;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .service-content i {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--white);
+            transition: all 0.8s ease;
+        }
+
+        .service-link:hover .service-content i {
+            color: var(--accent-gold);
+            transform: scale(1.15) translateY(-5px);
+        }
+
+        .service-content h3 {
+            font-size: 1.1rem;
+            color: var(--white);
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .service-content p {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* --- EQUIPO Y RESTO --- */
+        /* --- PRESENCIA REGIONAL --- */
+        .regional-presence-section {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            border-top: 2px solid var(--accent-gold);
+            background-image: linear-gradient(rgba(5, 20, 42, 0.96), rgba(5, 20, 42, 0.96)), url('patron.webp');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        .presence-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .subtitle-tag {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .subtitle-tag i {
+            color: #ff0000;
+            font-size: 1.3rem;
+            background: #fff;
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        .presence-text h2 {
+            font-size: 3.2rem;
+            color: var(--white);
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+
+        .presence-text p {
+            font-size: 1.15rem;
+            color: #d0d0d0;
+            margin-bottom: 45px;
+            line-height: 1.8;
+        }
+
+        .btn-red {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn-red:hover {
+            background-color: var(--accent-gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .location-card {
+            position: relative;
+            height: 450px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .location-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.85) 100%);
+            z-index: 1;
+        }
+
+        .location-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px;
+            z-index: 2;
+        }
+
+        .city-name {
+            display: inline-block;
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .city-name::after {
+            content: ' â”€â”€â”€â”€â”€';
+            color: var(--accent-gold);
+            position: relative;
+            top: -2px;
+            margin-left: 10px;
+        }
+
+        .location-content h3 {
+            color: var(--white);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .location-content p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .member-img {
+            width: 100%;
+            max-width: 240px;
+            margin: 0 auto 15px auto;
+            display: block;
+            aspect-ratio: auto;
+            border-radius: 0;
+            object-fit: cover;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.8s ease;
+        }
+
+        .team-member:hover .member-img,
+        .team-card:hover .member-img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .forms-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .form-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 3px solid var(--accent-gold);
+            color: var(--white);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fafafa;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-gold);
+            background-color: #fff;
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* --- MAPA Y CONTACTO SECUNDARIO --- */
+        .contact-map-wrapper {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-map-wrapper h3 {
+            text-align: left;
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .contact-info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-info-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        .contact-info-list i {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        footer {
+            background-color: var(--primary-blue);
+            color: #fff;
+            padding: 60px 0 30px;
+            text-align: center;
+            font-size: 0.95rem;
+            border-top: 3px solid var(--accent-gold);
+        }
+
+        /* Logo en footer para enfatizar marca */
+        .footer-logo {
+            max-width: 150px;
+            margin: 0 auto 20px auto;
+            display: block;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+        }
+
+        .social-icons {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            color: var(--accent-gold);
+            margin: 0 15px;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--white);
+        }
+
+        .footer-links {
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #d1d1d1;
+            margin: 0 15px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .modal {
+            display: none;
+            position: absolute;
+            z-index: 2001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 40px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: var(--primary-blue);
+        }
+
+        .whatsapp-wrapper {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .whatsapp-label {
+            background: white;
+            color: #333;
+            padding: 8px 14px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.3;
+            white-space: nowrap;
+        }
+
+        .whatsapp-label span {
+            display: block;
+            color: #25d366;
+            font-weight: 700;
+        }
+
+        .whatsapp-float {
+            background-color: #25d366;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(-5deg);
+            background-color: #1ebe57;
+        }
+
+        @media (max-width: 900px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: left;
+            }
+
+            .hero-text h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px auto;
+            }
+
+            .menu-toggle {
+                display: block;
+                color: var(--white);
+                font-size: 1.8rem;
+                cursor: pointer;
+                transition: color 0.3s;
+                margin-left: auto;
+            }
+
+            .menu-toggle:hover {
+                color: var(--accent-gold);
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                /* Just below the header */
+                left: 0;
+                width: 100%;
+                background-color: rgba(5, 20, 42, 0.98);
+                /* Brand dark blue */
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 30px 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+                /* Hidden by default on mobile, but animatable */
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.4s ease;
+            }
+
+            .nav-links.active {
+                max-height: 400px;
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: left;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px;
+                font-size: 1.1rem;
+            }
+
+            .lang-switch,
+            .mobile-hidden {
+                display: none !important;
+                /* hide lang switch inside nav on mobile to keep it simple */
+            }
+
+            .forms-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image-wrapper {
+                max-width: 100%;
+                margin: 0 auto;
+                min-height: 350px;
+            }
+
+            .presence-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* --- POR QUÃ‰ ELEGIRNOS --- */
+        .why-choose-us {
+            background-color: var(--white);
+            text-align: center;
+            color: var(--primary-blue);
+        }
+
+        .why-header {
+            margin-bottom: 60px;
+        }
+
+
+
+        .why-subtitle {
+            color: var(--accent-gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .why-subtitle i {
+            background-color: var(--accent-gold);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .why-title {
+            color: var(--primary-blue);
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: stretch;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .blog-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-content p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .why-card {
+            background: var(--primary-blue);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: 8px;
+            padding: 40px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-gold);
+        }
+
+        .why-icon {
+            color: var(--accent-gold);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            color: var(--white);
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .why-card p {
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.4rem;
+            }
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .why-grid,
+            .team-grid {
+                grid-template-columns: 1fr !important;
+                gap: 30px;
+            }
+
+            .why-title {
+                font-size: 2.2rem;
+            }
+
+            .counters-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            .culture-grid,
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        /* --- ANIMACIÃ“N DE REBOTE PARA ICONOS (ANTIGRAVITY) --- */
+        @keyframes icon-bounce {
+            0%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        i:hover, 
+        a:hover i, 
+        .btn:hover i, 
+        .service-card:hover i,
+        .sub-service-card:hover i,
+        .whatsapp-float:hover i {
+            animation: icon-bounce 0.5s ease-in-out;
+            display: inline-block;
+        }
+</style>
+
+    <!-- SEO Site Name Configuration -->
+    <meta property="og:site_name" content="San Andrés Legal Group">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "San Andrés Legal Group",
+      "url": "https://lisboalegalgroup.github.io/"
+    }
+    </script>
+    <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="San Andrés Legal Group | Abogados en Guayaquil, Ecuador">
+    <meta property="og:description" content="Estudio JurÃ­dico en Guayaquil con experiencia en derecho penal, civil, corporativo y mÃ¡s. San Andrés Legal Group, excelencia y compromiso con su caso.">
+    <meta property="og:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
+    <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/">
+    <meta property="og:type" content="website">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container navbar">
+            <!-- Logo principal fuertemente destacado -->
+            <a href="index.html" class="logo-container">
+                <div class="brand-logo-main">
+  <div class="monogram">SLG</div>
+  <div class="monogram-divider"></div>
+  <div class="logo-wordmark">
+    <div class="logo-name">San Andrés</div>
+    <div class="logo-tagline">Legal Group</div>
+  </div>
+</div>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="areas-de-practica.html">Ãreas de PrÃ¡ctica</a>
+                    </li>
+                    <li>
+                        <a href="herramientas-legales.html">Herramientas Legales</a>
+                    </li>
+                    <li>
+                        <a href="#equipo">Socios</a>
+                    </li>
+                    <li>
+                        <a href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 20px; position: relative; right: -40px;">
+                <div class="lang-switch">
+                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
+                </div>
+                <a href="#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <video autoplay loop muted playsinline class="hero-video" poster="abogado-hero.webp">
+            <source src="videolisboa.mp4" type="video/mp4">
+        </video>
+        <div class="container hero-container">
+            <div class="hero-text" data-aos="fade-up" data-aos-duration="1200">
+                <div class="brand-logo-main">
+  <div class="monogram">SLG</div>
+  <div class="monogram-divider"></div>
+  <div class="logo-wordmark">
+    <div class="logo-name">San Andrés</div>
+    <div class="logo-tagline">Legal Group</div>
+  </div>
+</div>
+                <h1>Liderazgo Legal. <br>
+                    <span>Impacto Global.</span>
+                </h1>
+                <p>Protegiendo sus intereses con excelencia jurÃ­dica, enfoque estratÃ©gico y tecnologÃ­a de vanguardia.
+                </p>
+                <div class="hero-ctas"
+                    style="margin-top: 35px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#servicios" class="btn btn-gold">Nuestros Servicios</a>
+                    <a href="#contacto" class="btn"
+                        style="background-color: transparent; border: 2px solid var(--white); color: var(--white); transition: 0.3s;"
+                        onmouseover="this.style.backgroundColor='var(--white)'; this.style.color='var(--primary-blue)';"
+                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--white)';">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose-us section-padding">
+        <div class="container">
+            <div class="why-header" data-aos="fade-down">
+                <div class="why-subtitle">
+                    <i class="fas fa-university">
+                    </i>Nuestra Propuesta de Valor
+                </div>
+                <h2 class="why-title">Comprometidos con<br>la excelencia jurÃ­dica</h2>
+            </div>
+            <div class="why-grid">
+                <!-- Columna 1 -->
+                <div class="why-card" data-aos="fade-up">
+                    <div class="why-icon">
+                        <i class="fas fa-balance-scale-right">
+                        </i>
+                    </div>
+                    <h3>Excelencia JurÃ­dica</h3>
+                    <p>Mantenemos los mÃ¡s altos estÃ¡ndares Ã©ticos y profesionales,
+                        ofreciendo soluciones tÃ©cnicas de altÃ­sima complejidad con precisiÃ³n y resultados contundentes
+                        en cada caso,
+                        asesorÃ­a o litigio. </p>
+                </div>
+                <!-- Columna 2 -->
+                <div class="why-card" data-aos="fade-up">
+                    <div class="why-icon">
+                        <i class="fas fa-chess-knight">
+                        </i>
+                    </div>
+                    <h3>Enfoque EstratÃ©gico</h3>
+                    <p>DiseÃ±amos estrategias legales a la medida que trascienden el Ã¡mbito jurÃ­dico. Entendemos su
+                        negocio y objetivos para mitigar riesgos,
+                        maximizar recursos y asegurar victorias clave.</p>
+                </div>
+                <!-- Columna 3 -->
+                <div class="why-card" data-aos="fade-up">
+                    <div class="why-icon">
+                        <i class="fas fa-network-wired">
+                        </i>
+                    </div>
+                    <h3>TecnologÃ­a Aplicada</h3>
+                    <p>Implementamos IA avanzada y estrictos protocolos de protecciÃ³n de datos para agilizar el anÃ¡lisis
+                        de casos,
+                        garantizar la seguridad de la informaciÃ³n confidencial y optimizar su defensa legal. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIÃ‰NES SOMOS -->
+    <section id="quienes-somos" class="section-padding"
+        style="background-color: var(--primary-blue); border-top: 1px solid #eaeaea;">
+        <div class="container">
+            <div class="section-title" style="margin-bottom: 25px;">
+                <h2 style="color: var(--white);">Â¿QuiÃ©nes Somos?</h2>
+                <div class="line">
+                </div>
+                <p style="margin-top: 20px; font-size: 1.1rem; color: #e0e0e0;">Conozca la firma que defiende sus
+                    intereses con
+                    excelencia.</p>
+            </div>
+            <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+                <p style="font-size: 1.15rem; line-height: 1.8; color: #e0e0e0;">
+                    En <strong style="color: var(--white);">San Andrés Legal Group</strong> somos una firma de abogados
+                    comprometida con la
+                    excelencia y la defensa inquebrantable de los intereses de nuestros clientes. Combinamos
+                    experiencia, rigor tÃ©cnico y un profundo conocimiento del entorno empresarial para brindar
+                    soluciones jurÃ­dicas integrales y preventivas. Nos destacamos por nuestra visiÃ³n estratÃ©gica y
+                    nuestra capacidad para anticipar riesgos,
+                    ofreciendo un servicio personalizado que se adapta a las exigencias corporativas y personales de
+                    cada caso. Su seguridad jurÃ­dica es nuestra mÃ¡xima prioridad.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="zoom-in">
+                <h2>Ãreas de PrÃ¡ctica</h2>
+                <div class="line">
+                </div>
+                <p style="margin-top: 20px; font-size: 1.1rem;">Seleccione un Ã¡rea para descubrir cÃ³mo garantizamos
+                    resultados mediante la excelencia.</p>
+            </div>
+            <div class="services-grid">
+                <!-- 1. Derecho Penal -->
+                <a href="derecho-penal.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up" style="background-image: url('derecho_penal.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-gavel">
+                            </i>
+                            <h3>Derecho Penal</h3>
+                            <p>Expertos en litigaciÃ³n penal con capacidad operativa a nivel nacional e internacional.
+                                Ofrecemos soluciones jurÃ­dicas de alta complejidad para los sectores pÃºblico y privado,
+                                garantizando una protecciÃ³n legal efectiva y resultados basados en la experiencia.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 2. Derecho Civil -->
+                <a href="derecho-civil.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_derecho-civil_1.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-balance-scale">
+                            </i>
+                            <h3>Derecho Civil</h3>
+                            <p>Especialistas en la protecciÃ³n de su patrimonio,
+                                obligaciones y contratos. Gestionamos todo tipo de controversias civiles y comerciales,
+                                garantizando la mÃ¡xima seguridad y defensa de sus intereses empresariales y personales.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 3. Derecho de Familia -->
+                <a href="derecho-de-familia.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_derecho-de-familia_1.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-users">
+                            </i>
+                            <h3>Derecho de Familia</h3>
+                            <p>Asesoramiento integral y sensible en procedimientos de divorcio,
+                                pensiones alimenticias,
+                                tenencia compartida y acuerdos prematrimoniales. Priorizamos el bienestar emocional y
+                                los derechos de su nÃºcleo familiar ante cualquier circunstancia.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 4. Derecho Constitucional -->
+                <a href="derecho-constitucional.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_derecho-constitucional_1.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-landmark">
+                            </i>
+                            <h3>Derecho Constitucional</h3>
+                            <p>Defensa fÃ©rrea de sus derechos fundamentales. Patrocinio de alto nivel en acciones de
+                                protecciÃ³n,
+                                hÃ¡beas corpus y litigio constitucional frente a las vulneraciones incurridas por parte
+                                del poder pÃºblico o entidades privadas.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 5. Derecho Administrativo -->
+                <a href="derecho-administrativo.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('derecho_administrativo.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-file-signature">
+                            </i>
+                            <h3>Derecho Administrativo</h3>
+                            <p>RepresentaciÃ³n experta ante instituciones estatales. Brindamos gestiÃ³n en contrataciÃ³n
+                                pÃºblica,
+                                impugnaciÃ³n de actos administrativos,
+                                auditorÃ­as y defensas asertivas en procedimientos sancionadores y coactivos.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 6. Compliance -->
+                <a href="compliance.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_compliance_1.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-shield-alt">
+                            </i>
+                            <h3>Compliance</h3>
+                            <p>DiseÃ±o,
+                                auditorÃ­a e implementaciÃ³n de programas de cumplimiento normativo y Ã©tica empresarial.
+                                Mitigamos riesgos legales,
+                                operativos,
+                                financieros y reputacionales,
+                                blindando el prestigio de su corporaciÃ³n a nivel global.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 7. Derecho de Sucesiones -->
+                <a href="herencias-y-sucesiones.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_herencias-y-sucesiones_1.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-scroll">
+                            </i>
+                            <h3>Derecho de Sucesiones</h3>
+                            <p>PlanificaciÃ³n patrimonial y hereditaria a la medida de su legado. Otorgamos asistencia
+                                legal exhaustiva en testamentos,
+                                particiÃ³n de herencias,
+                                fideicomisos y resoluciÃ³n extrajudicial y judicial de conflictos sucesorios.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 8. Derecho Laboral -->
+                <a href="derecho-laboral.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_derecho-laboral_1.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-handshake">
+                            </i>
+                            <h3>Derecho Laboral</h3>
+                            <p>Estrategias efectivas para la correcta gestiÃ³n de sus relaciones de trabajo. AsesorÃ­a
+                                corporativa en contrataciÃ³n,
+                                prevenciÃ³n de conflictos,
+                                auditorÃ­a,
+                                manejo de desvinculaciones y representaciÃ³n contundente en litigios laborales.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 9. Derecho Societario -->
+                <a href="derecho-societario.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('derecho_societario.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-building">
+                            </i>
+                            <h3>Derecho Societario</h3>
+                            <p>EstructuraciÃ³n corporativa y gobernanza integral. Desde la constituciÃ³n,
+                                escisiÃ³n y fusiÃ³n de compaÃ±Ã­as,
+                                hasta alianzas estratÃ©gicas para asegurar la solidez comercial,
+                                legal y el crecimiento sostenido de su empresa en el mercado.</p>
+                        </div>
+                    </div>
+                </a>
+                <!-- 10. Calculadora Laboral -->
+                <a href="calculadora-laboral.html" class="service-link">
+                    <div class="service-card" data-aos="fade-up"
+                        style="background-image: url('img_derecho-laboral_2.webp');">
+                        <div class="service-content">
+                            <i class="fas fa-calculator">
+                            </i>
+                            <h3>Calculadora Laboral</h3>
+                            <p>Nuestra herramienta digital gratuita que le permite calcular con precisiÃ³n liquidaciones,
+                                indemnizaciones y beneficios sociales conforme a la normativa laboral ecuatoriana actual.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="regional-presence-section section-padding" id="oficinas">
+        <div class="container presence-container">
+            <div class="presence-text" data-aos="fade-right">
+                <div class="subtitle-tag">
+                    <i class="fas fa-building">
+                    </i>Oficinas estratÃ©gicamente ubicadas
+                </div>
+                <h2>Presencia en todo el territorio nacional</h2>
+                <p>Somos una firma lÃ­der en la regiÃ³n con operaciones propias y contamos con exclusivas oficinas
+                    ubicadas estratÃ©gicamente en edificios corporativos para ofrecer la mejor atenciÃ³n personalizada y
+                    profesional.</p>
+                <a href="#contacto" class="btn btn-red">ContÃ¡ctanos</a>
+            </div>
+            <div class="locations-grid">
+                <!-- Tarjeta de ubicaciÃ³n Guayaquil -->
+                <div class="location-card" data-aos="fade-left" style="background-image: url('oficina-aerea.webp');">
+                    <div class="location-content">
+                        <span class="city-name">GUAYAQUIL</span>
+                        <h3>EDIFICIO FINANZA</h3>
+                        <p>VÃ©lez 220 entre Chile y Chimborazo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="equipo" class="team-section section-padding bg-marble">
+        <div class="container">
+            <div class="section-title" data-aos="zoom-in">
+                <h2>Nuestros Socios</h2>
+                <div class="line">
+                </div>
+            </div>
+            <div class="team-grid"
+                style="grid-template-columns: repeat(2, 1fr); max-width: 1000px; margin: 0 auto; gap: 50px;">
+                <!-- Socio 1 -->
+                <div class="team-card" data-aos="flip-up" style="text-align: center; transition: 0.8s;"
+                    onmouseover="this.style.transform='translateY(-5px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                        <img loading="lazy" src="Daniel Modelo.webp" alt="Daniel Espinoza" class="member-img"
+                            style="   object-fit: cover; object-position: top; margin-bottom: 20px;">
+                    <h3 style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 5px; font-family: 'Golos Text', sans-serif;">Daniel Espinoza</h3>
+                    <p
+                        style="color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
+                        Socio</p>
+                </div>
+                <!-- Socio 2 -->
+                <div class="team-card" data-aos="flip-up" style="text-align: center; transition: 0.8s;"
+                    onmouseover="this.style.transform='translateY(-5px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                        <img loading="lazy" src="Nueva foto karo.webp"
+                            alt="Karol Carvajal" class="member-img"
+                            style="   object-fit: cover; object-position: top; margin-bottom: 20px; background-color: var(--bg-light);">
+                    <h3 style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 5px; font-family: 'Golos Text', sans-serif;">Karol Carvajal</h3>
+                    <p
+                        style="color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
+                        Socia Senior</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CULTURA Y TRANSPARENCIA -->
+    <section id="cultura" class="section-padding bg-marble">
+        <div class="container">
+            <div class="section-title" data-aos="zoom-in">
+                <h2>Cultura y Transparencia</h2>
+                <div class="line">
+                </div>
+                <p
+                    style="margin-top: 20px; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Nuestro compromiso va mÃ¡s allÃ¡ de la excelencia tÃ©cnica;
+                    actuamos con integridad absoluta y responsabilidad corporativa.</p>
+            </div>
+            <div class="culture-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                <div class="culture-card" data-aos="fade-up"
+                    style="text-align: left; padding: 40px; background: var(--white); border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <i class="fas fa-certificate"
+                        style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">
+                    </i>
+                    <h3
+                        style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">
+                        Certificaciones</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Operamos bajo estrictos estÃ¡ndares
+                        internacionales de calidad y cumplimiento,
+                        garantizando auditorÃ­as transparentes y procesos certificados.</p>
+                </div>
+                <div class="culture-card" data-aos="fade-up"
+                    style="text-align: left; padding: 40px; background: var(--white); border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <i class="fas fa-balance-scale"
+                        style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">
+                    </i>
+                    <h3
+                        style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">
+                        Ã‰tica Profesional</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Mantenemos una polÃ­tica de tolerancia
+                        cero frente a conflictos de interÃ©s y corrupciÃ³n,
+                        asegurando un patrocinio legal impecable para su corporaciÃ³n.</p>
+                </div>
+                <div class="culture-card" data-aos="fade-up"
+                    style="text-align: left; padding: 40px; background: var(--white); border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;"
+                    onmouseover="this.style.transform='translateY(-5px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <i class="fas fa-hands-helping"
+                        style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">
+                    </i>
+                    <h3
+                        style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 15px; font-family: 'Montserrat', sans-serif;">
+                        Responsabilidad Social</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Participamos activamente en trabajo
+                        pro bono y promovemos el acceso a la justicia y la educaciÃ³n legal en sectores vulnerables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TESTIMONIOS Y CLIENTES -->
+    <section id="testimonios" class="section-padding"
+        style="background-color: var(--primary-blue); color: var(--white);">
+        <div class="container">
+            <div class="section-title" data-aos="zoom-in">
+                <h2 style="color: var(--white);">Respaldados por la Confianza</h2>
+                <div class="line">
+                </div>
+            </div>
+            <div class="testimonials-container" data-aos="zoom-in"
+                style="max-width: 900px; margin: 0 auto 60px auto; text-align: left; background: rgba(255,255,255,0.03); padding: 50px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.2);">
+                <i class="fas fa-quote-left"
+                    style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px; opacity: 0.5;">
+                </i>
+                <p style="font-size: 1.3rem; font-style: italic; line-height: 1.8; margin-bottom: 30px;">"La asesorÃ­a de
+                    San Andrés Legal Group fue determinante para nuestra reestructuraciÃ³n corporativa. Su nivel de anÃ¡lisis
+                    estratÃ©gico y precisiÃ³n jurÃ­dica los distingue como una de las firmas mÃ¡s competentes de la regiÃ³n."
+                </p>
+                <div>
+                    <h4
+                        style="color: var(--accent-gold); font-family: 'Montserrat', sans-serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">
+                        Director Ejecutivo</h4>
+                    <span style="font-size: 0.9rem; opacity: 0.8;">CÃ¡mara de Comercio Regional</span>
+                </div>
+            </div>
+            <!-- Carrusel de logotipos -->
+            <div class="clients-logos" data-aos="fade-up"
+                style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; opacity: 0.6; align-items: center;">
+                <i class="fas fa-building" style="font-size: 3.5rem;">
+                </i>
+                <i class="fas fa-industry" style="font-size: 3.5rem;">
+                </i>
+                <i class="fas fa-ship" style="font-size: 3.5rem;">
+                </i>
+                <i class="fas fa-landmark" style="font-size: 3.5rem;">
+                </i>
+                <i class="fas fa-hospital" style="font-size: 3.5rem;">
+                </i>
+            </div>
+        </div>
+    </section>
+    <!-- BLOG DE NOTICIAS -->
+    <section id="blog" class="section-padding">
+        <div class="container">
+            <div class="section-title" data-aos="zoom-in">
+                <h2>Actualidad JurÃ­dica</h2>
+                <div class="line">
+                </div>
+                <p style="margin-top: 20px; font-size: 1.1rem;">AnÃ¡lisis jurisprudencial y noticias legales destacadas.
+                </p>
+            </div>
+            <div class="blog-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                <!-- Post 1 -->
+                <div class="blog-card" data-aos="fade-up"
+                    style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;"
+                    onmouseover="this.style.transform='translateY(-8px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <div
+                        style="height: 220px; background-image: url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <span
+                            style="color: var(--accent-gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">15
+                            Mar 2026 â€¢ AnÃ¡lisis COGEP</span>
+                        <h3
+                            style="font-size: 1.3rem; margin: 15px 0; color: var(--primary-blue); font-family: 'Montserrat', sans-serif;">
+                            Impacto de las nuevas reformas al CÃ³digo General de Procesos</h3>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Un estudio
+                            detallado sobre cÃ³mo la oralidad y los plazos perentorios estÃ¡n reconfigurando la dinÃ¡mica
+                            en audiencias.</p>
+                        <a href="#"
+                            style="color: var(--primary-blue); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Leer
+                            mÃ¡s <i class="fas fa-arrow-right" style="margin-left: 5px;">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Post 2 -->
+                <div class="blog-card" data-aos="fade-up"
+                    style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;"
+                    onmouseover="this.style.transform='translateY(-8px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <div
+                        style="height: 220px; background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <span
+                            style="color: var(--accent-gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">02
+                            Mar 2026 â€¢ Derecho Administrativo</span>
+                        <h3
+                            style="font-size: 1.3rem; margin: 15px 0; color: var(--primary-blue); font-family: 'Montserrat', sans-serif;">
+                            Criterios de ImpugnaciÃ³n segÃºn el COA</h3>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">Estrategias
+                            corporativas para el manejo efectivo del silencio administrativo y la caducidad en
+                            procedimientos coactivos.</p>
+                        <a href="#"
+                            style="color: var(--primary-blue); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Leer
+                            mÃ¡s <i class="fas fa-arrow-right" style="margin-left: 5px;">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Post 3 -->
+                <div class="blog-card" data-aos="fade-up"
+                    style="background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: 0.3s;"
+                    onmouseover="this.style.transform='translateY(-8px)';"
+                    onmouseout="this.style.transform='translateY(0)';">
+                    <div
+                        style="height: 220px; background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
+                    </div>
+                    <div style="padding: 40px;">
+                        <span
+                            style="color: var(--accent-gold); font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">20
+                            Feb 2026 â€¢ Compliance & IA</span>
+                        <h3
+                            style="font-size: 1.3rem; margin: 15px 0; color: var(--primary-blue); font-family: 'Montserrat', sans-serif;">
+                            ProtecciÃ³n de Datos en la Era del LegalTech</h3>
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">CÃ³mo
+                            estructuramos auditorÃ­as preventivas utilizando herramientas de inteligencia artificial y
+                            tecnologÃ­a blockchain.</p>
+                        <a href="#"
+                            style="color: var(--primary-blue); font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Leer
+                            mÃ¡s <i class="fas fa-arrow-right" style="margin-left: 5px;">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="section-padding" style="background-color: var(--bg-light);">
+        <div class="container">
+            <div class="section-title" data-aos="zoom-in">
+                <h2>ContÃ¡ctenos</h2>
+                <div class="line">
+                </div>
+            </div>
+            <div class="forms-wrapper">
+                <div class="form-box" data-aos="fade-right">
+                    <h3 style="margin-bottom: 25px;">
+                        <i class="fas fa-calendar-alt">
+                        </i>Agendar Cita Formal
+                    </h3>
+                    <form onsubmit="event.preventDefault(); 
+            const nombre=document.getElementById('wa-nombre').value;
+            const telefono=document.getElementById('wa-tel').value;
+            const area=document.getElementById('wa-area').value;
+            const mensaje=`Hola, mi nombre es ${nombre}. Deseo agendar una cita para el Ã¡rea de ${area}. Mi nÃºmero de contacto es: ${telefono}.`;
+            const whatsappUrl=`https://wa.me/593990967952?text=${encodeURIComponent(mensaje)}`;
+            window.open(whatsappUrl, '_blank');
+            ">
+                        <div class="form-group">
+                            <label>Nombre Completo</label>
+                            <input type="text" id="wa-nombre" placeholder="Ej. Juan PÃ©rez" required>
+                        </div>
+                        <div class="form-group">
+                            <label>TelÃ©fono</label>
+                            <input type="tel" id="wa-tel" placeholder="+593 99 999 9999" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ãrea de InterÃ©s</label>
+                            <select id="wa-area" required>
+                                <option value="" disabled selected>Seleccione un Ã¡rea...</option>
+                                <option value="Derecho Penal">Derecho Penal</option>
+                                <option value="Derecho Civil">Derecho Civil</option>
+                                <option value="Derecho de Familia">Derecho de Familia</option>
+                                <option value="Derecho Constitucional">Derecho Constitucional</option>
+                                <option value="Derecho Administrativo">Derecho Administrativo</option>
+                                <option value="Compliance">Compliance</option>
+                                <option value="Derecho de Sucesiones">Derecho de Sucesiones</option>
+                                <option value="Derecho Laboral">Derecho Laboral</option>
+                                <option value="Derecho Societario">Derecho Societario</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.1rem;">Confirmar tu
+                            reserva</button>
+                    </form>
+                </div>
+                <div class="contact-map-wrapper" data-aos="fade-left">
+                    <h3>Guayaquil</h3>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.1812146569613!2d-79.88264357525459!3d-2.192023073653161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e79063fffff%3A0x370e269ec33509f3!2sJos%C3%A9%20V%C3%A9lez%20Villamar%20220%20y%2C%20Guayaquil%20090307!5e0!3m2!1ses-419!2sec!4v1772344811635!5m2!1ses-419!2sec"
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <ul class="contact-info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt">
+                            </i>
+                            <span>VÃ©lez 220 entre Chile y Chimborazo,
+                                Edificio Finanza</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope">
+                            </i>
+                            <span>info@slggroup.ec</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock">
+                            </i>
+                            <span>Lunes a Viernes 9:00 a 17:30</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt">
+                            </i>
+                            <span>0990967952</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <!-- Logo pequeÃ±o en el footer opcional para resaltar la marca -->
+            <div class="brand-logo-main">
+  <div class="monogram">SLG</div>
+  <div class="monogram-divider"></div>
+  <div class="logo-wordmark">
+    <div class="logo-name">San Andrés</div>
+    <div class="logo-tagline">Legal Group</div>
+  </div>
+</div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank">
+                    <i class="fab fa-linkedin">
+                    </i>
+                </a>
+                <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank">
+                    <i class="fab fa-instagram">
+                    </i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank">
+                    <i class="fab fa-facebook-square">
+                    </i>
+                </a>
+            </div>
+            <div class="footer-links">
+                <a onclick="openModal('legalModal')">Aviso Legal</a>
+                <a href="privacidad.html">PolÃ­tica de Privacidad</a>
+            </div>
+            <p>&copy;
+                2026 San Andrés Legal Group. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <div id="legalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('legalModal')">&times;
+            </span>
+            <h3 style="margin-bottom: 15px;">Aviso Legal</h3>
+            <p>InformaciÃ³n pertinente a los tÃ©rminos y condiciones del ejercicio profesional en la jurisdicciÃ³n
+                correspondiente.</p>
+        </div>
+    </div>
+    <div class="whatsapp-wrapper">
+        <div class="whatsapp-label">Â¿Necesitas ayuda?<span>EscrÃ­benos</span></div>
+        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    <script> // Funciones de modales
+
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function (e) {
+            if (e.target.className === 'modal') {
+                e.target.style.display = "none";
+            }
+        }
+
+
+    </script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = mobileMenu ? mobileMenu.querySelector('i') : null;
+
+            if (mobileMenu && navLinks && menuIcon) {
+                mobileMenu.addEventListener('click', function (e) {
+                    e.stopPropagation(); // Prevenir burbujeo
+                    navLinks.classList.toggle('active');
+
+                    // Toggle icono Hamburguesa/Cruz
+                    if (navLinks.classList.contains('active')) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-times');
+                    } else {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+
+                // Cerrar menÃº al hacer clic en un enlace (Ãºtil para Single Page)
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    });
+                });
+
+                // Cerrar menÃº al hacer click fuera
+                document.addEventListener('click', function (event) {
+                    const isClickInsideMenu = navLinks.contains(event.target);
+                    const isClickOnToggle = mobileMenu.contains(event.target);
+
+                    if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
+
+            // Script para header scrolleado si no existe
+            const header = document.querySelector('header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50,
+            });
+        });
+    </script>
+
+    <!-- 3D Effects Scripts -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Tilt 3D en las Tarjetas de Servicios
+            VanillaTilt.init(document.querySelectorAll(".service-card"), {
+                max: 12,
+                speed: 400,
+                glare: true,
+                "max-glare": 0.2,
+                perspective: 1000,
+                scale: 1.02
+            });
+
+            // 2. Parallax de Movimiento 3D en el Hero
+            const heroSection = document.querySelector('.hero');
+            const heroText = document.querySelector('.hero-text');
+            const heroImg = document.querySelector('.hero-image-wrapper');
+            
+            if (heroSection) {
+                heroSection.style.perspective = "1200px";
+                if (heroText) heroText.style.transformStyle = "preserve-3d";
+                if (heroImg) heroImg.style.transformStyle = "preserve-3d";
+
+                heroSection.addEventListener('mousemove', (e) => {
+                    const x = (e.clientX / window.innerWidth - 0.5) * 2;
+                    const y = (e.clientY / window.innerHeight - 0.5) * 2;
+                    
+                    if(heroText) {
+                        heroText.style.transform = `translateZ(60px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
+                    }
+                    if(heroImg) {
+                        heroImg.style.transform = `translateZ(30px) rotateX(${-y * 3}deg) rotateY(${x * 3}deg)`;
+                    }
+                });
+
+                heroSection.addEventListener('mouseleave', () => {
+                    if(heroText) {
+                        heroText.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                        heroText.style.transform = `translateZ(0) rotateX(0deg) rotateY(0deg)`;
+                    }
+                    if(heroImg) {
+                        heroImg.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                        heroImg.style.transform = `translateZ(0) rotateX(0deg) rotateY(0deg)`;
+                    }
+                    
+                    setTimeout(() => {
+                        if(heroText) heroText.style.transition = 'none';
+                        if(heroImg) heroImg.style.transition = 'none';
+                    }, 600);
+                });
+            }
+
+            // 3. Profundidad DinÃ¡mica (Z-Layering) en el Scroll
+            const parallaxElements = document.querySelectorAll('.culture-card, .blog-card, .form-box');
+            const containers = document.querySelectorAll('.services-grid, .blog-grid, .forms-wrapper, .culture-grid');
+            containers.forEach(c => c.style.perspective = '1200px');
+            
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                
+                parallaxElements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if(rect.top < window.innerHeight && rect.bottom > 0) {
+                        const distanceFromCenter = (window.innerHeight / 2) - (rect.top + rect.height / 2);
+                        const zOffset = Math.max(0, 40 - Math.abs(distanceFromCenter) * 0.08);
+                        const yOffset = distanceFromCenter * -0.05;
+                        
+                        if (!el.matches(':hover')) {
+                           el.style.transform = `translateY(${yOffset}px) translateZ(${zOffset}px)`;
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
