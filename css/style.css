@@ -700,7 +700,6 @@
             max-width: 150px;
             margin: 0 auto 20px auto;
             display: block;
-            filter: brightness(0) invert(1);
             opacity: 0.8;
         }
 
@@ -1373,7 +1372,6 @@
 
 .new-footer .footer-logo-new {
     max-width: 160px;
-    filter: brightness(0) invert(1);
     opacity: 0.9;
 }
 
