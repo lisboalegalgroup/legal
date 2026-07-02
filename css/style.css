@@ -1705,3 +1705,113 @@
         font-size: 3rem;
     }
 }
+
+/* --- CUSTOM CURSOR FOLLOWER --- */
+.custom-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 999999;
+    opacity: 0;
+    transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    will-change: transform;
+    width: 8px;
+    height: 8px;
+    background-color: #3b82f6; /* Modern electric blue */
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Visible state */
+.custom-cursor-dot.visible {
+    opacity: 1;
+}
+
+/* Hovering interactive elements */
+.custom-cursor-dot.hovering {
+    width: 6px;
+    height: 6px;
+    background-color: #60a5fa; /* Lighter blue */
+    box-shadow: 0 0 15px rgba(96, 165, 250, 1), 0 0 30px rgba(96, 165, 250, 0.6);
+}
+
+
+/* --- STATS COUNTER --- */
+.stats-counter-container {
+    margin-top: 80px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 60px;
+    width: 100%;
+}
+
+.stats-counter-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stats-counter-item {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: 10px 0;
+}
+
+/* Vertical dividers matching the image with a brand navy tint */
+.stats-counter-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background-color: rgba(5, 20, 42, 0.1);
+}
+
+.stats-counter-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: var(--accent-gold); /* Gold matching the branding */
+    line-height: 1;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.stats-counter-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary-blue); /* Navy matching the branding */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.85;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .stats-counter-container {
+        margin-top: 50px;
+        padding-top: 40px;
+    }
+    
+    .stats-counter-grid {
+        flex-direction: column;
+        gap: 45px;
+    }
+    
+    .stats-counter-item:not(:last-child)::after {
+        right: 0;
+        left: 0;
+        bottom: -22px;
+        top: auto;
+        height: 1px;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+

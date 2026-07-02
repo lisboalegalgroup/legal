@@ -163,6 +163,25 @@
                         garantizar la seguridad de la información confidencial y optimizar su defensa legal. </p>
                 </div>
             </div>
+
+            <!-- Contador de Estadísticas -->
+            <div class="stats-counter-container" data-aos="fade-up">
+                <div class="stats-counter-grid">
+                    <div class="stats-counter-item">
+                        <div class="stats-counter-number" data-target="100">0+</div>
+                        <div class="stats-counter-label">Clientes Atendidos</div>
+                    </div>
+                    <div class="stats-counter-item">
+                        <div class="stats-counter-number" data-target="10">0+</div>
+                        <div class="stats-counter-label">Áreas de Práctica</div>
+                    </div>
+                    <div class="stats-counter-item">
+                        <div class="stats-counter-number" data-target="6">0+</div>
+                        <div class="stats-counter-label">Miembros del Equipo</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -830,8 +849,46 @@
                     }
                 });
             });
+
+            // 4. Animación del Contador de Estadísticas (Intersection Observer)
+            const statsSection = document.querySelector('.stats-counter-container');
+            if (statsSection) {
+                const counters = document.querySelectorAll('.stats-counter-number');
+                
+                const animateCounter = (counter) => {
+                    const target = parseInt(counter.getAttribute('data-target'));
+                    const duration = 1200; // Duración total en ms
+                    const stepTime = 25; // Intervalo en ms
+                    const totalSteps = duration / stepTime;
+                    const increment = target / totalSteps;
+                    
+                    let current = 0;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= target) {
+                            clearInterval(timer);
+                            counter.innerText = target + '+';
+                        } else {
+                            counter.innerText = Math.floor(current) + '+';
+                        }
+                    }, stepTime);
+                };
+
+                const statsObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            counters.forEach(counter => animateCounter(counter));
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                statsObserver.observe(statsSection);
+            }
         });
     </script>
+    <script src="js/cursor-follower.js" defer></script>
 </body>
 
 </html>
