@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="canonical" href="https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="icon" href="https://lisboalegalgroup.github.io/legal/favicon.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="https://lisboalegalgroup.github.io/legal/favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="shortcut icon" href="https://lisboalegalgroup.github.io/legal/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculadora de pensión de alimentos referencial para Ecuador. Determine la pensión alimenticia conforme a la tabla oficial de 2026 y el Acuerdo MDH-DM-2026-0005-A.">
+    <title>Calculadora de Pensión de Alimentos | Lisboa Legal Group</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- SEO Site Name Configuration -->
+    <meta property="og:site_name" content="Lisboa Legal Group">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Lisboa Legal Group",
+      "url": "https://lisboalegalgroup.github.io/"
+    }
+    </script>
+
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Calculadora de Pensión de Alimentos | Lisboa Legal Group">
+    <meta property="og:description" content="Calculadora de pensión de alimentos referencial para Ecuador. Calcule la pensión alimenticia oficial 2026.">
+    <meta property="og:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
+    <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* Force dark header since there is no hero image anymore */
+        header {
+            background-color: var(--primary-blue) !important;
+        }
+        :root {
+            --ink: #05142a;
+            --ink2: #0a1e3d;
+            --ink3: #2D3748;
+            --paper: #FAFAFA;
+            --paper2: #f0f0f0;
+            --paper3: #e0e0e0;
+            --blue: #05142a;
+            --blue2: #EFF6FF;
+            --blue3: #DBEAFE;
+            --green: #1B5E35;
+            --green2: #E4F4EB;
+            --red: #991f1f;
+            --red2: #FCEBEB;
+            --amb: #8a4a1a;
+            --amb2: #FEF6EC;
+            --pur: #4A2D8A;
+            --pur2: #F4F0FF;
+            --gold: #d4af37;
+            --gold2: #d4af37;
+            --gold3: #FDF8E8;
+            --sh: 0 2px 12px rgba(5,20,42,.08), 0 1px 3px rgba(5,20,42,.06);
+            --shl: 0 8px 32px rgba(5,20,42,.12);
+        }
+        body {
+            background: var(--paper);
+            color: var(--ink);
+        }
+        .main {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 2rem 1.25rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+            gap: 1.4rem;
+            align-items: start;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid var(--paper3);
+            border-radius: 8px;
+            padding: 1.25rem;
+            box-shadow: var(--sh);
+            margin-bottom: 1rem;
+            border-top: 2px solid var(--gold);
+        }
+        .card:last-child {
+            margin-bottom: 0;
+        }
+        .ct {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1rem;
+            padding-bottom: .75rem;
+            border-bottom: 1px solid var(--paper3);
+        }
+        .sd {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--ink);
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .ct h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+        }
+        .ct small {
+            font-size: 10px;
+            font-family: 'DM Mono', monospace;
+            color: rgba(13, 17, 23, 0.45);
+            margin-left: auto;
+            background: var(--paper2);
+            padding: 2px 7px;
+            border-radius: 2px;
+            white-space: nowrap;
+        }
+        .f {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: .875rem;
+        }
+        .f:last-child {
+            margin-bottom: 0;
+        }
+        .f label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--ink3);
+            font-family: 'DM Sans', sans-serif;
+        }
+        .f .nr {
+            font-size: 10px;
+            font-family: 'DM Mono', monospace;
+            color: rgba(13, 17, 23, 0.38);
+            margin-top: 1px;
+            line-height: 1.35;
+        }
+        .f input,
+        .f select {
+            height: 38px;
+            padding: 0 10px;
+            border: 1px solid var(--paper3);
+            border-radius: 5px;
+            background: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 14px;
+            color: var(--ink);
+            width: 100%;
+            transition: border-color .15s;
+        }
+        .f input:focus,
+        .f select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, .08);
+        }
+        .f .hint {
+            font-size: 11px;
+            color: rgba(13, 17, 23, 0.52);
+            line-height: 1.45;
+            margin-top: 3px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .g2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        .calcbtn {
+            width: 100%;
+            height: 48px;
+            font-family: 'Golos Text', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background: var(--gold);
+            color: #fff;
+            margin-top: 1rem;
+            transition: all .3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, .3);
+        }
+        .calcbtn:hover {
+            background: #b5952f;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, .5);
+        }
+        .calcbtn:active {
+            transform: translateY(0);
+        }
+        .counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 4px;
+        }
+        .cnt-btn {
+            width: 34px;
+            height: 34px;
+            border: 1px solid var(--paper3);
+            border-radius: 4px;
+            background: #fff;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background .12s;
+            font-family: monospace;
+            flex-shrink: 0;
+        }
+        .cnt-btn:hover {
+            background: var(--paper2);
+        }
+        .cnt-val {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--ink);
+            min-width: 30px;
+            text-align: center;
+            font-family: 'DM Mono', monospace;
+        }
+        .re {
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: rgba(13, 17, 23, 0.3);
+            text-align: center;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .reico {
+            font-size: 40px;
+        }
+        .retit {
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .resub {
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .r-header {
+            background: linear-gradient(135deg, #05142a, #0a1e3d);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .rhl {
+            font-size: 11px;
+            font-family: 'DM Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: rgba(212, 175, 55, 0.9);
+            margin-bottom: 4px;
+        }
+        .rhv {
+            font-family: 'DM Serif Display', serif;
+            font-size: 38px;
+            color: #d4af37;
+            letter-spacing: -1px;
+            margin: .25rem 0;
+        }
+        .rhs {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .7);
+            line-height: 1.45;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .rmet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 1rem;
+        }
+        .rmc {
+            background: var(--paper2);
+            border-radius: 4px;
+            padding: 10px 12px;
+        }
+        .rml {
+            font-size: 11px;
+            color: rgba(13, 17, 23, 0.55);
+            margin-bottom: 4px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .rmv {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--ink);
+            font-family: 'DM Sans', sans-serif;
+        }
+        .rms {
+            font-size: 10px;
+            color: rgba(13, 17, 23, 0.45);
+            font-family: 'DM Mono', monospace;
+            margin-top: 2px;
+            line-height: 1.35;
+        }
+        .dtit {
+            font-size: 11px;
+            font-family: 'DM Mono', monospace;
+            letter-spacing: .08em;
+            color: rgba(13, 17, 23, 0.45);
+            text-transform: uppercase;
+            margin-bottom: .5rem;
+            margin-top: .75rem;
+        }
+        table.dt {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        table.dt thead th {
+            text-align: left;
+            font-weight: 600;
+            color: rgba(13, 17, 23, 0.58);
+            font-size: 11px;
+            padding: 5px 8px;
+            border-bottom: 2px solid var(--paper3);
+            font-family: 'DM Mono', monospace;
+        }
+        table.dt tbody tr {
+            border-bottom: 1px solid var(--paper3);
+        }
+        table.dt tbody tr:last-child {
+            border-bottom: none;
+        }
+        table.dt td {
+            padding: 8px;
+            vertical-align: top;
+        }
+        .tdc {
+            font-weight: 700;
+            color: var(--ink);
+            font-size: 13px;
+        }
+        .tdn {
+            font-size: 10px;
+            font-family: 'DM Mono', monospace;
+            color: rgba(13, 17, 23, 0.45);
+            margin-top: 2px;
+            line-height: 1.35;
+        }
+        .tdv {
+            text-align: right;
+            font-weight: 700;
+            font-size: 13px;
+            white-space: nowrap;
+            color: var(--ink);
+        }
+        .tdf {
+            text-align: right;
+            font-weight: 800;
+            font-size: 14px;
+            background: var(--blue2);
+            padding: 10px 8px;
+            border-top: 2px solid var(--paper3);
+            color: var(--ink);
+        }
+        .al {
+            border-radius: 4px;
+            padding: 10px 12px;
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            border-left: 3px solid;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .al.r {
+            background: var(--red2);
+            border-color: var(--red);
+            color: var(--red);
+        }
+        .al.a {
+            background: var(--amb2);
+            border-color: var(--amb);
+            color: var(--amb);
+        }
+        .al.g {
+            background: var(--green2);
+            border-color: var(--green);
+            color: var(--green);
+        }
+        .al.b {
+            background: var(--blue2);
+            border-color: var(--blue);
+            color: var(--ink);
+        }
+        .al.p {
+            background: var(--pur2);
+            border-color: var(--pur);
+            color: var(--pur);
+        }
+        .al strong {
+            font-weight: 800;
+        }
+        .ntags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: .75rem;
+            padding-top: .75rem;
+            border-top: 1px solid var(--paper3);
+        }
+        .nt {
+            font-size: 10px;
+            font-family: 'DM Mono', monospace;
+            padding: 2px 7px;
+            background: var(--paper2);
+            color: var(--ink3);
+            border-radius: 2px;
+        }
+        .nota {
+            font-size: 11px;
+            color: rgba(13, 17, 23, 0.48);
+            line-height: 1.6;
+            margin-top: .75rem;
+            padding-top: .75rem;
+            border-top: 1px solid var(--paper3);
+            font-family: 'DM Sans', sans-serif;
+        }
+        .twrap {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid var(--paper3);
+            border-radius: 6px;
+        }
+        .tmin {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            min-width: 900px;
+            background: #fff;
+        }
+        .tmin th {
+            background: var(--blue);
+            color: #fff;
+            padding: 8px 10px;
+            text-align: center;
+            font-family: 'DM Mono', monospace;
+            font-size: 11px;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+        .tmin td {
+            padding: 8px 10px;
+            border-bottom: 1px solid var(--paper3);
+            border-right: 1px solid var(--paper3);
+            text-align: center;
+            vertical-align: middle;
+        }
+        .tmin td:first-child,
+        .tmin td:nth-child(2) {
+            text-align: left;
+            font-size: 11px;
+        }
+        .tmin tr:nth-child(even) td {
+            background: #FBFAF7;
+        }
+        .tmin tr.level-start td {
+            border-top: 2px solid var(--blue3);
+        }
+        .tmin .lv {
+            font-weight: 800;
+            color: var(--gold);
+            font-family: 'DM Mono', monospace;
+            white-space: nowrap;
+        }
+        .tmin .pct {
+            font-weight: 800;
+            color: var(--ink);
+        }
+        .tmin small {
+            display: block;
+            color: rgba(13, 17, 23, 0.48);
+            font-size: 10px;
+            margin-top: 2px;
+        }
+        .sanc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: .5rem;
+        }
+        .sanc-item {
+            border-radius: 4px;
+            padding: 10px;
+            border: 1px solid;
+        }
+        .sanc-item.red {
+            border-color: var(--red);
+            background: var(--red2);
+        }
+        .sanc-item .si-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+        .sanc-item .si-title {
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 2px;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .sanc-item .si-desc {
+            font-size: 11px;
+            line-height: 1.4;
+            color: var(--ink3);
+            font-family: 'DM Sans', sans-serif;
+        }
+        .sanc-item.red .si-title {
+            color: var(--red);
+        }
+        .tabs-bar {
+            background: #fff;
+            border-bottom: 2px solid var(--paper3);
+            position: sticky;
+            top: 90px;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(13, 17, 23, 0.06);
+        }
+        .tabs-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            overflow-x: auto;
+        }
+        .tab {
+            padding: .875rem 1.25rem;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: var(--ink3);
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+            transition: all .15s;
+            font-family: 'DM Sans', sans-serif;
+            white-space: nowrap;
+        }
+        .tab:hover {
+            color: var(--ink);
+        }
+        .tab.active {
+            color: var(--gold);
+            border-bottom-color: var(--gold);
+        }
+        .tc {
+            display: none;
+        }
+        .tc.active {
+            display: block;
+        }
+        .source-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 1rem;
+        }
+        .source-box .rmc {
+            background: #fff;
+            border: 1px solid var(--paper3);
+        }
+        .info-panel {
+            background: var(--ink2);
+            border-radius: 10px;
+            padding: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .info-panel h4 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 19px;
+            color: var(--gold);
+            margin-bottom: .75rem;
+        }
+        .info-panel p {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .68);
+            line-height: 1.7;
+            margin-bottom: .55rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .info-panel strong {
+            color: rgba(255, 255, 255, .95);
+        }
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 1rem;
+        }
+        .chip {
+            font-size: 10px;
+            font-family: 'DM Mono', monospace;
+            padding: 3px 8px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 2px;
+            color: rgba(255, 255, 255, 0.55);
+        }
+        .chip.gold {
+            border-color: rgba(212, 175, 55, .5);
+            color: #d4af37;
+            background: rgba(212, 175, 55, .1);
+        }
+        .c-footer {
+            max-width: 1120px;
+            margin: 0 auto 2rem;
+            padding: 1.5rem;
+            border-top: 1px solid var(--paper3);
+            font-size: 12px;
+            font-family: 'DM Mono', monospace;
+            color: rgba(13, 17, 23, 0.42);
+            text-align: center;
+            line-height: 1.6;
+        }
+        @media(max-width:760px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .rmet {
+                grid-template-columns: 1fr 1fr;
+            }
+            .sanc-grid {
+                grid-template-columns: 1fr;
+            }
+            .g2 {
+                grid-template-columns: 1fr;
+            }
+            .source-box {
+                grid-template-columns: 1fr;
+            }
+            .main {
+                padding: 1.25rem 1rem;
+            }
+            .tab {
+                padding: .75rem .875rem;
+                font-size: 12px;
+            }
+            .tabs-bar {
+                top: 90px;
+            }
+            table.dt, .tmin {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                width: 100%;
+            }
+        }
+        
+        /* Area Hero Banner */
+        .area-hero {
+            background-color: var(--primary-blue);
+            background-image: linear-gradient(rgba(5, 20, 42, 0.90), rgba(5, 20, 42, 0.90)), url('img_derecho-de-familia_1.webp');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 180px 0 80px 0;
+            text-align: center;
+        }
+        .area-hero h1 {
+            color: var(--white);
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container navbar">
+            <a href="index.html" class="logo-container">
+                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="areas-de-practica.html">Áreas de Práctica</a></li>
+                    <li><a href="herramientas-legales.html">Herramientas Legales</a></li>
+                    <li><a href="index.html#equipo">Socios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div class="lang-switch">
+                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
+                </div>
+                <a href="index.html#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="area-hero">
+        <div class="container">
+            <h1>Calculadora de Pensión de Alimentos</h1>
+            <div class="line" style="width: 70px; height: 3px; background-color: var(--accent-gold); margin: 0 auto 25px auto;"></div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-marble" style="min-height: 80vh; border-top: 3px solid var(--accent-gold); padding-top: 0px; background-color: #f8f5f0;">
+        <div class="tabs-bar">
+            <div class="tabs-inner">
+                <button class="tab active" onclick="showTab('calc',this)">🧮 Calculadora</button>
+                <button class="tab" onclick="showTab('tabla',this)">📊 Tabla 2026</button>
+                <button class="tab" onclick="showTab('sanciones',this)">⚠️ Sanciones por mora</button>
+                <button class="tab" onclick="showTab('normas',this)">📖 Normas aplicables</button>
+            </div>
+        </div>
+        
+        <div class="main">
+            <!-- TAB 1: CALCULADORA -->
+            <div id="tab-calc" class="tc active">
+                <div class="grid">
+                    <div>
+                        <div class="card">
+                            <div class="ct"><div class="sd">1</div><h3>Datos del alimentante (quien paga)</h3><small>Art. 13 Acuerdo 2026</small></div>
+                            <div class="f">
+                                <label>Ingreso mensual del alimentante para el cálculo (USD)</label>
+                                <div class="nr">La tabla ubica el ingreso en SBU. Para ingresos menores a 1 SBU se toma el SBU como mínimo referencial.</div>
+                                <input type="number" id="ingreso" value="1200" min="0" step="0.01">
+                                <span class="hint">Coloca el ingreso mensual real. Si deseas, puedes activar el descuento del aporte personal IESS del 9,45% para relación de dependencia.</span>
+                            </div>
+                            <div class="f">
+                                <label>¿Descontar aporte personal IESS 9,45%?</label>
+                                <select id="iess">
+                                    <option value="no">No — usar el ingreso ingresado como base</option>
+                                    <option value="si">Sí — descontar 9,45% antes de calcular</option>
+                                </select>
+                                <span class="hint">El Acuerdo 2026 indica que para la determinación del ingreso se descuenta el pago al IESS cuando corresponda.</span>
+                            </div>
+                            <div class="f">
+                                <label>Otros hijos/as con derecho a alimentos fuera de este proceso</label>
+                                <select id="otros_hijos">
+                                    <option value="0">No — solo los hijos reclamados aquí</option>
+                                    <option value="1">Sí — 1 hijo/a más</option>
+                                    <option value="2">Sí — 2 hijos/as más</option>
+                                    <option value="3">Sí — 3 hijos/as más</option>
+                                    <option value="4">Sí — 4 o más hijos/as más</option>
+                                </select>
+                                <span class="hint">La tabla considera el total de hijos/as que deben percibir alimentos, incluso si no todos demandan; luego se divide para el total y se asigna la porción de quienes demandaron.</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="ct"><div class="sd">2</div><h3>Datos del beneficiario</h3><small>Edad y total de hijos</small></div>
+                            <div class="f">
+                                <label>Edad aplicable del hijo/a beneficiario/a</label>
+                                <div class="nr">0 a 2 años 11 meses 29 días / 3 años en adelante</div>
+                                <input type="number" id="edad_hijo" value="5" min="0" max="99" step="1">
+                                <span class="hint">Si hay varios hijos/as de diferentes edades, el Acuerdo 2026 dispone aplicar el porcentaje del derechohabiente de mayor edad.</span>
+                            </div>
+                            <div class="f">
+                                <label>Número de hijos/as reclamados en ESTE proceso</label>
+                                <div class="counter">
+                                    <button type="button" class="cnt-btn" onclick="cambiarHijos(-1)">−</button>
+                                    <div class="cnt-val" id="nhijos-val">1</div>
+                                    <button type="button" class="cnt-btn" onclick="cambiarHijos(1)">+</button>
+                                    <span style="font-size:12px;color:var(--ink3); font-weight:700">hijo(s) demandantes</span>
+                                </div>
+                                <span class="hint">El resultado final muestra la porción correspondiente solo a los hijos/as reclamados en este proceso.</span>
+                            </div>
+                            <div class="f">
+                                <label>Discapacidad del hijo/a beneficiario/a</label>
+                                <select id="discapacidad">
+                                    <option value="no">No tiene discapacidad</option>
+                                    <option value="d30">Sí — 30% a 49%</option>
+                                    <option value="d50">Sí — 50% a 74%</option>
+                                    <option value="d75">Sí — 75% a 100%</option>
+                                </select>
+                                <span class="hint">El agregado por discapacidad se calcula sobre 1 SBU y no se multiplica por cada hijo/a: se considera por hogar y se toma el mayor porcentaje de discapacidad.</span>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="ct"><div class="sd">3</div><h3>Beneficios adicionales</h3><small>Art. 16 CNA</small></div>
+                            <div class="f">
+                                <label>¿El alimentante recibe subsidios por carga familiar?</label>
+                                <select id="subsidio">
+                                    <option value="no">No</option>
+                                    <option value="si">Sí — recibe subsidio por carga familiar</option>
+                                </select>
+                                <span class="hint">Los subsidios legales o convencionales por carga familiar que reciba el demandado corresponden al alimentado.</span>
+                            </div>
+                            <div class="f">
+                                <label>Región educativa para pensiones adicionales</label>
+                                <select id="region">
+                                    <option value="sierra">Sierra / Oriente — adicionales en septiembre y diciembre</option>
+                                    <option value="costa">Costa / Galápagos — adicionales en abril y diciembre</option>
+                                </select>
+                                <span class="hint">Son 2 pensiones adicionales al año según la región educativa del domicilio del beneficiario.</span>
+                            </div>
+                            <div class="f">
+                                <label>¿El alimentante recibe utilidades anuales?</label>
+                                <select id="utilidades">
+                                    <option value="no">No / No aplica</option>
+                                    <option value="si">Sí — recibe utilidades</option>
+                                </select>
+                                <span class="hint">El 5% de las utilidades legales corresponde al alimentado, prorrateado si existen varios hijos/as.</span>
+                            </div>
+                        </div>
+
+                        <button class="calcbtn" onclick="calcular()">Calcular pensión alimenticia →</button>
+                    </div>
+
+                    <div id="rp">
+                        <div class="card re">
+                            <div class="reico">👶</div>
+                            <div class="retit">Pensión alimenticia 2026</div>
+                            <div class="resub">Completa los datos y presiona<br><strong>Calcular pensión alimenticia</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: TABLA -->
+            <div id="tab-tabla" class="tc">
+                <div class="card">
+                    <div class="ct"><h3>Tabla de Pensiones Alimenticias 2026</h3><small>Acuerdo MDH-DM-2026-0005-A</small></div>
+                    <p style="font-size:13px;color:var(--ink3);margin-bottom:1rem;line-height:1.6">La tabla oficial 2026 está organizada en <strong>seis niveles</strong> según el ingreso del alimentante expresado en SBU, con dos grupos de edad: <strong>0 a 2 años 11 meses 29 días</strong> y <strong>3 años en adelante</strong>. En discapacidad, el agregado se calcula como porcentaje de 1 SBU.</p>
+                    <div class="twrap">
+                        <table class="tmin" id="tabla-min">
+                            <thead>
+                                <tr>
+                                    <th>Nivel</th>
+                                    <th>Rango ingreso</th>
+                                    <th>Alimentados</th>
+                                    <th>0 a 2 años<br><small style="color:#dbeafe">11 meses 29 días</small></th>
+                                    <th>3 años en adelante</th>
+                                    <th>Disc. 30%-49%</th>
+                                    <th>Disc. 50%-74%</th>
+                                    <th>Disc. 75%-100%</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tmin-body"></tbody>
+                        </table>
+                    </div>
+                    <div class="al b" style="margin-top:1rem"><strong>Actualización aplicada:</strong> SBU 2026 = $482,00. Si el ingreso es menor a 1 SBU, el cálculo usa como mínimo referencial el SBU actualizado. El agregado por discapacidad se aplica una sola vez por hogar.</div>
+                </div>
+            </div>
+
+            <!-- TAB 3: SANCIONES -->
+            <div id="tab-sanciones" class="tc">
+                <div class="card">
+                    <div class="ct"><h3>Consecuencias del incumplimiento</h3><small>Arts. 20 al 26 CNA</small></div>
+                    <p style="font-size:13px;color:var(--ink3);margin-bottom:1rem;line-height:1.6">El incumplimiento de <strong>2 o más pensiones</strong> puede activar sanciones y restricciones procesales:</p>
+                    <div class="sanc-grid">
+                        <div class="sanc-item red"><div class="si-icon">🚫</div><div class="si-title">Prohibición de salida del país</div><div class="si-desc">Puede ser ordenada por el juez al verificar pensiones en mora.</div></div>
+                        <div class="sanc-item red"><div class="si-icon">🏦</div><div class="si-title">Retención o bloqueo de fondos</div><div class="si-desc">Medidas sobre cuentas bancarias y fondos disponibles para asegurar el pago.</div></div>
+                        <div class="sanc-item red"><div class="si-icon">📋</div><div class="si-title">Registro de deudores</div><div class="si-desc">Puede constar en registros judiciales y reportes administrativos correspondientes.</div></div>
+                        <div class="sanc-item red"><div class="si-icon">🔒</div><div class="si-title">Apremio personal</div><div class="si-desc">Medida coercitiva conforme al procedimiento aplicable en materia de alimentos.</div></div>
+                        <div class="sanc-item red"><div class="si-icon">🏠</div><div class="si-title">Prohibición de enajenar bienes</div><div class="si-desc">Puede limitar ventas o gravámenes sobre bienes para garantizar el cumplimiento.</div></div>
+                        <div class="sanc-item red"><div class="si-icon">💰</div><div class="si-title">Interés por mora</div><div class="si-desc">Las pensiones vencidas pueden generar intereses desde el incumplimiento.</div></div>
+                    </div>
+                    <div class="al r" style="margin-top:1rem"><strong>Advertencia:</strong> Este módulo es informativo. Para ejecutar, levantar o impugnar medidas por mora se debe revisar el expediente y la liquidación aprobada.</div>
+                </div>
+            </div>
+
+            <!-- TAB 4: NORMAS -->
+            <div id="tab-normas" class="tc">
+                <div class="card">
+                    <div class="ct"><h3>Normas y reglas usadas en el cálculo</h3><small>Resumen práctico</small></div>
+                    <table class="dt">
+                        <thead>
+                            <tr>
+                                <th>Regla</th>
+                                <th>Aplicación dentro de esta calculadora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><div class="tdc">Seis niveles por SBU</div><div class="tdn">Acuerdo 2026, art. 1</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">El ingreso se convierte a SBU y se ubica en uno de los seis niveles oficiales.</td>
+                            </tr>
+                            <tr>
+                                <td><div class="tdc">Edad del alimentado</div><div class="tdn">Acuerdo 2026, art. 2</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">Se distingue entre 0 a 2 años 11 meses 29 días y 3 años en adelante.</td>
+                            </tr>
+                            <tr>
+                                <td><div class="tdc">Total de hijos/as</div><div class="tdn">Acuerdo 2026, art. 13</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">Se toma el total de hijos/as con derecho a alimentos, aunque no todos hayan demandado; luego se divide para el total y se fija la porción de quienes demandaron.</td>
+                            </tr>
+                            <tr>
+                                <td><div class="tdc">Ingresos menores al SBU</div><div class="tdn">Disposición General Primera</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">Si el ingreso es menor a 1 SBU, se usa como mínimo referencial el SBU actualizado.</td>
+                            </tr>
+                            <tr>
+                                <td><div class="tdc">Descuento IESS</div><div class="tdn">Acuerdo 2026, art. 13</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">La calculadora permite aplicar el descuento del aporte personal IESS del 9,45% antes de ubicar el ingreso.</td>
+                            </tr>
+                            <tr>
+                                <td><div class="tdc">Discapacidad</div><div class="tdn">Acuerdo 2026, arts. 2 y 10</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">El agregado por rehabilitación y ayudas técnicas se calcula como porcentaje de 1 SBU y se aplica por hogar, tomando el mayor porcentaje de discapacidad.</td>
+                            </tr>
+                            <tr>
+                                <td><div class="tdc">Pensiones adicionales</div><div class="tdn">CNA, art. innumerado 16</div></td>
+                                <td style="font-size:12px;color:var(--ink3)">Se muestran dos pensiones adicionales al año según región educativa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="source-box">
+                        <div class="rmc"><div class="rml">Fuente</div><div class="rmv" style="font-size:13px">MDH-DM-2026-0005-A</div><div class="rms">Tabla pensiones 2026</div></div>
+                        <div class="rmc"><div class="rml">SBU usado</div><div class="rmv">$482,00</div><div class="rms">año 2026</div></div>
+                        <div class="rmc"><div class="rml">Tipo de resultado</div><div class="rmv" style="font-size:13px">Referencial</div><div class="rms">lo fija el juez/a</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="c-footer">
+        <strong>Lisboa Legal Group</strong> — Calculadora de Pensión Alimenticia · MDH-DM-2026-0005-A · SBU 2026 = $482,00. Cálculo referencial. La pensión definitiva la fija el juez/a según las pruebas del proceso. Consulta a un profesional del derecho.
+    </div>
+
+    <!-- Calculadora Logística Script -->
+    <script>
+        const SBU = 482;
+        const IESS_RATE = 0.0945;
+        let nHijos = 1;
+
+        function cambiarHijos(d) {
+            nHijos = Math.max(1, Math.min(10, nHijos + d));
+            document.getElementById('nhijos-val').textContent = nHijos;
+        }
+
+        function showTab(id, btn) {
+            document.querySelectorAll('.tc').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById('tab-' + id).classList.add('active');
+            btn.classList.add('active');
+        }
+
+        const fmt = n => parseFloat((Math.round(n * 100) / 100).toFixed(2)).toLocaleString('es-EC', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        const pctFmt = p => (p * 100).toLocaleString('es-EC', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%';
+
+        // TABLA DE PENSIONES ALIMENTICIAS 2026
+        // Acuerdo Nro. MDH-DM-2026-0005-A. SBU 2026 = $482,00.
+        const NIVELES = [
+            {
+                nivel: 1, minSBU: 1.00000, maxSBU: 1.25000, rango: '1.00000 SBU hasta 1.25000 SBU', filas: [
+                    { alimentados: '1 hijo/a', minHijos: 1, maxHijos: 1, p0: 0.2812, p3: 0.2949 },
+                    { alimentados: '2 hijos/as', minHijos: 2, maxHijos: 2, p0: 0.3971, p3: 0.4313 },
+                    { alimentados: '3 o más hijos/as', minHijos: 3, maxHijos: Infinity, p0: 0.5218, p3: 0.5423 }
+                ], disc: { d30: 0.0456, d50: 0.0523, d75: 0.0663 }
+            },
+            {
+                nivel: 2, minSBU: 1.25003, maxSBU: 3.00000, rango: '1.25003 SBU hasta 3.00000 SBU', filas: [
+                    { alimentados: '1 hijo/a', minHijos: 1, maxHijos: 1, p0: 0.3484, p3: 0.3696 },
+                    { alimentados: '2 o más hijos/as', minHijos: 2, maxHijos: Infinity, p0: 0.4745, p3: 0.4951 }
+                ], disc: { d30: 0.1068, d50: 0.1226, d75: 0.1555 }
+            },
+            {
+                nivel: 3, minSBU: 3.00003, maxSBU: 4.00000, rango: '3.00003 SBU hasta 4.00000 SBU', filas: [
+                    { alimentados: '1 o más hijos/as', minHijos: 1, maxHijos: Infinity, p0: 0.3849, p3: 0.4083 }
+                ], disc: { d30: 0.1823, d50: 0.2092, d75: 0.2653 }
+            },
+            {
+                nivel: 4, minSBU: 4.00003, maxSBU: 6.50000, rango: '4.00003 SBU hasta 6.50000 SBU', filas: [
+                    { alimentados: '1 o más hijos/as', minHijos: 1, maxHijos: Infinity, p0: 0.3979, p3: 0.4221 }
+                ], disc: { d30: 0.2554, d50: 0.2930, d75: 0.3716 }
+            },
+            {
+                nivel: 5, minSBU: 6.50003, maxSBU: 9.00000, rango: '6.50003 SBU hasta 9.00000 SBU', filas: [
+                    { alimentados: '1 o más hijos/as', minHijos: 1, maxHijos: Infinity, p0: 0.4114, p3: 0.4364 }
+                ], disc: { d30: 0.3043, d50: 0.3492, d75: 0.4428 }
+            },
+            {
+                nivel: 6, minSBU: 9.00003, maxSBU: Infinity, rango: '9.00003 SBU en adelante', filas: [
+                    { alimentados: '1 o más hijos/as', minHijos: 1, maxHijos: Infinity, p0: 0.4253, p3: 0.4512 }
+                ], disc: { d30: 0.3043, d50: 0.3492, d75: 0.4428 }
+            }
+        ];
+
+        function getNivel(ingresoBase) {
+            const sbu = ingresoBase / SBU;
+            if (sbu <= 1.25) return NIVELES[0];
+            if (sbu <= 3.00) return NIVELES[1];
+            if (sbu <= 4.00) return NIVELES[2];
+            if (sbu <= 6.50) return NIVELES[3];
+            if (sbu <= 9.00) return NIVELES[4];
+            return NIVELES[5];
+        }
+
+        function getFila(nivel, totalHijos) {
+            return nivel.filas.find(f => totalHijos >= f.minHijos && totalHijos <= f.maxHijos) || nivel.filas[nivel.filas.length - 1];
+        }
+
+        function discLabel(k) {
+            return { no: 'Sin discapacidad', d30: '30% a 49%', d50: '50% a 74%', d75: '75% a 100%' }[k] || 'Sin discapacidad';
+        }
+
+        function buildTablaMin() {
+            const tbody = document.getElementById('tmin-body');
+            tbody.innerHTML = '';
+            NIVELES.forEach((n) => {
+                n.filas.forEach((f, idx) => {
+                    const tr = document.createElement('tr');
+                    if (idx === 0) tr.className = 'level-start';
+                    const disc30 = `$${fmt(SBU * n.disc.d30)}<small>${pctFmt(n.disc.d30)} de 1 SBU</small>`;
+                    const disc50 = `$${fmt(SBU * n.disc.d50)}<small>${pctFmt(n.disc.d50)} de 1 SBU</small>`;
+                    const disc75 = `$${fmt(SBU * n.disc.d75)}<small>${pctFmt(n.disc.d75)} de 1 SBU</small>`;
+                    tr.innerHTML = `
+                        <td><span class="lv">Nivel ${n.nivel}</span></td>
+                        <td>${n.rango}<small>$${fmt(n.minSBU * SBU)}${n.maxSBU === Infinity ? ' en adelante' : ' - $' + fmt(n.maxSBU * SBU)}</small></td>
+                        <td>${f.alimentados}</td>
+                        <td><span class="pct">${pctFmt(f.p0)}</span><small>del ingreso</small></td>
+                        <td><span class="pct">${pctFmt(f.p3)}</span><small>del ingreso</small></td>
+                        <td>${disc30}</td><td>${disc50}</td><td>${disc75}</td>`;
+                    tbody.appendChild(tr);
+                });
+            });
+        }
+
+        function calcular() {
+            const ingresoIngresado = parseFloat(document.getElementById('ingreso').value) || 0;
+            const aplicaIess = document.getElementById('iess').value === 'si';
+            const otrosHijos = parseInt(document.getElementById('otros_hijos').value) || 0;
+            const edadHijo = parseInt(document.getElementById('edad_hijo').value) || 0;
+            const discapacidad = document.getElementById('discapacidad').value;
+            const subsidio = document.getElementById('subsidio').value;
+            const region = document.getElementById('region').value;
+            const utilidades = document.getElementById('utilidades').value;
+            const rp = document.getElementById('rp');
+
+            if (ingresoIngresado < 0 || edadHijo < 0) {
+                rp.innerHTML = '<div class="card"><div class="al r"><strong>Error:</strong> Los ingresos y la edad no pueden ser negativos.</div></div>';
+                return;
+            }
+
+            const descuentoIess = aplicaIess ? ingresoIngresado * IESS_RATE : 0;
+            const ingresoNeto = Math.max(0, ingresoIngresado - descuentoIess);
+            const ingresoBase = Math.max(ingresoNeto, SBU);
+            const usaMinimoSBU = ingresoNeto < SBU;
+            const nivel = getNivel(ingresoBase);
+            const totalHijosOblig = nHijos + otrosHijos;
+            const fila = getFila(nivel, totalHijosOblig);
+            const ageKey = edadHijo < 3 ? 'p0' : 'p3';
+            const edadTxt = edadHijo < 3 ? '0 a 2 años 11 meses 29 días' : '3 años en adelante';
+            const pctBase = fila[ageKey];
+
+            const montoTotalHogarBase = ingresoBase * pctBase;
+            const valorBasePorHijo = montoTotalHogarBase / totalHijosOblig;
+            const pensionBaseDemandada = valorBasePorHijo * nHijos;
+            const agregadoDisc = discapacidad === 'no' ? 0 : SBU * nivel.disc[discapacidad];
+            const pensionMensual = pensionBaseDemandada + agregadoDisc;
+
+            const mesesAdicionales = region === 'costa' ? 'abril y diciembre' : 'septiembre y diciembre';
+            const pensionAdicional = pensionMensual;
+            const pensionAnual = pensionMensual * 12 + pensionAdicional * 2;
+
+            const als = [];
+            if (aplicaIess) {
+                als.push({ t: 'b', tx: `<strong>Descuento IESS aplicado:</strong> Se descontó el 9,45% del ingreso ingresado ($${fmt(descuentoIess)}). Base usada: $${fmt(ingresoNeto)}.` });
+            }
+            if (usaMinimoSBU) {
+                als.push({ t: 'a', tx: `<strong>Ingreso menor a 1 SBU:</strong> Para ubicar el nivel de la tabla se tomó como mínimo referencial el SBU actualizado de $${fmt(SBU)}.` });
+            }
+            if (edadHijo >= 18 && edadHijo < 21) {
+                als.push({ t: 'b', tx: '<strong>Mayor de 18 años:</strong> El derecho puede continuar hasta los 21 años si estudia y carece de ingresos propios suficientes. Debe probarse en el proceso.' });
+            }
+            if (edadHijo >= 21 && discapacidad === 'no') {
+                als.push({ t: 'r', tx: '<strong>21 años o más:</strong> En principio el derecho a alimentos por niñez/adolescencia termina, salvo discapacidad u otra regla aplicable que deba revisarse jurídicamente.' });
+            }
+            if (discapacidad !== 'no') {
+                als.push({ t: 'p', tx: `<strong>Agregado por discapacidad:</strong> Se sumó $${fmt(agregadoDisc)} por ${discLabel(discapacidad)}. Este valor se calcula sobre 1 SBU y se aplica por hogar, no por cada hijo/a.` });
+            }
+            if (totalHijosOblig > nHijos) {
+                als.push({ t: 'g', tx: `<strong>Prorrateo:</strong> El cálculo consideró ${totalHijosOblig} hijo(s) con derecho a alimentos y asignó al proceso la porción correspondiente a ${nHijos} hijo(s) demandante(s).` });
+            }
+
+            const auxRows = [];
+            if (subsidio === 'si') auxRows.push(`<tr><td><div class="tdc">Subsidio por carga familiar</div><div class="tdn">Beneficio adicional</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">Según contrato/ley</td><td class="tdv">A determinar</td></tr>`);
+            if (utilidades === 'si') auxRows.push(`<tr><td><div class="tdc">5% de utilidades anuales</div><div class="tdn">Prorrateado si hay varios hijos/as</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">5% legal</td><td class="tdv">A determinar</td></tr>`);
+
+            rp.innerHTML = `<div class="card">
+                <div class="r-header">
+                    <div class="rhl">Pensión alimenticia mensual estimada</div>
+                    <div class="rhv">$${fmt(pensionMensual)}</div>
+                    <div class="rhs">por ${nHijos} hijo(s) demandante(s) · Nivel ${nivel.nivel} · ${pctFmt(pctBase)} del ingreso base</div>
+                </div>
+                <div class="rmet">
+                    <div class="rmc"><div class="rml">Pensión mensual</div><div class="rmv" style="color:var(--gold)">$${fmt(pensionMensual)}</div><div class="rms">base + agregado si aplica</div></div>
+                    <div class="rmc"><div class="rml">Ingreso base usado</div><div class="rmv">$${fmt(ingresoBase)}</div><div class="rms">${(ingresoBase / SBU).toFixed(5)} SBU</div></div>
+                    <div class="rmc"><div class="rml">Nivel oficial</div><div class="rmv">Nivel ${nivel.nivel}</div><div class="rms">${nivel.rango}</div></div>
+                    <div class="rmc"><div class="rml">Total anual estimado</div><div class="rmv">$${fmt(pensionAnual)}</div><div class="rms">12 meses + 2 adicionales</div></div>
+                </div>
+                ${als.map(a => `<div class="al ${a.t}"><small>${a.tx}</small></div>`).join('')}
+                <div class="dtit">Desglose del cálculo</div>
+                <table class="dt">
+                    <thead><tr><th>Concepto</th><th>Base</th><th>Valor</th></tr></thead>
+                    <tbody>
+                        <tr><td><div class="tdc">Ingreso ingresado</div><div class="tdn">Monto mensual reportado</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">Usuario</td><td class="tdv">$${fmt(ingresoIngresado)}</td></tr>
+                        ${aplicaIess ? `<tr><td><div class="tdc">Descuento IESS 9,45%</div><div class="tdn">Aplicado antes de ubicar nivel</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">9,45%</td><td class="tdv">− $${fmt(descuentoIess)}</td></tr>` : ''}
+                        <tr><td><div class="tdc">Ingreso base para tabla</div><div class="tdn">Máx(ingreso neto, SBU)</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">$${fmt(SBU)} SBU</td><td class="tdv">$${fmt(ingresoBase)}</td></tr>
+                        <tr><td><div class="tdc">Nivel y fila aplicada</div><div class="tdn">${nivel.rango} · ${fila.alimentados}</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">${edadTxt}</td><td class="tdv">${pctFmt(pctBase)}</td></tr>
+                        <tr><td><div class="tdc">Monto total del hogar</div><div class="tdn">Ingreso base × porcentaje</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">$${fmt(ingresoBase)} × ${pctFmt(pctBase)}</td><td class="tdv">$${fmt(montoTotalHogarBase)}</td></tr>
+                        <tr><td><div class="tdc">Valor base por hijo/a</div><div class="tdn">Monto total ÷ ${totalHijosOblig} hijo(s)</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">Prorrateo</td><td class="tdv">$${fmt(valorBasePorHijo)}</td></tr>
+                        <tr><td><div class="tdc">Porción de este proceso</div><div class="tdn">${nHijos} hijo(s) demandante(s)</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">$${fmt(valorBasePorHijo)} × ${nHijos}</td><td class="tdv">$${fmt(pensionBaseDemandada)}</td></tr>
+                        ${discapacidad !== 'no' ? `<tr><td><div class="tdc">Agregado por discapacidad</div><div class="tdn">${discLabel(discapacidad)} · por hogar</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">${pctFmt(nivel.disc[discapacidad])} de 1 SBU</td><td class="tdv">$${fmt(agregadoDisc)}</td></tr>` : ''}
+                        <tr><td><div class="tdc">Pensión adicional (${mesesAdicionales})</div><div class="tdn">2 pensiones adicionales al año</div></td><td style="font-size:11px;color:rgba(13,17,23,.45)">= pensión mensual</td><td class="tdv">$${fmt(pensionAdicional)} × 2</td></tr>
+                        ${auxRows.join('')}
+                        <tr style="background:var(--blue2)"><td colspan="2" style="font-weight:800;font-size:14px;padding:10px 8px;border-top:2px solid var(--paper3)"><strong>TOTAL ANUAL ESTIMADO</strong></td><td class="tdf">$${fmt(pensionAnual)}</td></tr>
+                    </tbody>
+                </table>
+                <div class="al b" style="margin-top:.75rem"><strong>Resultado referencial:</strong> La pensión definitiva la fija el juez/a según las pruebas del proceso. La tabla establece mínimos; las partes o el juez no deberían fijar valores inferiores a la tabla aplicable.</div>
+                <div class="ntags">
+                    <span class="nt">MDH-DM-2026-0005-A</span><span class="nt">SBU 2026 = $482</span>
+                    <span class="nt">Nivel ${nivel.nivel}</span><span class="nt">${edadTxt}</span>
+                    <span class="nt">${discLabel(discapacidad)}</span>
+                </div>
+                <div class="nota">⚠ Usa este cálculo como guía. Para un proceso real revisa ingresos probados, IESS, otros hijos/as, discapacidad certificada, región educativa, utilidades, subsidios y liquidaciones SUPA.</div>
+            </div>`;
+        }
+
+        buildTablaMin();
+    </script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+            const menuIcon = mobileMenu ? mobileMenu.querySelector('i') : null;
+
+            if (mobileMenu && navLinks && menuIcon) {
+                mobileMenu.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevenir burbujeo
+                    navLinks.classList.toggle('active');
+                    
+                    // Toggle icono Hamburguesa/Cruz
+                    if (navLinks.classList.contains('active')) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-times');
+                    } else {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+
+                // Cerrar menú al hacer clic en un enlace
+                const links = navLinks.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    });
+                });
+                
+                // Cerrar menú al hacer click fuera
+                document.addEventListener('click', function(event) {
+                    const isClickInsideMenu = navLinks.contains(event.target);
+                    const isClickOnToggle = mobileMenu.contains(event.target);
+                    
+                    if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
+            
+            // Script para header scrolleado si no existe
+            const header = document.querySelector('header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
