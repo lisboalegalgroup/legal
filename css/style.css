@@ -1685,6 +1685,45 @@
 .profile-tab-content-text p {
     margin-bottom: 20px;
 }
+.profile-tab-content-text h3 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--primary-blue);
+    position: relative;
+    padding-bottom: 8px;
+}
+.profile-tab-content-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--accent-gold);
+}
+.profile-tab-content-text ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 20px 0 25px 0;
+}
+.profile-tab-content-text li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+.profile-tab-content-text li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: -2px;
+    color: var(--accent-gold);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
