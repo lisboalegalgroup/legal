@@ -167,6 +167,10 @@
             transform: scale(1.05);
         }
 
+        .menu-toggle {
+            display: none;
+        }
+
         .nav-links {
             display: flex;
             gap: 25px;
@@ -736,7 +740,7 @@
 
         .modal {
             display: none;
-            position: absolute;
+            position: fixed;
             z-index: 2001;
             left: 0;
             top: 0;

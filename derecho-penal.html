@@ -288,7 +288,31 @@
             }
         });
     </script>
-    <div class="whatsapp-wrapper">
+        <div id="legalModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('legalModal')">&times;
+            </span>
+            <h3 style="margin-bottom: 15px;">Aviso Legal</h3>
+            <p>InformaciÃ³n pertinente a los tÃ©rminos y condiciones del ejercicio profesional en la jurisdicciÃ³n correspondiente.</p>
+        </div>
+    </div>
+    <script> // Funciones de modales
+
+        function openModal(id) {
+            document.getElementById(id).style.display = "block";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none";
+        }
+
+        window.onclick = function (e) {
+            if (e.target.className === 'modal') {
+                e.target.style.display = "none";
+            }
+        }
+    </script>
+<div class="whatsapp-wrapper">
         <div class="whatsapp-label">¿Necesitas ayuda?<span>Escríbenos</span></div>
         <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp">
             <i class="fab fa-whatsapp"></i>
@@ -298,4 +322,5 @@
 </body>
 
 </html>
+
 
