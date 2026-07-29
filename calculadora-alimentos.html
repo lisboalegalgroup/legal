@@ -79,9 +79,12 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+            grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
             gap: 1.4rem;
             align-items: start;
+        }
+        .grid > div {
+            min-width: 0;
         }
         .card {
             background: #fff;
@@ -162,7 +165,7 @@
             border-radius: 5px;
             background: #fff;
             font-family: 'DM Sans', sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             color: var(--ink);
             width: 100%;
             transition: border-color .15s;
@@ -336,6 +339,11 @@
             border-collapse: collapse;
             font-size: 12px;
             font-family: 'DM Sans', sans-serif;
+            table-layout: fixed;
+        }
+        table.dt th, table.dt td {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         table.dt thead th {
             text-align: left;
@@ -642,7 +650,8 @@
             text-align: center;
             line-height: 1.6;
         }
-        @media(max-width:760px) {
+        
+        @media(max-width:900px) {
             .grid {
                 grid-template-columns: 1fr;
             }
@@ -666,14 +675,81 @@
                 font-size: 12px;
             }
             .tabs-bar {
-                top: 90px;
+                top: 70px;
             }
-            table.dt, .tmin {
+            .tmin {
                 display: block;
                 overflow-x: auto;
                 white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
                 width: 100%;
+            }
+        }
+        
+        @media(max-width:600px) {
+            .main {
+                padding: 1rem 0.5rem;
+            }
+            .card {
+                padding: 0.9rem;
+            }
+            .r-header {
+                padding: 1rem 0.75rem;
+            }
+            .rhv {
+                font-size: 30px;
+            }
+            .rhs {
+                font-size: 11px;
+                word-break: break-word;
+            }
+            .rmc {
+                padding: 8px 6px;
+                min-width: 0;
+            }
+            .rmv {
+                font-size: 15px;
+                word-break: break-word;
+            }
+            .rml {
+                font-size: 10px;
+            }
+            .rms {
+                font-size: 9px;
+                line-height: 1.25;
+            }
+            table.dt th:nth-child(1), table.dt td:nth-child(1) {
+                width: 46%;
+            }
+            table.dt th:nth-child(2), table.dt td:nth-child(2) {
+                width: 27%;
+            }
+            table.dt th:nth-child(3), table.dt td:nth-child(3) {
+                width: 27%;
+            }
+            table.dt td {
+                padding: 6px 4px;
+            }
+            .tdc {
+                font-size: 11px;
+                line-height: 1.25;
+            }
+            .tdn {
+                font-size: 9px;
+                line-height: 1.2;
+            }
+            .tdv {
+                font-size: 11px;
+            }
+            .tdf {
+                font-size: 12px;
+                padding: 8px 4px;
+            }
+            .area-hero {
+                padding: 110px 1rem 30px 1rem;
+            }
+            .area-hero h1 {
+                font-size: 1.8rem;
             }
         }
         

@@ -1106,11 +1106,22 @@
                 font-size: 24px;
             }
             
-            table.dt, table.escala-table, .escala-table, .dt {
+            table.escala-table, .escala-table {
                 display: block;
                 overflow-x: auto;
                 white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
+            }
+
+            table.dt {
+                width: 100%;
+                display: table;
+                table-layout: fixed;
+                white-space: normal;
+            }
+            table.dt th, table.dt td {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
             }
         }
     
