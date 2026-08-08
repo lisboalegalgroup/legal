@@ -23,12 +23,63 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "url": "https://lisboalegalgroup.github.io/"
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html/#webapp",
+          "url": "https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html",
+          "name": "Calculadora de Pensión de Alimentos Ecuador 2026",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "Calculadora legal gratuita para determinar la pensión alimenticia referencial en Ecuador conforme a la tabla oficial del MIES y el Salario Básico Unificado 2026.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "publisher": {
+            "@type": "LegalService",
+            "name": "Lisboa Legal Group",
+            "url": "https://lisboalegalgroup.github.io/legal/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo se calcula la pensión de alimentos en Ecuador en 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La pensión alimenticia en Ecuador se calcula tomando como base los ingresos netos del alimentante, el Salario Básico Unificado vigente ($482 en 2026), el número de hijos y sus edades (menores o mayores de 3 años), aplicando la Tabla Oficial de Pensiones Alimenticias emitida por el Ministerio correspondiente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Hasta qué edad es obligatoria la pensión alimenticia en Ecuador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es obligatoria hasta los 18 años de edad. Sin embargo, se extiende hasta los 21 años si el hijo o hija demuestra estar cursando estudios superiores o universitarios de manera continua y no cuenta con recursos propios suficientes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Cuáles son las pensiones adicionales que se deben pagar al año?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Además de las 12 pensiones mensuales, la ley ecuatoriana exige el pago de dos pensiones adicionales al año: la décimo tercera pensión (en diciembre) y la décimo cuarta pensión (al inicio del año lectivo escolar según la región Costa o Sierra)."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 

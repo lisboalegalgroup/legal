@@ -22,12 +22,55 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "url": "https://lisboalegalgroup.github.io/"
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://lisboalegalgroup.github.io/legal/herramientas-legales.html/#webpage",
+          "url": "https://lisboalegalgroup.github.io/legal/herramientas-legales.html",
+          "name": "Herramientas Legales y Calculadoras Interactivas Ecuador",
+          "description": "Plataforma de herramientas jurídicas gratuitas de Lisboa Legal Group: calculadoras de pensión de alimentos, liquidaciones laborales, jubilación patronal y plazos procesales.",
+          "publisher": {
+            "@type": "LegalService",
+            "name": "Lisboa Legal Group",
+            "url": "https://lisboalegalgroup.github.io/legal/"
+          }
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://lisboalegalgroup.github.io/legal/herramientas-legales.html/#itemlist",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Calculadora de Pensión de Alimentos 2026",
+              "url": "https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Calculadora de Liquidación Laboral",
+              "url": "https://lisboalegalgroup.github.io/legal/calculadora-laboral.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Calculadora de Jubilación Patronal e IESS",
+              "url": "https://lisboalegalgroup.github.io/legal/calculadora-jubilacion.html"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Calculadora de Plazos y Términos Procesales (COGEP)",
+              "url": "https://lisboalegalgroup.github.io/legal/calculadora-plazos.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
     <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">

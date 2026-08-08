@@ -22,12 +22,52 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "url": "https://lisboalegalgroup.github.io/"
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://lisboalegalgroup.github.io/legal/derecho-penal.html/#service",
+          "url": "https://lisboalegalgroup.github.io/legal/derecho-penal.html",
+          "name": "Defensa Penal y Asesoría Legal Penal en Guayaquil, Ecuador",
+          "serviceType": "Derecho Penal",
+          "description": "Defensa legal especializada en delitos contra las personas, la propiedad, la administración pública, delitos económicos y representación en audiencias penales (COIP).",
+          "provider": {
+            "@type": "LegalService",
+            "name": "Lisboa Legal Group",
+            "url": "https://lisboalegalgroup.github.io/legal/"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ecuador"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lisboalegalgroup.github.io/legal/derecho-penal.html/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué hacer inmediatamente en caso de una detención o flagrancia en Ecuador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La persona detenida debe ejercer de inmediato su derecho a guardar silencio y exigir la presencia de un abogado especialista en derecho penal antes de dar cualquier declaración ante la Policía o la Fiscalía."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es la audiencia de formulación de cargos según el COIP?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es la audiencia judicial donde la Fiscalía presenta los elementos de convicción iniciales, inicia formalmente la instrucción fiscal y el juez determina si se aplican medidas cautelares reales o personales."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">

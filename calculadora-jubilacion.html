@@ -22,12 +22,55 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "url": "https://lisboalegalgroup.github.io/"
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://lisboalegalgroup.github.io/legal/calculadora-jubilacion.html/#webapp",
+          "url": "https://lisboalegalgroup.github.io/legal/calculadora-jubilacion.html",
+          "name": "Calculadora de Jubilación Patronal e IESS Ecuador",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "Calculadora referencial gratuita para la estimación de pensión por jubilación patronal y del IESS conforme a la legislación laboral ecuatoriana.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "publisher": {
+            "@type": "LegalService",
+            "name": "Lisboa Legal Group",
+            "url": "https://lisboalegalgroup.github.io/legal/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lisboalegalgroup.github.io/legal/calculadora-jubilacion.html/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Quiénes tienen derecho a la Jubilación Patronal en Ecuador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Conforme al Art. 216 del Código del Trabajo, tienen derecho los trabajadores con 25 años o más de servicio continuo o interrumpido para el mismo empleador, o proporcional si fueron despedidos entre los 20 y 25 años."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Es compatible la jubilación patronal con la pensión del IESS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sí, la jubilación patronal es un derecho laboral independiente fijado en el Código del Trabajo y es acumulable con la pensión de vejez otorgada por el IESS."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
 

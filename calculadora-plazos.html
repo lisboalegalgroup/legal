@@ -13,6 +13,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Calculadora interactiva gratuita para determinar plazos y términos procesales en Ecuador. Materias civil, penal, laboral, familia y más.">
     <title>Calculadora de Plazos Procesales | Lisboa Legal Group</title>
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://lisboalegalgroup.github.io/legal/calculadora-plazos.html/#webapp",
+          "url": "https://lisboalegalgroup.github.io/legal/calculadora-plazos.html",
+          "name": "Calculadora de Plazos Procesales Ecuador (COGEP / COIP)",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "All",
+          "browserRequirements": "Requires JavaScript. Requires HTML5.",
+          "description": "Calculadora legal en línea para determinar términos y plazos en días hábiles o calendario conforme al COGEP y legislación ecuatoriana.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "publisher": {
+            "@type": "LegalService",
+            "name": "Lisboa Legal Group",
+            "url": "https://lisboalegalgroup.github.io/legal/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lisboalegalgroup.github.io/legal/calculadora-plazos.html/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cómo se computan los términos procesales en Ecuador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Conforme al COGEP, los términos se cuentan únicamente en días hábiles (excluyendo sábados, domingos y feriados oficiales), a partir del día hábil siguiente a la notificación."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué ocurre si el término vence en día inhábil?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si el último día de un término o plazo legal es inhábil o feriado, el vencimiento se traslada automáticamente al primer día hábil siguiente."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 

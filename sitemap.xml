@@ -2,82 +2,112 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/index.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
+    <loc>https://lisboalegalgroup.github.io/legal/herramientas-legales.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/calculadora-alimentos.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/calculadora-laboral.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/calculadora-jubilacion.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/calculadora-plazos.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://lisboalegalgroup.github.io/legal/areas-de-practica.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/derecho-administrativo.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/derecho-civil.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/compliance.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/derecho-constitucional.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/consultoria-tributaria.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/daniel-espinoza.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/derecho-de-familia.html</loc>
-    <lastmod>2026-03-04</lastmod>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://lisboalegalgroup.github.io/legal/karol-carvajal.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/derecho-laboral.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/derecho-penal.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/derecho-civil.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/derecho-administrativo.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/derecho-constitucional.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/derecho-procesal.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/derecho-societario.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/consultoria-tributaria.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/herencias-y-sucesiones.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/compliance.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/daniel-espinoza.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/karol-carvajal.html</loc>
+    <lastmod>2026-08-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://lisboalegalgroup.github.io/legal/gustavo-san-andres.html</loc>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://lisboalegalgroup.github.io/legal/privacidad.html</loc>
-    <lastmod>2026-03-04</lastmod>
+    <lastmod>2026-08-08</lastmod>
     <priority>0.50</priority>
   </url>
 </urlset>

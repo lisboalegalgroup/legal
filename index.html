@@ -16,33 +16,87 @@
         content="Estudio Jurídico en Guayaquil con experiencia en derecho penal, civil, corporativo y más. Lisboa Legal Group, excelencia y compromiso con su caso.">
     <title>Lisboa Legal Group | Abogados en Guayaquil, Ecuador</title>
     
-    <!-- Site Name for Google Search -->
+    <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "alternateName": "Lisboa Legal",
-      "url": "https://lisboalegalgroup.github.io/legal/",
-      "logo": "https://lisboalegalgroup.github.io/legal/logo-full.png"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://lisboalegalgroup.github.io/legal/#website",
+          "url": "https://lisboalegalgroup.github.io/legal/",
+          "name": "Lisboa Legal Group",
+          "alternateName": "Lisboa Legal",
+          "publisher": {
+            "@id": "https://lisboalegalgroup.github.io/legal/#organization"
+          },
+          "inLanguage": "es"
+        },
+        {
+          "@type": ["LegalService", "Attorney"],
+          "@id": "https://lisboalegalgroup.github.io/legal/#organization",
+          "name": "Lisboa Legal Group",
+          "alternateName": "Estudio Jurídico Lisboa Legal Group",
+          "url": "https://lisboalegalgroup.github.io/legal/",
+          "logo": "https://lisboalegalgroup.github.io/legal/logo-full.png",
+          "image": "https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp",
+          "description": "Estudio Jurídico en Guayaquil, Ecuador especializado en derecho penal, laboral, civil, de familia, corporativo, consultoría tributaria y asesoría legal estratégica.",
+          "telephone": "+593990967952",
+          "email": "lisboalegalgroup@gmail.com",
+          "priceRange": "$$",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Guayaquil",
+            "addressRegion": "Guayas",
+            "addressCountry": "EC"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Guayaquil"
+            },
+            {
+              "@type": "Country",
+              "name": "Ecuador"
+            }
+          ],
+          "knowsAbout": [
+            "Derecho Penal",
+            "Derecho Laboral",
+            "Derecho de Familia",
+            "Derecho Civil",
+            "Derecho Societario",
+            "Consultoría Tributaria",
+            "Compliance Legal"
+          ],
+          "employee": [
+            {
+              "@type": "Person",
+              "name": "Abg. Daniel Espinoza",
+              "jobTitle": "Socio fundador / Abogado",
+              "url": "https://lisboalegalgroup.github.io/legal/daniel-espinoza.html"
+            },
+            {
+              "@type": "Person",
+              "name": "Abg. Karol Carvajal",
+              "jobTitle": "Socia / Abogada",
+              "url": "https://lisboalegalgroup.github.io/legal/karol-carvajal.html"
+            },
+            {
+              "@type": "Person",
+              "name": "Abg. Gustavo San Andrés",
+              "jobTitle": "Socio / Abogado",
+              "url": "https://lisboalegalgroup.github.io/legal/gustavo-san-andres.html"
+            }
+          ]
+        }
+      ]
     }
     </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "url": "https://lisboalegalgroup.github.io/"
-    }
-    </script>
     <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

@@ -21,12 +21,52 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
+    
+    <!-- Schema.org JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Lisboa Legal Group",
-      "url": "https://lisboalegalgroup.github.io/"
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": "https://lisboalegalgroup.github.io/legal/derecho-laboral.html/#service",
+          "url": "https://lisboalegalgroup.github.io/legal/derecho-laboral.html",
+          "name": "Abogados Laborales y Asesoría Laboral en Guayaquil, Ecuador",
+          "serviceType": "Derecho Laboral",
+          "description": "Defensa en despidos intempestivos, vistos buenos, demandas laborales, actas de finiquito y patrocinio tanto para trabajadores como para empleadores.",
+          "provider": {
+            "@type": "LegalService",
+            "name": "Lisboa Legal Group",
+            "url": "https://lisboalegalgroup.github.io/legal/"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Ecuador"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://lisboalegalgroup.github.io/legal/derecho-laboral.html/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Qué hacer en caso de sufrir un despido intempestivo?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Se debe acudir ante el Ministerio del Trabajo para sentar la denuncia o iniciar una demanda laboral ante los juzgados de trabajo con patrocinio de un abogado especialista para exigir el pago completo de indemnizaciones y liquidación."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "¿Qué es el visto bueno laboral y cómo se tramita en Ecuador?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Es la solicitud administrativa presentada ante la Inspección del Trabajo por las causas previstas en los artículos 172 y 173 del Código del Trabajo para dar por concluido un contrato laboral con justificación legal."
+              }
+            }
+          ]
+        }
+      ]
     }
     </script>
     <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
