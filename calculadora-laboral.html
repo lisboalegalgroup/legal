@@ -21,9 +21,9 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
-    
+
     <!-- Schema.org JSON-LD Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -90,22 +90,26 @@
     <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/calculadora-laboral.html">
     <meta property="og:type" content="website">
 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculadora Laboral | Lisboa Legal Group">
+    <meta name="twitter:description" content="Calculadora de liquidación laboral gratuita y en línea para Ecuador. Calcule fácilmente beneficios e indemnizaciones.">
+    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
     <header>
         <div class="container navbar">
             <!-- Logo principal fuertemente destacado -->
-            <a href="index.html" class="logo-container">
-                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img">
+            <a href="./" class="logo-container">
+                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img" width="192" height="192" decoding="async">
             </a>
-            <div class="menu-toggle" id="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Abrir menú principal" aria-expanded="false" aria-controls="primary-navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
                 <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="primary-navigation">
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <a href="./">Inicio</a>
                     </li>
                     <li>
                         <a href="areas-de-practica.html">Áreas de Práctica</a>
@@ -114,21 +118,21 @@
                         <a href="herramientas-legales.html">Herramientas Legales</a>
                     </li>
                     <li>
-                        <a href="index.html#equipo">Socios</a>
+                        <a href="./#equipo">Socios</a>
                     </li>
                     <li>
-                        <a href="index.html#contacto">Contacto</a>
+                        <a href="./#contacto">Contacto</a>
                     </li>
                 </ul>
             </nav>
             <div style="display: flex; align-items: center; gap: 20px;">
-                <div class="lang-switch">
-                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
-                </div>
-                <a href="index.html#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
+                <div class="lang-switch" aria-label="Idioma del sitio"><span lang="es" aria-current="true">ES</span></div>
+                <a href="./#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
             </div>
         </div>
     </header>
+
+    <main id="main-content">
 
     <style>
         /* Force dark header since there is no hero image anymore */
@@ -604,7 +608,7 @@
             <h1>Calculadora de Liquidación Laboral</h1>
             <div class="line" style="width: 70px; height: 3px; background-color: var(--accent-gold); margin: 0 auto 25px auto;"></div>
             <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.15rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-                Fórmulas verificadas en el Código del Trabajo y Res. 02-2025 CNJ. Selecciona los datos de la relación laboral para calcular la liquidación.
+                Estimación basada en el Código del Trabajo y la Res. 02-2025 CNJ. Ingrese los datos y verifique el resultado con un profesional antes de usarlo.
             </p>
         </div>
     </section>
@@ -616,7 +620,7 @@
                 <div class="card">
                     <div class="ct"><div class="sd">1</div><h3>¿Dónde trabajabas?</h3><small>Art. 113 CT</small></div>
                     <div class="f">
-                        <select id="region">
+                        <select id="region" name="region" aria-label="Region">
                             <option value="costa">Costa y Galápagos (14.° hasta 28 feb)</option>
                             <option value="sierra">Sierra y Oriente (14.° hasta 31 ago)</option>
                         </select>
@@ -627,7 +631,7 @@
                 <div class="card">
                     <div class="ct"><div class="sd">2</div><h3>¿Cómo terminó la relación laboral?</h3></div>
                     <div class="f">
-                        <select id="modalidad" onchange="onMod()">
+                        <select id="modalidad" onchange="onMod()" name="modalidad" aria-label="Modalidad">
                             <option value="despido">Despido intempestivo — Art. 188 CT</option>
                             <option value="desahucio_emp">Desahucio (empleador notificó) — Art. 185 CT</option>
                             <option value="desahucio_trab">Desahucio (trabajador notificó) — Art. 185 CT</option>
@@ -646,8 +650,8 @@
                 <div class="card">
                     <div class="ct"><div class="sd">3</div><h3>Período trabajado</h3><small>Base de la escala</small></div>
                     <div class="g2col">
-                        <div class="f"><label>Fecha de ingreso</label><input type="date" id="fi" value="2021-03-01" onchange="updT()"></div>
-                        <div class="f"><label>Fecha de salida</label><input type="date" id="fs" value="2026-05-09" onchange="updT()"></div>
+                        <div class="f"><label for="fi">Fecha de ingreso</label><input type="date" id="fi" value="2021-03-01" onchange="updT()" name="fi"></div>
+                        <div class="f"><label for="fs">Fecha de salida</label><input type="date" id="fs" value="2026-05-09" onchange="updT()" name="fs"></div>
                     </div>
                     <div id="tdisplay"></div>
                 </div>
@@ -657,13 +661,13 @@
                     <div class="f">
                         <label>Última mejor remuneración mensual total (USD)</label>
                         <div class="nr">Res. 02-2025 CNJ: sueldo base + beneficios regulares permanentes</div>
-                        <input type="number" id="rem" value="482" min="482" step="0.01">
+                        <input type="number" id="rem" value="482" min="482" step="0.01" name="rem" aria-label="Remuneración mensual">
                         <span class="hint">Incluye horas extras habituales, comisiones fijas y otros ingresos permanentes. SBU 2026 mínimo = $482,00</span>
                     </div>
                     <div class="f">
                         <label>Días de sueldo pendientes de pago</label>
                         <div class="nr">Art. 80 CT</div>
-                        <input type="number" id="dpend" value="0" min="0" max="31" step="1">
+                        <input type="number" id="dpend" value="0" min="0" max="31" step="1" name="dpend" aria-label="Dpend">
                         <span class="hint">Días del último mes trabajados pero aún no pagados</span>
                     </div>
                 </div>
@@ -682,19 +686,19 @@
                     <div class="f">
                         <label>Vacaciones acumuladas no gozadas (días)</label>
                         <div class="nr">Art. 76 CT — acumulación máx. 60 días</div>
-                        <input type="number" id="vacac" value="0" min="0" step="1">
+                        <input type="number" id="vacac" value="0" min="0" step="1" name="vacac" aria-label="Vacac">
                         <span class="hint">Días de vacaciones de años anteriores que nunca se tomaron (adicionales a la proporción del año en curso)</span>
                     </div>
                     <div class="f">
                         <label>Horas extras / suplementarias pendientes (USD)</label>
                         <div class="nr">Arts. 55-56 CT — 50% ordinarias · 100% nocturnas/festivos</div>
-                        <input type="number" id="hex" value="0" min="0" step="0.01">
+                        <input type="number" id="hex" value="0" min="0" step="0.01" name="hex" aria-label="Hex">
                         <span class="hint">Valor total de horas extras ya trabajadas pero no cobradas</span>
                     </div>
                     <div class="f">
                         <label>Fondos de reserva no depositados (meses)</label>
                         <div class="nr">Art. 196 CT — 8.33% mensual · Solo desde el 2.° año</div>
-                        <input type="number" id="frm" value="0" min="0" step="1">
+                        <input type="number" id="frm" value="0" min="0" step="1" name="frm" aria-label="Frm">
                         <span class="hint">Solo si el empleador NO depositó en el IESS. Requiere más de 1 año de trabajo.</span>
                     </div>
                 </div>
@@ -703,15 +707,15 @@
                     <div class="ct"><div class="sd">7</div><h3>Protecciones especiales</h3><small>Solo aplican en despido</small></div>
                     <div class="cks">
                         <div class="ck" id="ce" onclick="togCk('ce','cbe')">
-                            <input type="checkbox" id="cbe">
+                            <input type="checkbox" id="cbe" name="cbe" aria-label="Cbe">
                             <div><div class="ckt">Trabajadora embarazada o en período de lactancia</div><div class="ckn">Art. 153 + Art. 195.1 CT — Ineficaz + 1 año adicional (acumulable con Art. 188)</div></div>
                         </div>
                         <div class="ck" id="cs" onclick="togCk('cs','cbs')">
-                            <input type="checkbox" id="cbs">
+                            <input type="checkbox" id="cbs" name="cbs" aria-label="Cbs">
                             <div><div class="ckt">Dirigente sindical en ejercicio del cargo</div><div class="ckn">Art. 187 CT — Ineficaz durante mandato + 1 año posterior + 1 año adicional</div></div>
                         </div>
                         <div class="ck" id="cd" onclick="togCk('cd','cbd')">
-                            <input type="checkbox" id="cbd">
+                            <input type="checkbox" id="cbd" name="cbd" aria-label="Cbd">
                             <div><div class="ckt">Persona con discapacidad</div><div class="ckn">Art. 42 num. 33 CT — 18 meses adicionales de remuneración</div></div>
                         </div>
                     </div>
@@ -731,7 +735,9 @@
         </div>
     </div>
 
-    <div class="footer"><strong>Lisboa Legal Group</strong> — Calculadora Laboral · Código del Trabajo (reforma nov. 2025) · Res. 02-2025 CNJ · SBU 2026 = $482,00 (Acuerdo MDT-2025-001). Cálculo referencial. Consulta siempre a un profesional del derecho laboral.</div>
+        </main>
+
+    <footer class="tool-footer"><strong>Lisboa Legal Group</strong> — Calculadora Laboral · Código del Trabajo (reforma nov. 2025) · Res. 02-2025 CNJ · SBU 2026 = $482,00 (Acuerdo MDT-2025-001). Cálculo referencial. Consulte siempre a un profesional del derecho laboral. · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></footer>
 
     <script>
         const SBU = 482; let dm = 'a';
@@ -930,7 +936,7 @@
                 mobileMenu.addEventListener('click', function(e) {
                     e.stopPropagation(); // Prevenir burbujeo
                     navLinks.classList.toggle('active');
-                    
+
                     // Toggle icono Hamburguesa/Cruz
                     if (navLinks.classList.contains('active')) {
                         menuIcon.classList.remove('fa-bars');
@@ -950,12 +956,12 @@
                         menuIcon.classList.add('fa-bars');
                     });
                 });
-                
+
                 // Cerrar menú al hacer click fuera
                 document.addEventListener('click', function(event) {
                     const isClickInsideMenu = navLinks.contains(event.target);
                     const isClickOnToggle = mobileMenu.contains(event.target);
-                    
+
                     if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
                         menuIcon.classList.remove('fa-times');
@@ -963,7 +969,7 @@
                     }
                 });
             }
-            
+
             // Script para header scrolleado si no existe
             const header = document.querySelector('header');
             if (header) {
@@ -977,7 +983,7 @@
             }
         });
     </script>
-        <div id="legalModal" class="modal">
+        <div id="legalModal" class="modal" hidden aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('legalModal')">&times;
             </span>
@@ -1002,12 +1008,13 @@
         }
     </script>
 <div class="whatsapp-wrapper">
-        <div class="whatsapp-label">¿Necesitas ayuda?<span>Escríbenos</span></div>
-        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-label">¿Necesita ayuda?<span>Escríbanos</span></div>
+        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp" rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-whatsapp"></i>
         </a>
     </div>
     <script src="js/cursor-follower.js" defer></script>
+    <script src="js/site-accessibility.js" defer></script>
 </body>
 
 </html>

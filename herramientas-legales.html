@@ -22,9 +22,9 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
-    
+
     <!-- Schema.org JSON-LD Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -83,23 +83,27 @@
     <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/herramientas-legales.html">
     <meta property="og:type" content="website">
 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Herramientas Legales | Abogados Especialistas en Guayaquil">
+    <meta name="twitter:description" content="Conoce nuestras áreas de práctica legal en Guayaquil. Especialistas en derecho corporativo, sucesiones, familia, penal y más. Contáctenos hoy.">
+    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header>
         <div class="container navbar">
             <!-- Logo principal fuertemente destacado -->
-            <a href="index.html" class="logo-container">
-                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img">
+            <a href="./" class="logo-container">
+                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img" width="192" height="192" decoding="async">
             </a>
-            <div class="menu-toggle" id="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Abrir menú principal" aria-expanded="false" aria-controls="primary-navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
                 <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="primary-navigation">
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <a href="./">Inicio</a>
                     </li>
                     <li>
                         <a href="areas-de-practica.html">Áreas de Práctica</a>
@@ -108,7 +112,7 @@
                         <a href="herramientas-legales.html">Herramientas Legales</a>
                     </li>
                     <li>
-                        <a href="index.html#equipo">Socios</a>
+                        <a href="./#equipo">Socios</a>
                     </li>
                     <li>
                         <a href="#contacto">Contacto</a>
@@ -116,13 +120,13 @@
                 </ul>
             </nav>
             <div style="display: flex; align-items: center; gap: 20px;">
-                <div class="lang-switch">
-                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
-                </div>
+                <div class="lang-switch" aria-label="Idioma del sitio"><span lang="es" aria-current="true">ES</span></div>
                 <a href="#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
             </div>
         </div>
     </header>
+
+    <main id="main-content">
 
     <section class="hero"
         style="min-height: 40vh; padding: 120px 0 60px 0; background-color: var(--primary-blue); display: flex; align-items: center; justify-content: center; text-align: left;">
@@ -147,7 +151,7 @@
                 <a href="calculadora-laboral.html" class="service-link">
                     <div class="service-card" style="background-image: url('img_derecho-laboral_2.webp');">
                         <div class="service-content">
-                            <i class="fas fa-calculator"></i>
+                            <i aria-hidden="true" class="fas fa-calculator"></i>
                             <h3>Calculadora Laboral</h3>
                             <p>Nuestra herramienta digital gratuita que le permite calcular con precisión liquidaciones, indemnizaciones y beneficios sociales conforme a la normativa laboral ecuatoriana actual.</p>
                         </div>
@@ -158,19 +162,19 @@
                 <a href="calculadora-plazos.html" class="service-link">
                     <div class="service-card" style="background-image: url('derecho_penal.webp');">
                         <div class="service-content">
-                            <i class="fas fa-calendar-alt"></i>
+                            <i aria-hidden="true" class="fas fa-calendar-alt"></i>
                             <h3>Calculadora de Plazos Procesales</h3>
                             <p>Calcule fácilmente plazos y términos procesales en diferentes materias del derecho ecuatoriano con nuestra herramienta automatizada.</p>
                         </div>
                     </div>
                 </a>
 
-                <!-- 3. Cálculo de Pensiones Jubilar -->
+                <!-- 3. Cálculo de pensión jubilar -->
                 <a href="calculadora-jubilacion.html" class="service-link">
                     <div class="service-card" style="background-image: url('img_consultoria-tributaria_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-piggy-bank"></i>
-                            <h3>Cálculo de Pensiones Jubilar</h3>
+                            <i aria-hidden="true" class="fas fa-piggy-bank"></i>
+                            <h3>Cálculo de pensión jubilar</h3>
                             <p>Herramienta especializada para calcular la jubilación patronal y referencial del IESS conforme a los coeficientes oficiales de 2026.</p>
                         </div>
                     </div>
@@ -180,7 +184,7 @@
                 <a href="calculadora-alimentos.html" class="service-link">
                     <div class="service-card" style="background-image: url('img_derecho-de-familia_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-baby"></i>
+                            <i aria-hidden="true" class="fas fa-baby"></i>
                             <h3>Pensión de Alimentos</h3>
                             <p>Determine la pensión alimenticia oficial en Ecuador según la tabla 2026, considerando ingresos, edad, prorrateo por otros hijos y agregados por discapacidad.</p>
                         </div>
@@ -189,7 +193,7 @@
             </div>
         </div>
     </section>
-    
+
     <section id="contacto" class="section-padding" style="background-color: var(--bg-light);">
         <div class="container">
             <div class="section-title">
@@ -200,28 +204,28 @@
             <div class="forms-wrapper">
                 <div class="form-box">
                     <h3 style="margin-bottom: 25px;">
-                        <i class="fas fa-calendar-alt">
-                        </i>Agendar Cita Formal
+                        <i aria-hidden="true" class="fas fa-calendar-alt">
+                        </i>Solicitar una cita
                     </h3>
-                    <form onsubmit="event.preventDefault(); 
+                    <form onsubmit="event.preventDefault();
             const nombre=document.getElementById('wa-nombre').value;
             const telefono=document.getElementById('wa-tel').value;
             const area=document.getElementById('wa-area').value;
-            const mensaje=`Hola, mi nombre es ${nombre}. Deseo agendar una cita para el área de ${area}. Mi número de contacto es: ${telefono}.`;
+            const mensaje=`Hola, mi nombre es ${nombre}. Deseo solicitar una cita para el área de ${area}. Mi número de contacto es: ${telefono}.`;
             const whatsappUrl=`https://wa.me/593990967952?text=${encodeURIComponent(mensaje)}`;
             window.open(whatsappUrl, '_blank');
             ">
                         <div class="form-group">
-                            <label>Nombre Completo</label>
-                            <input type="text" id="wa-nombre" placeholder="Ej. Juan Pérez" required>
+                            <label for="wa-nombre">Nombre Completo</label>
+                            <input type="text" id="wa-nombre" placeholder="Ej. Juan Pérez" required name="wa-nombre" autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <label>Teléfono</label>
-                            <input type="tel" id="wa-tel" placeholder="+593 99 999 9999" required>
+                            <label for="wa-tel">Teléfono</label>
+                            <input type="tel" id="wa-tel" placeholder="+593 99 999 9999" required name="wa-tel" autocomplete="tel" inputmode="tel">
                         </div>
                         <div class="form-group">
-                            <label>Área de Interés</label>
-                            <select id="wa-area" required>
+                            <label for="wa-area">Área de Interés</label>
+                            <select id="wa-area" required name="wa-area">
                                 <option value="" disabled selected>Seleccione un área...</option>
                                 <option value="Derecho Penal">Derecho Penal</option>
                                 <option value="Derecho Civil">Derecho Civil</option>
@@ -235,14 +239,14 @@
                                 <option value="Otro">Otro</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.1rem;">Confirmar tu
-                            reserva</button>
+                        <p class="form-privacy-note">Al continuar, WhatsApp recibirá su nombre, número y área de consulta para responder su solicitud. Evite incluir información sensible hasta recibir instrucciones. <a href="privacidad.html">Consulte la Política de Privacidad</a>.</p>
+                        <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.1rem;">Continuar por WhatsApp</button>
                     </form>
                 </div>
                 <div class="contact-map-wrapper">
                     <h3>Guayaquil</h3>
                     <div class="map-container">
-                        <iframe
+                        <iframe title="Ubicación de Lisboa Legal Group en Guayaquil"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.1812146569613!2d-79.88264357525459!3d-2.192023073653161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e79063fffff%3A0x370e269ec33509f3!2sJos%C3%A9%20V%C3%A9lez%20Villamar%20220%20y%2C%20Guayaquil%20090307!5e0!3m2!1ses-419!2sec!4v1772344811635!5m2!1ses-419!2sec"
                             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -250,40 +254,43 @@
                     </div>
                     <ul class="contact-info-list">
                         <li>
-                            <i class="fas fa-map-marker-alt">
+                            <i aria-hidden="true" class="fas fa-map-marker-alt">
                             </i>
                             <span>Vélez 220 entre Chile y Chimborazo,
                                 Edificio Finansa</span>
                         </li>
                         <li>
-                            <i class="fas fa-envelope">
+                            <i aria-hidden="true" class="fas fa-envelope">
                             </i>
-                            <span>lisboalegalgroup@gmail.com</span>
+                            <a href="mailto:lisboalegalgroup@gmail.com">lisboalegalgroup@gmail.com</a>
                         </li>
                         <li>
-                            <i class="fas fa-clock">
+                            <i aria-hidden="true" class="fas fa-clock">
                             </i>
                             <span>Lunes a Viernes 9:00 a 17:30</span>
                         </li>
                         <li>
-                            <i class="fas fa-phone-alt">
+                            <i aria-hidden="true" class="fas fa-phone-alt">
                             </i>
-                            <span>0990967952</span>
+                            <a href="tel:+593990967952">099 096 7952</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+        </main>
+
     <footer class="new-footer">
-        <video autoplay loop muted playsinline class="footer-video" style="background-color: var(--primary-blue);">
-            <source src="videolisboa.mp4" type="video/mp4">
-        </video>
+    <video class="footer-video" autoplay loop muted playsinline preload="metadata" poster="oficina-aerea.webp" aria-hidden="true" tabindex="-1">
+        <source src="videolisboa.mp4" type="video/mp4">
+    </video>
+
         <div class="footer-overlay"></div>
         <div class="container footer-content-wrapper">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img loading="lazy" src="logo-full.png" alt="Lisboa Legal Group" class="footer-logo-new">
+                    <img loading="lazy" src="logo-full.png" alt="Lisboa Legal Group" class="footer-logo-new" width="192" height="192" decoding="async">
                 </div>
                 <div class="footer-locations">
                     <div class="footer-location-title">
@@ -294,9 +301,9 @@
                         <div class="location-col">
                             <h4>MATRIZ GUAYAQUIL</h4>
                             <ul>
-                                <li><i class="fas fa-map-marker-alt"></i> <span>Vélez 220 entre Chile y Chimborazo.<br>Edificio Finansa</span></li>
-                                <li><i class="fas fa-phone-alt"></i> <span>(+593) 9 90967952</span></li>
-                                <li><i class="fas fa-envelope"></i> <span>lisboalegalgroup@gmail.com</span></li>
+                                <li><i aria-hidden="true" class="fas fa-map-marker-alt"></i> <span>Vélez 220 entre Chile y Chimborazo.<br>Edificio Finansa</span></li>
+                                <li><i aria-hidden="true" class="fas fa-phone-alt"></i> <span>(+593) 9 90967952</span></li>
+                                <li><i aria-hidden="true" class="fas fa-envelope"></i> <a href="mailto:lisboalegalgroup@gmail.com">lisboalegalgroup@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -308,19 +315,19 @@
                 <div class="footer-copy">
                     <p>2026. Todos los derechos reservados</p>
                     <div class="footer-links-new">
-                        <a onclick="openModal('legalModal')">Aviso Legal</a> | <a href="privacidad.html">Política de Privacidad</a>
+                        <a href="aviso-legal.html">Aviso legal</a> | <a href="privacidad.html">Política de Privacidad</a>
                     </div>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank" aria-label="Facebook" class="social-square"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank" aria-label="Instagram" class="social-square"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank" aria-label="LinkedIn" class="social-square"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/593990967952" target="_blank" aria-label="WhatsApp" class="social-square"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank" aria-label="Facebook" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank" aria-label="Instagram" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank" aria-label="LinkedIn" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/593990967952" target="_blank" aria-label="WhatsApp" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-    <div id="legalModal" class="modal">
+    <div id="legalModal" class="modal" hidden aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('legalModal')">&times;
             </span>
@@ -330,9 +337,9 @@
         </div>
     </div>
     <div class="whatsapp-wrapper">
-        <div class="whatsapp-label">¿Necesitas ayuda?<span>Escríbenos</span></div>
-        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-label">¿Necesita ayuda?<span>Escríbanos</span></div>
+        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp" rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-whatsapp"></i>
         </a>
     </div>
     <script> // Funciones de modales
@@ -402,7 +409,7 @@
                 mobileMenu.addEventListener('click', function(e) {
                     e.stopPropagation(); // Prevenir burbujeo
                     navLinks.classList.toggle('active');
-                    
+
                     // Toggle icono Hamburguesa/Cruz
                     if (navLinks.classList.contains('active')) {
                         menuIcon.classList.remove('fa-bars');
@@ -422,12 +429,12 @@
                         menuIcon.classList.add('fa-bars');
                     });
                 });
-                
+
                 // Cerrar menú al hacer click fuera
                 document.addEventListener('click', function(event) {
                     const isClickInsideMenu = navLinks.contains(event.target);
                     const isClickOnToggle = mobileMenu.contains(event.target);
-                    
+
                     if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
                         menuIcon.classList.remove('fa-times');
@@ -435,7 +442,7 @@
                     }
                 });
             }
-            
+
             // Script para header scrolleado si no existe
             const header = document.querySelector('header');
             if (header) {
@@ -450,6 +457,7 @@
         });
     </script>
     <script src="js/cursor-follower.js" defer></script>
+    <script src="js/site-accessibility.js" defer></script>
 </body>
 
 </html>

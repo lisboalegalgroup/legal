@@ -85,7 +85,7 @@
 
         .bg-marble {
             background-color: var(--bg-light);
-            background-image: url('https://www.transparenttextures.com/patterns/white-marble.png');
+            background-image: none;
         }
 
         /* --- BASE --- */
@@ -483,7 +483,7 @@
             background-color: var(--primary-blue);
             color: var(--white);
             border-top: 2px solid var(--accent-gold);
-            background-image: linear-gradient(rgba(5, 20, 42, 0.96), rgba(5, 20, 42, 0.96)), url('patron.webp');
+            background-image: linear-gradient(rgba(5, 20, 42, 0.96), rgba(5, 20, 42, 0.96));
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
@@ -926,7 +926,7 @@
                 gap: 20px;
                 padding: 30px 0;
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-                
+
                 /* Hidden by default on mobile, but animatable */
                 max-height: 0;
                 overflow: hidden;
@@ -934,7 +934,7 @@
                 visibility: hidden;
                 transition: all 0.4s ease;
             }
-            
+
             .nav-links.active {
                 max-height: 400px;
                 opacity: 1;
@@ -951,7 +951,7 @@
                 padding: 10px;
                 font-size: 1.1rem;
             }
-            
+
             .lang-switch, .mobile-hidden {
                  display: none !important; /* hide lang switch inside nav on mobile to keep it simple */
             }
@@ -1134,8 +1134,8 @@
             }
         }
 
-        
-    
+
+
         /* --- SUBPAGE SPECIFIC STYLES --- */
         .area-hero {
             background-color: var(--primary-blue);
@@ -1332,7 +1332,7 @@
                 font-size: 2rem;
             }
         }
-    
+
         /* --- ANIMACIÓN DE REBOTE PARA ICONOS (ANTIGRAVITY) --- */
         @keyframes icon-bounce {
             0%, 100% { transform: translateY(0); }
@@ -1340,9 +1340,9 @@
             60% { transform: translateY(-5px); }
         }
 
-        i:hover, 
-        a:hover i, 
-        .btn:hover i, 
+        i:hover,
+        a:hover i,
+        .btn:hover i,
         .service-card:hover i,
         .sub-service-card:hover i,
         .whatsapp-float:hover i {
@@ -1451,7 +1451,7 @@ body{font-family:'Golos Text', sans-serif;background:var(--paper);color:var(--in
 .cards{display:flex;flex-direction:column;gap:10px}
 .pcard{background:#fff;border:none;border-radius:12px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.05);transition:transform .3s,box-shadow .3s}
 .pcard:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(0,0,0,0.08)}
-.pcard-header{display:flex;align-items:center;cursor:pointer;user-select:none}
+.pcard-header{display:flex;align-items:center;cursor:pointer;user-select:none;width:100%;border:0;background:transparent;text-align:left;color:inherit;font:inherit;padding:0}
 .pcard-stripe{width:4px;flex-shrink:0;align-self:stretch}
 .pcard-left{padding:1rem;min-width:92px;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--paper3);text-align:center}
 .pcard-dias{font-family:'Golos Text', sans-serif;font-size:28px;line-height:1;letter-spacing:-1px}
@@ -1498,10 +1498,20 @@ body{font-family:'Golos Text', sans-serif;background:var(--paper);color:var(--in
 .footer strong{color:rgba(13,17,23,.55)}
 
 @media(max-width:768px){
-  .layout{grid-template-columns:1fr}
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .layout,.sidebar,.sidebar-card,.layout>section{min-width:0;width:100%}
   .sidebar{position:static}
-  .mat-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:6px;padding:.5rem}
-  .mat-item{padding:.5rem .6rem}
+  .mat-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;padding:.5rem}
+  .mat-item{min-width:0;padding:.5rem .6rem}
+  .mi-name{min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .mi-code{display:none}
+  .pcard-header{min-width:0;overflow:hidden}
+  .pcard-left{min-width:74px;padding:.75rem .5rem}
+  .pcard-body,.pcard-top,.pcard-title{min-width:0}
+  .pcard-body{padding:.75rem}
+  .pcard-title{overflow-wrap:anywhere}
+  .pcard-etapa{white-space:normal;text-align:right}
+  .pcard-chevron{margin-right:.25rem}
   .hero{padding:1.75rem 1rem 1.5rem}
   .main{padding:1.25rem 1rem}
   .mat-divider{display:none}
@@ -1509,21 +1519,25 @@ body{font-family:'Golos Text', sans-serif;background:var(--paper);color:var(--in
   .etapa-select{width:100%}
 }
 </style>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculadora de Plazos Procesales | Lisboa Legal Group">
+    <meta name="twitter:description" content="Calculadora de liquidación laboral gratuita y en línea para Ecuador. Calcule fácilmente beneficios e indemnizaciones.">
+    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header>
         <div class="container navbar">
             <!-- Logo principal fuertemente destacado -->
-            <a href="index.html" class="logo-container">
-                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img">
+            <a href="./" class="logo-container">
+                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img" width="192" height="192" decoding="async">
             </a>
-            <div class="menu-toggle" id="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Abrir menú principal" aria-expanded="false" aria-controls="primary-navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
                 <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="primary-navigation">
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <a href="./">Inicio</a>
                     </li>
                     <li>
                         <a href="areas-de-practica.html">Áreas de Práctica</a>
@@ -1532,18 +1546,16 @@ body{font-family:'Golos Text', sans-serif;background:var(--paper);color:var(--in
                         <a href="herramientas-legales.html">Herramientas Legales</a>
                     </li>
                     <li>
-                        <a href="index.html#equipo">Socios</a>
+                        <a href="./#equipo">Socios</a>
                     </li>
                     <li>
-                        <a href="index.html#contacto">Contacto</a>
+                        <a href="./#contacto">Contacto</a>
                     </li>
                 </ul>
             </nav>
             <div style="display: flex; align-items: center; gap: 20px;">
-                <div class="lang-switch">
-                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
-                </div>
-                <a href="index.html#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
+                <div class="lang-switch" aria-label="Idioma del sitio"><span lang="es" aria-current="true">ES</span></div>
+                <a href="./#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
             </div>
         </div>
     </header>
@@ -1553,16 +1565,16 @@ body{font-family:'Golos Text', sans-serif;background:var(--paper);color:var(--in
         <h1 style="color: var(--white); font-size: 3.2rem; margin-bottom: 20px; font-weight: 800;">Calculadora de Plazos Procesales</h1>
         <div class="line" style="width: 70px; height: 3px; background-color: var(--accent-gold); margin: 0 auto 25px auto;"></div>
         <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.15rem; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-            Consulta todos los plazos vigentes por materia. Selecciona una fecha de notificación para calcular el vencimiento en días hábiles.
+            Consulte reglas procesales seleccionadas por materia. El cálculo automático solo se habilita cuando la unidad está definida y siempre requiere verificación profesional.
         </p>
     </div>
 </section>
 
 <section class="section-padding bg-marble" style="min-height: 80vh; border-top: 3px solid var(--accent-gold); padding-top: 60px;">
     <div class="container">
-        
 
-        <main class="main">
+
+        <main id="main-content" class="main">
 <div class="layout">
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -1588,8 +1600,8 @@ body{font-family:'Golos Text', sans-serif;background:var(--paper);color:var(--in
   <section>
     <div class="content-header">
       <div class="search-row">
-        <div class="search-wrap"><input type="text" id="buscar" placeholder="Buscar plazo: contestación, apelación, instrucción..." oninput="filtrar()"></div>
-        <select class="etapa-select" id="etapa-sel" onchange="filtrar()"><option value="">Todas las etapas</option></select>
+        <div class="search-wrap"><input type="text" id="buscar" placeholder="Buscar plazo: contestación, apelación, instrucción..." oninput="filtrar()" name="buscar" aria-label="Buscar plazo: contestación, apelación, instrucción..."></div>
+        <select class="etapa-select" id="etapa-sel" onchange="filtrar()" name="etapa-sel" aria-label="Filtrar por etapa"><option value="">Todas las etapas</option></select>
       </div>
       <div class="meta-row">
         <div class="materia-title" id="mat-title">Materia Civil <span id="mat-code">COGEP</span></div>
@@ -1650,8 +1662,8 @@ civil:{titulo:"Materia Civil",code:"COGEP",plazos:[
   {id:"c12",t:"Providencias preventivas — Caducidad",dias:15,unidad:"días hábiles",etapa:"Medidas cautelares",norma:"Art. 133 COGEP",
    desc:"Las providencias preventivas caducan si en 15 días de ordenadas (o de que se hizo exigible la obligación) no se propone la demanda principal. El solicitante debe pagar los daños y perjuicios ocasionados.",
    cons:"La caducidad es automática. No se puede solicitar la misma medida preventiva respecto de la misma obligación una vez caducada. Siempre tramitar la demanda principal antes del vencimiento de los 15 días."},
-  {id:"c13",t:"Abandono del proceso — Declaración",dias:180,unidad:"días hábiles (6 meses)",etapa:"Abandono",norma:"Art. 245 COGEP",
-   desc:"El proceso se declara en abandono cuando TODAS las partes cesan en la prosecución durante 6 MESES (180 días hábiles), contados desde el día siguiente de la notificación de la última providencia útil. El plazo se computa conforme al Art. 33 del Código Civil.",
+  {id:"c13",t:"Abandono del proceso — Declaración",dias:6,tipo:"meses",unidad:"meses calendario",etapa:"Abandono",norma:"Art. 245 COGEP",
+   desc:"El proceso se declara en abandono cuando TODAS las partes cesan en la prosecución durante 6 MESES, contados desde el día siguiente de la notificación de la última providencia útil o de la actuación ordenada en ella. El plazo se computa conforme al Art. 33 del Código Civil.",
    cons:"NO cabe abandono en: derechos de niñas/niños/adolescentes/incapaces/adultos mayores, derechos laborales de trabajadores, procesos voluntarios, acciones contencioso administrativas subjetivas, etapa de ejecución (Art. 247 COGEP). El abandono de segunda instancia confirma la sentencia apelada."}
 ]},
 penal:{titulo:"Materia Penal",code:"COIP",plazos:[
@@ -1821,25 +1833,26 @@ function filtrar(){
 function renderCard(p){
   const isOpen=expandidos[p.id];
   const diasStr=p.dias===0?'∞':p.dias.toString();
-  // Sección inferior: calculador solo si tiene días hábiles y NO es info_only
+  const tipoCalculo=p.tipo==='meses'?'meses':(/días hábiles/i.test(p.unidad)?'habiles':null);
+  // Solo se calcula cuando la unidad está definida de forma inequívoca.
   let bottomSection='';
-  if(p.info_only||p.dias===0){
-    bottomSection=`<div class="info-only"><p><strong>ℹ️ Este plazo no tiene un número fijo de días hábiles que calcular.</strong><br>${
+  if(p.info_only||p.dias===0||!tipoCalculo){
+    bottomSection=`<div class="info-only"><p><strong>ℹ️ Cálculo automático no disponible para esta regla.</strong><br>${
       p.dias===0?'Es una oportunidad procesal determinada por la etapa o una situación que opera por ministerio de ley, sin un término de días específico que empezar a contar desde una notificación.':
-      'El cómputo depende de condiciones procesales (número de pensiones incumplidas, estado del proceso), no de una fecha de notificación.'}</p></div>`;
+      'La unidad, el punto de partida o las condiciones procesales requieren revisión profesional antes de fijar una fecha.'}</p></div>`;
   } else {
     bottomSection=`<div class="calc-section">
-      <div class="calc-title">Calcular fecha de vencimiento (días hábiles L–V)</div>
+      <div class="calc-title">${tipoCalculo==='meses'?'Calcular referencia por meses calendario':'Calcular fecha base (lunes a viernes, sin feriados)'}</div>
       <div class="calc-row">
-        <label>Fecha notificación / citación:</label>
-        <input type="date" id="fd-${p.id}" onchange="calcVenc('${p.id}',${p.dias})">
+        <label for="fd-${p.id}">Fecha de notificación o citación:</label>
+        <input type="date" id="fd-${p.id}" onchange="calcVenc('${p.id}',${p.dias},'${tipoCalculo}')" name="fd-${p.id}">
         <div class="venc-badge" id="vb-${p.id}">— selecciona fecha —</div>
       </div>
       <div class="venc-note" id="vn-${p.id}"></div>
     </div>`;
   }
   return`<div class="pcard c-${matActual} ${isOpen?'open':''}" id="card-${p.id}">
-    <div class="pcard-header" onclick="toggleCard('${p.id}')">
+    <div class="pcard-header" role="button" tabindex="0" onclick="toggleCard('${p.id}')" aria-expanded="${isOpen?'true':'false'}" aria-controls="detail-${p.id}">
       <div class="pcard-stripe"></div>
       <div class="pcard-left">
         <div class="pcard-dias">${diasStr}</div>
@@ -1854,7 +1867,7 @@ function renderCard(p){
       </div>
       <div class="pcard-chevron">▼</div>
     </div>
-    <div class="pcard-detail">
+    <div class="pcard-detail" id="detail-${p.id}">
       <div class="pcard-desc">${p.desc}</div>
       <div class="pcard-consejos">${p.cons}</div>
       ${bottomSection}
@@ -1867,29 +1880,33 @@ function toggleCard(id){
   filtrar();
 }
 
-// ── CÁLCULO CORRECTO DE DÍAS HÁBILES ─────────────────────────────────
-// Desde el día SIGUIENTE a la fecha de notificación,
-// cuenta N días hábiles (lunes a viernes).
-// Los feriados nacionales NO están incluidos (requerirían BD actualizada).
-function calcVenc(id,dias){
+// Fecha base orientativa. Los días hábiles excluyen fines de semana, pero no
+// feriados ni suspensiones. Los meses se computan como meses calendario.
+function calcVenc(id,dias,tipo){
   const f=document.getElementById('fd-'+id).value;
   if(!f)return;
-  // día siguiente a la notificación
   const inicio=new Date(f+'T12:00:00');
   inicio.setDate(inicio.getDate()+1);
-  let count=0;
-  const cur=new Date(inicio);
-  while(count<dias){
-    const dow=cur.getDay(); // 0=dom, 6=sab
-    if(dow!==0&&dow!==6){
-      count++;
-      if(count<dias)cur.setDate(cur.getDate()+1);
-    } else {
-      cur.setDate(cur.getDate()+1);
+  let cur=new Date(inicio);
+  if(tipo==='meses'){
+    const dia=cur.getDate();
+    cur.setDate(1);
+    cur.setMonth(cur.getMonth()+dias);
+    const ultimo=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate();
+    cur.setDate(Math.min(dia,ultimo));
+  }else{
+    let count=0;
+    while(count<dias){
+      const dow=cur.getDay();
+      if(dow!==0&&dow!==6){
+        count++;
+        if(count<dias)cur.setDate(cur.getDate()+1);
+      }else{
+        cur.setDate(cur.getDate()+1);
+      }
     }
+    while(cur.getDay()===0||cur.getDay()===6)cur.setDate(cur.getDate()+1);
   }
-  // avanzar si el último día cae en finde
-  while(cur.getDay()===0||cur.getDay()===6) cur.setDate(cur.getDate()+1);
   const hoy=new Date(); hoy.setHours(0,0,0,0);
   const diff=Math.ceil((cur-hoy)/(1000*60*60*24));
   const opts={weekday:'long',year:'numeric',month:'long',day:'numeric'};
@@ -1900,7 +1917,7 @@ function calcVenc(id,dias){
   if(diff<0){el.classList.add('red');nota.textContent='⚠ El plazo ya venció hace '+Math.abs(diff)+' día(s) calendario.';}
   else if(diff===0){el.classList.add('amber');nota.textContent='⚠ El plazo vence HOY.';}
   else if(diff<=3){el.classList.add('amber');nota.textContent='⚠ Quedan solo '+diff+' día(s) calendario. Actuar urgente.';}
-  else {el.classList.add('ok');nota.textContent='✔ Quedan '+diff+' día(s) calendario hasta el vencimiento. (Feriados no incluidos.)';}
+  else {el.classList.add('ok');nota.textContent='✔ Quedan '+diff+' día(s) calendario. '+(tipo==='meses'?'Referencia por meses calendario; confirme el Art. 33 del Código Civil y las circunstancias del expediente.':'Fecha base sin feriados nacionales, locales ni suspensiones judiciales; verifique antes de actuar.');}
 }
 
 // init
@@ -1921,7 +1938,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navLinks.classList.toggle('active');
         });
     }
-    
+
     // Script para header scrolleado
     const header = document.querySelector('header');
     if (header) {
@@ -1937,7 +1954,9 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
     <script src="js/cursor-follower.js" defer></script>
-    <div id="legalModal" class="modal">
+    <footer class="tool-footer"><strong>Lisboa Legal Group</strong> · Cálculo orientativo. <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></footer>
+
+    <div id="legalModal" class="modal" hidden aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('legalModal')">&times;
             </span>
@@ -1961,6 +1980,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     </script>
+    <script src="js/site-accessibility.js" defer></script>
 </body>
 </html>
 

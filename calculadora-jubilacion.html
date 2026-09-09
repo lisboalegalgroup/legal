@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Calculadora de pensiones jubilares referencial. Jubilación Patronal e IESS para Ecuador.">
+    <meta name="description" content="Estime jubilación patronal e IESS en Ecuador con supuestos, coeficientes y requisitos visibles. Resultado orientativo sujeto a validación.">
     <title>Calculadora de Jubilación | Lisboa Legal Group</title>
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,9 +22,9 @@
 
     <!-- SEO Site Name Configuration -->
     <meta property="og:site_name" content="Lisboa Legal Group">
-    
+
     <!-- Schema.org JSON-LD Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -124,21 +124,25 @@ input, select { font-size: 16px !important; }
     font-weight: 800;
 }
 </style>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Calculadora de Jubilación | Lisboa Legal Group">
+    <meta name="twitter:description" content="Calculadora de pensiones jubilares referencial. Jubilación Patronal e IESS para Ecuador.">
+    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
     <header>
         <div class="container navbar">
-            <a href="index.html" class="logo-container">
-                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img">
+            <a href="./" class="logo-container">
+                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img" width="192" height="192" decoding="async">
             </a>
-            <div class="menu-toggle" id="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Abrir menú principal" aria-expanded="false" aria-controls="primary-navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
                 <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="primary-navigation">
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <a href="./">Inicio</a>
                     </li>
                     <li>
                         <a href="areas-de-practica.html">Áreas de Práctica</a>
@@ -147,21 +151,21 @@ input, select { font-size: 16px !important; }
                         <a href="herramientas-legales.html">Herramientas Legales</a>
                     </li>
                     <li>
-                        <a href="index.html#equipo">Socios</a>
+                        <a href="./#equipo">Socios</a>
                     </li>
                     <li>
-                        <a href="index.html#contacto">Contacto</a>
+                        <a href="./#contacto">Contacto</a>
                     </li>
                 </ul>
             </nav>
             <div style="display: flex; align-items: center; gap: 20px;">
-                <div class="lang-switch">
-                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
-                </div>
-                <a href="index.html#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
+                <div class="lang-switch" aria-label="Idioma del sitio"><span lang="es" aria-current="true">ES</span></div>
+                <a href="./#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
             </div>
         </div>
     </header>
+
+    <main id="main-content">
 
     <section class="area-hero">
         <div class="container">
@@ -184,32 +188,34 @@ input, select { font-size: 16px !important; }
 <div id="tab-patronal" class="tab-content active"><div class="grid"><div>
   <div class="info-panel"><p>Para un cálculo serio, la persona debe proporcionar: <strong>fecha de ingreso, fecha de salida, edad, sexo, causal de salida, si recibe doble jubilación, remuneraciones de los últimos cinco años, fondos de reserva, deducciones y remuneración básica/unificada media del último año para el tope legal</strong>.</p><p>La Resolución 04-2026 ordena que el <strong>fondo global</strong> se calcule con los acuerdos ministeriales vigentes a la fecha de terminación. Si la terminación fue anterior a dichos acuerdos, se usa la tabla del <strong>Art. 218 CT</strong> y se suma el año adicional del <strong>Art. 217 CT</strong>.</p></div>
   <div class="card"><div class="card-title"><h3>1. Datos personales y tiempo de servicio</h3><small>Base del derecho</small></div>
-    <div class="f"><label>Nombre del trabajador</label><input type="text" id="p_nombre" value="Darwin" placeholder="Nombre completo"></div>
-    <div class="g3"><div class="f"><label>Sexo para coeficiente</label><select id="p_sexo" onchange="updCoef()"><option value="H">Hombre</option><option value="M">Mujer</option></select></div><div class="f"><label>Edad a la salida/jubilación</label><input type="number" id="p_edad" value="50" min="39" max="99" step="1" onchange="updCoef()"><span class="hint">Para acuerdo ministerial 2026: 39 a 99. Para Art. 218 CT: 39 a 89.</span></div><div class="f"><label>Coeficiente aplicable</label><input type="number" id="p_coef" step="0.0000000000001" placeholder="Automático o manual"><span class="hint">Se llena según el régimen escogido. Puedes corregirlo manualmente.</span></div></div>
-    <div class="f"><label>Régimen para fondo global según Resolución 04-2026</label><select id="p_regimen" onchange="updCoef()"><option value="auto">Automático por fecha de salida</option><option value="ministerial">Terminación posterior a acuerdos ministeriales: aplicar acuerdo vigente / tabla 2026</option><option value="pre_acuerdo">Terminación anterior a acuerdos ministeriales: Art. 218 CT + año adicional Art. 217 CT</option></select><span class="hint">La resolución prioriza la normativa vigente a la fecha de terminación; si no era aplicable un acuerdo ministerial, usa Art. 218 CT y suma el año adicional del Art. 217.</span></div>
-    <div class="g2"><div class="f"><label>Fecha de ingreso</label><input type="date" id="p_fi" value="2003-08-15" onchange="updTP()"></div><div class="f"><label>Fecha de salida / jubilación</label><input type="date" id="p_fs" value="2026-06-30" onchange="updTP()"></div></div><div id="tdisplay"></div>
-    <div class="g2"><div class="f"><label>Años completos manuales</label><input type="number" id="p_anios_manual" min="0" max="60" step="1" placeholder="Opcional: ej. 23"><span class="hint">Si llenas este campo, tiene prioridad sobre las fechas.</span></div><div class="f"><label>Causal de salida</label><select id="p_causal"><option value="despido">Despido intempestivo</option><option value="renuncia">Renuncia / acuerdo</option><option value="jubilacion">Jubilación / retiro</option><option value="visto_bueno">Visto bueno / terminación justificada</option></select><span class="hint">Entre 20 y 25 años suele requerirse despido intempestivo para proporcional.</span></div></div>
-    <div class="g2"><div class="f"><label>¿Tiene doble jubilación? IESS + patronal</label><select id="p_doble"><option value="no">No, solo jubilación patronal</option><option value="si">Sí, también recibe/recibirá IESS</option></select><span class="hint">Define el mínimo legal: $30 si solo patronal, $20 si doble jubilación.</span></div><div class="f"><label>Remuneración básica/unificada media del último año</label><input type="number" id="p_tope" value="950" min="0" step="0.01"><span class="hint">Art. 216 CT: la pensión mensual no debe superar este valor.</span></div></div>
+    <div class="f"><label for="p_nombre">Nombre del trabajador</label><input type="text" id="p_nombre" value="Darwin" placeholder="Nombre completo" name="p_nombre"></div>
+    <div class="g3"><div class="f"><label for="p_sexo">Sexo para coeficiente</label><select id="p_sexo" onchange="updCoef()" name="p_sexo"><option value="H">Hombre</option><option value="M">Mujer</option></select></div><div class="f"><label for="p_edad">Edad a la salida/jubilación</label><input type="number" id="p_edad" value="50" min="39" max="99" step="1" onchange="updCoef()" name="p_edad"><span class="hint">Para acuerdo ministerial 2026: 39 a 99. Para Art. 218 CT: 39 a 89.</span></div><div class="f"><label for="p_coef">Coeficiente aplicable</label><input type="number" id="p_coef" step="0.0000000000001" placeholder="Automático o manual" name="p_coef"><span class="hint">Se llena según el régimen escogido. Puedes corregirlo manualmente.</span></div></div>
+    <div class="f"><label for="p_regimen">Régimen para fondo global según Resolución 04-2026</label><select id="p_regimen" onchange="updCoef()" name="p_regimen"><option value="auto">Automático por fecha de salida</option><option value="ministerial">Terminación posterior a acuerdos ministeriales: aplicar acuerdo vigente / tabla 2026</option><option value="pre_acuerdo">Terminación anterior a acuerdos ministeriales: Art. 218 CT + año adicional Art. 217 CT</option></select><span class="hint">La resolución prioriza la normativa vigente a la fecha de terminación; si no era aplicable un acuerdo ministerial, usa Art. 218 CT y suma el año adicional del Art. 217.</span></div>
+    <div class="g2"><div class="f"><label for="p_fi">Fecha de ingreso</label><input type="date" id="p_fi" value="2003-08-15" onchange="updTP()" name="p_fi"></div><div class="f"><label for="p_fs">Fecha de salida / jubilación</label><input type="date" id="p_fs" value="2026-06-30" onchange="updTP()" name="p_fs"></div></div><div id="tdisplay"></div>
+    <div class="g2"><div class="f"><label for="p_anios_manual">Años completos manuales</label><input type="number" id="p_anios_manual" min="0" max="60" step="1" placeholder="Opcional: ej. 23" name="p_anios_manual"><span class="hint">Si llenas este campo, tiene prioridad sobre las fechas.</span></div><div class="f"><label for="p_causal">Causal de salida</label><select id="p_causal" name="p_causal"><option value="despido">Despido intempestivo</option><option value="renuncia">Renuncia / acuerdo</option><option value="jubilacion">Jubilación / retiro</option><option value="visto_bueno">Visto bueno / terminación justificada</option></select><span class="hint">Entre 20 y 25 años suele requerirse despido intempestivo para proporcional.</span></div></div>
+    <div class="g2"><div class="f"><label for="p_doble">¿Tiene doble jubilación? IESS + patronal</label><select id="p_doble" name="p_doble"><option value="no">No, solo jubilación patronal</option><option value="si">Sí, también recibe/recibirá IESS</option></select><span class="hint">Define el mínimo legal: $30 si solo patronal, $20 si doble jubilación.</span></div><div class="f"><label for="p_tope">Remuneración básica/unificada media del último año</label><input type="number" id="p_tope" value="950" min="0" step="0.01" name="p_tope"><span class="hint">Art. 216 CT: la pensión mensual no debe superar este valor.</span></div></div>
   </div>
   <div class="card"><div class="card-title"><h3>2. Remuneraciones y valores para el haber individual</h3><small>Art. 216 CT</small></div>
-    <div class="g2"><div class="f"><label>Promedio mensual de los últimos 5 años</label><input type="number" id="p_prom_mensual" value="950" min="0" step="0.01"><span class="hint">Si no conoces el total, escribe aquí el promedio mensual.</span></div><div class="f"><label>Total ganado en los últimos 5 años</label><input type="number" id="p_total_5" min="0" step="0.01" placeholder="Opcional"><span class="hint">Si llenas este campo, se calcula el promedio anual dividiendo para 5.</span></div></div>
-    <div class="g2"><div class="f"><label>Última remuneración mensual referencial</label><input type="number" id="p_ultima_rem" value="950" min="0" step="0.01"><span class="hint">Sirve para contraste; el tope se define arriba según Art. 216 CT.</span></div><div class="f"><label>Fondos de reserva / valores reconocidos</label><input type="number" id="p_fondos" value="0" min="0" step="0.01"><span class="hint">Coloca 0 si ya fueron pagados o no aplican.</span></div></div>
-    <div class="g2"><div class="f"><label>Valores a deducir</label><input type="number" id="p_deducciones" value="0" min="0" step="0.01"><span class="hint">Aportes, anticipos o valores legalmente imputables, si existen.</span></div><div class="f"><label>Observación del caso</label><input type="text" id="p_obs" placeholder="Ej.: fondos de reserva pagados mensualmente"></div></div>
+    <div class="g2"><div class="f"><label for="p_prom_mensual">Promedio mensual de los últimos 5 años</label><input type="number" id="p_prom_mensual" value="950" min="0" step="0.01" name="p_prom_mensual"><span class="hint">Si no conoces el total, escribe aquí el promedio mensual.</span></div><div class="f"><label for="p_total_5">Total ganado en los últimos 5 años</label><input type="number" id="p_total_5" min="0" step="0.01" placeholder="Opcional" name="p_total_5"><span class="hint">Si llenas este campo, se calcula el promedio anual dividiendo para 5.</span></div></div>
+    <div class="g2"><div class="f"><label for="p_ultima_rem">Última remuneración mensual referencial</label><input type="number" id="p_ultima_rem" value="950" min="0" step="0.01" name="p_ultima_rem"><span class="hint">Sirve para contraste; el tope se define arriba según Art. 216 CT.</span></div><div class="f"><label for="p_fondos">Fondos de reserva / valores reconocidos</label><input type="number" id="p_fondos" value="0" min="0" step="0.01" name="p_fondos"><span class="hint">Coloca 0 si ya fueron pagados o no aplican.</span></div></div>
+    <div class="g2"><div class="f"><label for="p_deducciones">Valores a deducir</label><input type="number" id="p_deducciones" value="0" min="0" step="0.01" name="p_deducciones"><span class="hint">Aportes, anticipos o valores legalmente imputables, si existen.</span></div><div class="f"><label for="p_obs">Observación del caso</label><input type="text" id="p_obs" placeholder="Ej.: fondos de reserva pagados mensualmente" name="p_obs"></div></div>
     <button class="calcbtn" onclick="calcPatronal()">Calcular pensión jubilar patronal →</button>
   </div>
 </div><div id="rp-patronal"><div class="card re"><div class="reico">🏢</div><div class="retit">Cálculo patronal mejorado</div><div class="resub">Llena los datos y presiona<br><strong>Calcular pensión jubilar patronal</strong></div></div></div></div></div>
 
-<div id="tab-iess" class="tab-content"><div class="grid"><div><div class="info-panel"><h4>Jubilación IESS referencial</h4><p>Este módulo solo da una estimación. La pensión definitiva depende del historial individual registrado en el IESS.</p></div><div class="card"><div class="card-title"><h3>Datos del afiliado</h3><small>Referencial</small></div><div class="f"><label>Nombre</label><input id="i_nombre" value="Darwin"></div><div class="g2"><div class="f"><label>Edad actual</label><input type="number" id="i_edad" value="50" min="18" max="100"></div><div class="f"><label>Imposiciones mensuales</label><input type="number" id="i_imposiciones" value="276" min="0" max="700"><span class="hint">23 años = 276 imposiciones.</span></div></div><div class="f"><label>Promedio mensual de aportación</label><input type="number" id="i_sueldo" value="950" min="0" step="0.01"></div><button class="calcbtn" style="background:var(--blue)" onclick="calcIESS()">Calcular IESS referencial →</button></div></div><div id="rp-iess"><div class="card re"><div class="reico">🏛️</div><div class="retit">Jubilación IESS</div><div class="resub">Cálculo referencial, no reemplaza el cálculo oficial.</div></div></div></div></div>
+<div id="tab-iess" class="tab-content"><div class="grid"><div><div class="info-panel"><h4>Jubilación IESS referencial</h4><p>Usa los requisitos del Art. 11 y los coeficientes anuales del Art. 13 de la Resolución C.D. 100 compilada por el IESS. La base debe corresponder a los cinco mejores años de aportación determinados por el IESS; no use el último sueldo si no representa esa base.</p></div><div class="card"><div class="card-title"><h3>Datos del afiliado</h3><small>Resolución C.D. 100</small></div><div class="f"><label for="i_nombre">Nombre</label><input id="i_nombre" value="Darwin" name="i_nombre"></div><div class="g2"><div class="f"><label for="i_edad">Edad actual</label><input type="number" id="i_edad" value="50" min="18" max="100" name="i_edad"></div><div class="f"><label for="i_imposiciones">Imposiciones mensuales</label><input type="number" id="i_imposiciones" value="276" min="0" max="900" name="i_imposiciones"><span class="hint">23 años completos = 276 imposiciones.</span></div></div><div class="f"><label for="i_sueldo">Base mensual de cálculo determinada por el IESS</label><input type="number" id="i_sueldo" value="950" min="0" step="0.01" name="i_sueldo"><span class="hint">Promedio de los cinco mejores años conforme al método oficial aplicable.</span></div><button class="calcbtn" style="background:var(--blue)" onclick="calcIESS()">Calcular IESS referencial →</button></div></div><div id="rp-iess" role="status" aria-live="polite" aria-atomic="true"><div class="card re"><div class="reico">🏛️</div><div class="retit">Jubilación IESS</div><div class="resub">Cálculo referencial, no reemplaza el cálculo oficial.</div></div></div></div></div>
 
 <div id="tab-global" class="tab-content"><div class="card"><div class="card-title"><h3>Fondo global / conmutación</h3><small>Resolución 04-2026</small></div><div class="al b"><strong>Cómo usar este módulo:</strong> Primero calcula la jubilación patronal en la pestaña principal. El sistema escogerá entre: acuerdo ministerial vigente a la fecha de terminación; o, si la terminación fue anterior a los acuerdos ministeriales, Art. 218 CT + año adicional Art. 217 CT.</div><div id="rp-global"><div class="card re" style="box-shadow:none"><div class="reico">💰</div><div class="retit">Sin cálculo aún</div><div class="resub">Calcula primero la jubilación patronal.</div></div></div></div></div>
 
-<div id="tab-coef" class="tab-content"><div class="card"><div class="card-title"><h3>Tablas de coeficientes</h3><small>MDT 2026 y Art. 218 CT</small></div><p style="font-size:13px;color:var(--ink3);line-height:1.6;margin-bottom:1rem">Tabla ministerial 2026 para terminaciones bajo acuerdos ministeriales y tabla del Art. 218 CT para terminaciones anteriores, conforme Resolución CNJ 04-2026. Selecciona una edad para resaltarla.</p><div class="g2"><div class="f"><label>Resaltar edad</label><input type="number" id="edad_resaltar" value="50" min="39" max="99" onchange="buildCoefTable()"></div><div class="f"><label>Buscar coeficiente rápido</label><button class="calcbtn secondary" onclick="updCoef();showTab('patronal',document.querySelectorAll('.tab')[0])" style="margin:0">Volver al cálculo</button></div></div><table class="escala-table"><thead><tr><th>Edad</th><th>MDT 2026 Hombres</th><th>MDT 2026 Mujeres</th><th>Art. 218 CT</th></tr></thead><tbody id="coef-body"></tbody></table></div></div>
+<div id="tab-coef" class="tab-content"><div class="card"><div class="card-title"><h3>Tablas de coeficientes</h3><small>MDT 2026 y Art. 218 CT</small></div><p style="font-size:13px;color:var(--ink3);line-height:1.6;margin-bottom:1rem">Tabla ministerial 2026 para terminaciones bajo acuerdos ministeriales y tabla del Art. 218 CT para terminaciones anteriores, conforme Resolución CNJ 04-2026. Selecciona una edad para resaltarla.</p><div class="g2"><div class="f"><label for="edad_resaltar">Resaltar edad</label><input type="number" id="edad_resaltar" value="50" min="39" max="99" onchange="buildCoefTable()" name="edad_resaltar"></div><div class="f"><label>Buscar coeficiente rápido</label><button class="calcbtn secondary" onclick="updCoef();showTab('patronal',document.querySelectorAll('.tab')[0])" style="margin:0">Volver al cálculo</button></div></div><table class="escala-table"><thead><tr><th>Edad</th><th>MDT 2026 Hombres</th><th>MDT 2026 Mujeres</th><th>Art. 218 CT</th></tr></thead><tbody id="coef-body"></tbody></table></div></div>
         </div>
-        
-        <div class="c-footer">Cálculo referencial con Art. 216 Código del Trabajo y tabla de coeficientes 2026 del Ministerio del Trabajo. No sustituye el cálculo oficial, peritaje contable ni asesoría legal.</div>
+
+        <footer class="c-footer">Cálculo referencial con Art. 216 del Código del Trabajo, Resolución CNJ 04-2026 y Resolución IESS C.D. 100. No sustituye el cálculo oficial, peritaje contable ni asesoría legal. · <a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a></footer>
     </section>
 
     <!-- JS -->
+        </main>
+
     <script>
 const COEF_H = {"39": 13.6240511395293, "40": 13.4902996574351, "41": 13.3506329787339, "42": 13.2049516768611, "43": 13.0531263883323, "44": 12.8950576553416, "45": 12.7303214095166, "46": 12.5597775302821, "47": 12.3824645767693, "48": 12.1986556953135, "49": 12.0083259363075, "50": 11.8114952451513, "51": 11.608185992937, "52": 11.3984963668201, "53": 11.1825027617808, "54": 10.9603316842964, "55": 10.7321781447951, "56": 10.4982124117763, "57": 10.2586805392681, "58": 10.0138714211764, "59": 9.7640979069911, "60": 9.5096924855521, "61": 9.2510596369364, "62": 8.9886392687691, "63": 8.7228843141189, "64": 8.4542937751956, "65": 8.1834121200189, "66": 7.9108060339537, "67": 7.6370698018019, "68": 7.3628081572463, "69": 7.0886751471427, "70": 6.8153122558908, "71": 6.5433884819821, "72": 6.2735485406205, "73": 6.0064913094755, "74": 5.7428381986366, "75": 5.4832406327311, "76": 5.2283311600428, "77": 4.9787122616067, "78": 4.7349199097944, "79": 4.4975149575758, "80": 4.2669482224023, "81": 4.0436991077307, "82": 3.8281119284053, "83": 3.6205624273113, "84": 3.4213247271837, "85": 3.2306180788624, "86": 3.048611009321, "87": 2.8753838701223, "88": 2.7110550701158, "89": 2.555558430423, "90": 2.4087786983048, "91": 2.2707393769132, "92": 2.1409701673895, "93": 2.0187808390621, "94": 1.9033092783633, "95": 1.7927176956777, "96": 1.6805046543105, "97": 1.5553420624124, "98": 1.3716017400062, "99": 1.0};
 const COEF_M = {"39": 14.4247210929854, "40": 14.3056897074653, "41": 14.1810607848849, "42": 14.0506928590618, "43": 13.9144134749551, "44": 13.772075593478, "45": 13.6235430659378, "46": 13.4686756167054, "47": 13.3073704350276, "48": 13.139505772172, "49": 12.9649952139555, "50": 12.7837737951589, "51": 12.5957975613268, "52": 12.4010159114368, "53": 12.1994512146057, "54": 11.9911202536013, "55": 11.7760597966234, "56": 11.5543790625656, "57": 11.3261847295615, "58": 11.0916453508346, "59": 10.8509190664333, "60": 10.6042678132118, "61": 10.3519535638185, "62": 10.0942798748719, "63": 9.8316001841089, "64": 9.5643048299006, "65": 9.2928460058257, "66": 9.0176848426366, "67": 8.7393326961543, "68": 8.4583527168584, "69": 8.175331935464, "70": 7.8908907594317, "71": 7.6056640094191, "72": 7.3203429202419, "73": 7.0355887951114, "74": 6.7521243742336, "75": 6.4706552862189, "76": 6.1918838541499, "77": 5.9165225172898, "78": 5.645265479073, "79": 5.3787754901345, "80": 5.1176965700822, "81": 4.8626393705137, "82": 4.6141912300826, "83": 4.3728580772168, "84": 4.1391098752643, "85": 3.9133879100993, "86": 3.695992721904, "87": 3.4872133825369, "88": 3.2872526884025, "89": 3.096142548173, "90": 2.9138392064644, "91": 2.740026227321, "92": 2.5741825142932, "93": 2.4150563897939, "94": 2.2603331004976, "95": 2.1055883256772, "96": 1.9412615539289, "97": 1.7467852866017, "98": 1.4734744647692, "99": 1.0};
@@ -218,6 +224,7 @@ const FECHA_AM_2016 = "2016-04-05";
 let lastPatronal = null;
 const fmt=n=>parseFloat((Math.round((Number(n)||0)*100)/100).toFixed(2)).toLocaleString('es-EC',{minimumFractionDigits:2,maximumFractionDigits:2});
 const f4=n=>Number(n||0).toLocaleString('es-EC',{minimumFractionDigits:4,maximumFractionDigits:13});
+const safeText=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 function showTab(id,btn){document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById('tab-'+id).classList.add('active');if(btn)btn.classList.add('active');}
 function diffF(a,b){const d1=new Date(a+'T00:00:00'),d2=new Date(b+'T00:00:00');if(d2<=d1)return null;let y=d2.getFullYear()-d1.getFullYear(),mo=d2.getMonth()-d1.getMonth(),di=d2.getDate()-d1.getDate();if(di<0){mo--;di+=new Date(d2.getFullYear(),d2.getMonth(),0).getDate()}if(mo<0){y--;mo+=12}return{y,mo,di,totDias:(d2-d1)/86400000}}
 function updTP(){const fi=document.getElementById('p_fi').value,fs=document.getElementById('p_fs').value,el=document.getElementById('tdisplay');if(!fi||!fs){el.textContent='';return}const d=diffF(fi,fs);if(!d){el.textContent='⚠ Fecha de salida debe ser posterior al ingreso';el.style.color='var(--red)';return}el.style.color='var(--ink)';el.textContent=`Tiempo exacto: ${d.y} año(s), ${d.mo} mes(es), ${d.di} día(s). Para el cálculo se toman ${d.y} año(s) completo(s).`;}
@@ -243,7 +250,7 @@ function getAnios(){const m=document.getElementById('p_anios_manual').value;if(m
 function getPromAnual(){const total5=parseFloat(document.getElementById('p_total_5').value)||0;const promMensual=parseFloat(document.getElementById('p_prom_mensual').value)||0;if(total5>0)return total5/5;return promMensual*12;}
 function estadoDerecho(anios,causal){if(anios>=25)return ['Jubilación patronal completa','g','Cumple 25 años o más de servicio con el mismo empleador.'];if(anios>=20&&causal==='despido')return ['Jubilación patronal proporcional','gold','Tiene entre 20 y menos de 25 años y la causal marcada es despido intempestivo.'];if(anios>=20)return ['Revisar procedencia','a','Tiene entre 20 y menos de 25 años, pero no se marcó despido intempestivo. Puede requerir análisis legal específico.'];return ['Sin derecho todavía','r','No alcanza 20 años completos de servicio.'];}
 function calcPatronal(){
- const nombre=document.getElementById('p_nombre').value||'El trabajador';
+ const nombre=safeText(document.getElementById('p_nombre').value||'El trabajador');
  const sexo=document.getElementById('p_sexo').value;
  const edad=parseInt(document.getElementById('p_edad').value)||0;
  const reg=getRegimen();
@@ -260,7 +267,7 @@ function calcPatronal(){
  const minLegal=doble?20:30;
  const fondos=parseFloat(document.getElementById('p_fondos').value)||0;
  const ded=parseFloat(document.getElementById('p_deducciones').value)||0;
- const obs=document.getElementById('p_obs').value||'';
+ const obs=safeText(document.getElementById('p_obs').value||'');
  const rp=document.getElementById('rp-patronal');
  if(anios<=0){rp.innerHTML=`<div class="card"><div class="al r"><strong>Error:</strong> Ingresa fechas válidas o años completos manuales.</div></div>`;return}
  if(reg==='pre_acuerdo'&&(edad<39||edad>89)){rp.innerHTML=`<div class="card"><div class="al r"><strong>Error:</strong> Para Art. 218 CT la tabla de la Resolución 04-2026 contiene edades de 39 a 89. Corrige la edad o ingresa un coeficiente manual válido.</div></div>`;return}
@@ -291,8 +298,10 @@ function calcPatronal(){
  rp.innerHTML=`<div class="card"><div class="r-header gold"><div class="rhl" style="color:var(--gold2)">Pensión jubilar patronal mensual referencial</div><div class="rhv" style="color:var(--gold2)">$${fmt(pensionFinal)}</div><div class="rhs" style="color:rgba(255,255,255,.65)">${nombre} · ${anios} año(s) · edad ${edad} · ${reg==='pre_acuerdo'?'Art. 218 + 217 CT':'Acuerdo ministerial / tabla 2026'}</div></div><div class="rmet"><div class="rmc"><div class="rml">Haber individual</div><div class="rmv" style="color:var(--gold)">$${fmt(haber)}</div><div class="rms">5% promedio anual × años + fondos - deducciones</div></div><div class="rmc"><div class="rml">Pensión base</div><div class="rmv">$${fmt(pensionBase)}</div><div class="rms">Haber / coeficiente / 12</div></div><div class="rmc"><div class="rml">Coeficiente aplicado</div><div class="rmv">${f4(coef)}</div><div class="rms">${reg==='pre_acuerdo'?'Art. 218 CT':'2026 · '+(sexo==='M'?'Mujeres':'Hombres')} · edad ${edad}</div></div><div class="rmc"><div class="rml">Fondo global referencial</div><div class="rmv" style="color:var(--green)">$${fmt(capitalGlobal)}</div><div class="rms">${capitalFormula}</div></div></div>${alertas.join('')}<div class="dtit">Desglose del cálculo con Resolución 04-2026</div><div style="overflow-x: auto; width: 100%;"><table class="dt"><thead><tr><th>Concepto</th><th>Fórmula / base legal</th><th>Valor</th></tr></thead><tbody><tr><td><div class="tdc">Promedio anual de últimos 5 años</div><div class="tdn">Total 5 años / 5 o promedio mensual × 12</div></td><td>Art. 216 CT</td><td class="tdv">$${fmt(promAnual)}</td></tr><tr><td><div class="tdc">5% del promedio anual × años</div><div class="tdn">5% × $${fmt(promAnual)} × ${anios}</div></td><td>Haber base</td><td class="tdv">$${fmt(base5)}</td></tr><tr><td><div class="tdc">Fondos de reserva / valores reconocidos</div><div class="tdn">Dato proporcionado</div></td><td>Se suma</td><td class="tdv">$${fmt(fondos)}</td></tr><tr><td><div class="tdc">Deducciones imputables</div><div class="tdn">Dato proporcionado</div></td><td>Se resta</td><td class="tdv">-$${fmt(ded)}</td></tr><tr><td><div class="tdc">Haber individual</div><div class="tdn">Base + fondos - deducciones</div></td><td>Total</td><td class="tdv">$${fmt(haber)}</td></tr><tr><td><div class="tdc">Pensión base</div><div class="tdn">Haber individual / (${f4(coef)} × 12)</div></td><td>${reg==='pre_acuerdo'?'Art. 218 CT':'Acuerdo ministerial vigente'}</td><td class="tdv">$${fmt(pensionBase)}</td></tr><tr><td><div class="tdc">Mínimo legal</div><div class="tdn">${doble?'Doble jubilación':'Solo jubilación patronal'}</div></td><td>Art. 216 CT</td><td class="tdv">$${fmt(minLegal)}</td></tr><tr><td><div class="tdc">Tope mensual</div><div class="tdn">Remuneración básica/unificada media del último año</div></td><td>Art. 216 CT</td><td class="tdv">${tope>0?'$'+fmt(tope):'No ingresado'}</td></tr><tr><td><div class="tdc">Fondo global</div><div class="tdn">${capitalFormula}</div></td><td>Res. CNJ 04-2026</td><td class="tdv">$${fmt(capitalGlobal)}</td></tr><tr style="background:var(--paper2)"><td colspan="2" style="font-weight:900;font-size:14px;padding:10px 8px;border-top:2px solid var(--paper3)">PENSIÓN MENSUAL FINAL REFERENCIAL</td><td class="tdf">$${fmt(pensionFinal)}</td></tr></tbody></table></div><div class="ntags"><span class="nt">Resolución CNJ 04-2026</span><span class="nt">Art. 216 CT</span><span class="nt">${reg==='pre_acuerdo'?'Art. 218 + 217 CT':'Acuerdo ministerial vigente'}</span><span class="nt">Cálculo global</span></div><div class="nota">⚠ Resultado referencial. La Resolución 04-2026 rige para el fondo global cuando exista acuerdo de partes. Para juicio, acta transaccional o peritaje, valida roles, fondos de reserva, aportes patronales, edad exacta y la fecha de terminación.</div></div>`;
 }
 function buildGlobal(){const el=document.getElementById('rp-global');if(!el)return;if(!lastPatronal){el.innerHTML='<div class="card re" style="box-shadow:none"><div class="reico">💰</div><div class="retit">Sin cálculo aún</div><div class="resub">Calcula primero la jubilación patronal.</div></div>';return}const x=lastPatronal;el.innerHTML=`<div class="r-header gold"><div class="rhl" style="color:var(--gold2)">Fondo global referencial</div><div class="rhv" style="color:var(--gold2)">$${fmt(x.capitalGlobal)}</div><div class="rhs" style="color:rgba(255,255,255,.65)">${x.capitalFormula}</div></div><div class="al gold"><strong>Lectura jurídica:</strong> Según Resolución CNJ 04-2026, el fondo global se calcula aplicando los acuerdos ministeriales vigentes a la fecha de terminación; si la relación terminó antes de dichos acuerdos, se usa Art. 218 CT y se suma el año adicional del Art. 217 CT.</div><div style="overflow-x: auto; width: 100%;"><table class="dt"><tbody><tr><td><div class="tdc">Régimen aplicado</div></td><td class="tdv">${x.reg==='pre_acuerdo'?'Art. 218 CT + Art. 217 CT':'Acuerdo ministerial vigente / tabla 2026'}</td></tr><tr><td><div class="tdc">Pensión mensual final</div><div class="tdn">Luego de mínimo/tope legal</div></td><td class="tdv">$${fmt(x.pension)}</td></tr><tr><td><div class="tdc">Factor anual</div><div class="tdn">12 meses</div></td><td class="tdv">12</td></tr><tr><td><div class="tdc">Coeficiente aplicado</div><div class="tdn">${x.reg==='pre_acuerdo'?'Art. 218 CT + 1 año adicional':'Coeficiente 2026 para '+(x.sexo==='M'?'mujeres':'hombres')}</div></td><td class="tdv">${x.reg==='pre_acuerdo'?f4(x.coef)+' + 1':f4(x.coef)}</td></tr><tr style="background:var(--paper2)"><td class="tdf" style="text-align:left">FONDO GLOBAL</td><td class="tdf">$${fmt(x.capitalGlobal)}</td></tr></tbody></table></div>`;}
-function getTasaIESS(imposiciones){if(imposiciones<120)return{tasa:0,tiene:false};if(imposiciones<180)return{tasa:50,tiene:true};if(imposiciones<240)return{tasa:52,tiene:true};if(imposiciones<300)return{tasa:55,tiene:true};if(imposiciones<360)return{tasa:60,tiene:true};if(imposiciones<420)return{tasa:65,tiene:true};if(imposiciones<480)return{tasa:70,tiene:true};return{tasa:75,tiene:true}}
-function calcIESS(){const nombre=document.getElementById('i_nombre').value||'Afiliado';const edad=Number(document.getElementById('i_edad').value)||0;const impos=Number(document.getElementById('i_imposiciones').value)||0;const sueldo=Number(document.getElementById('i_sueldo').value)||0;const x=getTasaIESS(impos);const rp=document.getElementById('rp-iess');const anios=Math.floor(impos/12),meses=impos%12;if(!x.tiene){rp.innerHTML=`<div class="card"><div class="al r"><strong>Sin derecho referencial:</strong> ${nombre} registra ${impos} imposiciones. Se requieren al menos 120 imposiciones para revisar edad avanzada y 480 para ordinaria completa.</div></div>`;return}const pension=sueldo*x.tasa/100;let al='';if(edad>=60&&impos>=480)al='<div class="al g"><strong>Cumple requisito ordinario referencial:</strong> 60 años o más y 480 imposiciones o más.</div>';else if(edad>=70&&impos>=120)al='<div class="al gold"><strong>Puede revisar jubilación por edad avanzada:</strong> 70 años o más y al menos 120 imposiciones.</div>';else al='<div class="al a"><strong>Aún debe revisar requisitos:</strong> La tasa se muestra solo como referencia por imposiciones; pueden faltar edad o aportes.</div>';rp.innerHTML=`<div class="card"><div class="r-header blue"><div class="rhl" style="color:#93c5fd">Pensión IESS referencial</div><div class="rhv" style="color:#93c5fd">$${fmt(pension)}</div><div class="rhs" style="color:rgba(255,255,255,.65)">${x.tasa}% de $${fmt(sueldo)} · ${anios} años ${meses} meses</div></div>${al}<div class="rmet"><div class="rmc"><div class="rml">Imposiciones</div><div class="rmv">${impos}</div><div class="rms">${anios} años y ${meses} meses</div></div><div class="rmc"><div class="rml">Tasa referencial</div><div class="rmv" style="color:var(--blue)">${x.tasa}%</div><div class="rms">Según rango de aportes</div></div><div class="rmc"><div class="rml">Mensual</div><div class="rmv">$${fmt(pension)}</div><div class="rms">Estimado</div></div><div class="rmc"><div class="rml">Anual</div><div class="rmv">$${fmt(pension*12)}</div><div class="rms">12 meses</div></div></div><div class="nota">El cálculo oficial del IESS puede variar según historial, topes, mínimos y normativa vigente.</div></div>`;}
+const COEF_IESS={5:.4375,6:.45,7:.4625,8:.475,9:.4875,10:.5,11:.5125,12:.525,13:.5375,14:.55,15:.5625,16:.575,17:.5875,18:.6,19:.6125,20:.625,21:.6375,22:.65,23:.6625,24:.675,25:.6875,26:.7,27:.7125,28:.725,29:.7375,30:.75,31:.7625,32:.775,33:.7875,34:.8,35:.8125,36:.8325,37:.8605,38:.897,39:.943,40:1};
+function getCoefIESS(imposiciones){const anios=Math.floor(imposiciones/12);if(anios<5)return 0;if(anios<=40)return COEF_IESS[anios];return 1+(anios-40)*.0125}
+function requisitoIESS(edad,imposiciones){if(imposiciones>=480)return{cumple:true,texto:'480 imposiciones o más, sin edad mínima'};if(edad>=70&&imposiciones>=120)return{cumple:true,texto:'70 años o más y al menos 120 imposiciones'};if(edad>=65&&imposiciones>=180)return{cumple:true,texto:'65 años o más y al menos 180 imposiciones'};if(edad>=60&&imposiciones>=360)return{cumple:true,texto:'60 años o más y al menos 360 imposiciones'};return{cumple:false,texto:'No reúne uno de los cuatro supuestos de edad e imposiciones del Art. 11 de la Resolución C.D. 100'}}
+function calcIESS(){const nombre=safeText(document.getElementById('i_nombre').value||'Afiliado');const edad=Number(document.getElementById('i_edad').value)||0;const impos=Math.max(0,Math.floor(Number(document.getElementById('i_imposiciones').value)||0));const base=Number(document.getElementById('i_sueldo').value)||0;const rp=document.getElementById('rp-iess');const anios=Math.floor(impos/12),meses=impos%12;const coef=getCoefIESS(impos);const requisito=requisitoIESS(edad,impos);if(edad<18||edad>100||base<=0){rp.innerHTML='<div class="card"><div class="al r"><strong>Datos incompletos:</strong> Revise la edad y la base mensual de cálculo.</div></div>';return}if(!requisito.cumple){rp.innerHTML=`<div class="card"><div class="al r"><strong>No cumple los requisitos de acceso:</strong> ${nombre} registra ${impos} imposiciones y ${edad} años. ${requisito.texto}.</div><div class="nota">Supuestos oficiales: 60/360, 65/180, 70/120 o cualquier edad/480. Verifique además cesantía y el historial registrado por el IESS.</div></div>`;return}const pension=base*coef;const tasa=(coef*100).toLocaleString('es-EC',{minimumFractionDigits:2,maximumFractionDigits:2});rp.innerHTML=`<div class="card"><div class="r-header blue"><div class="rhl" style="color:#93c5fd">Pensión IESS referencial</div><div class="rhv" style="color:#93c5fd">$${fmt(pension)}</div><div class="rhs" style="color:rgba(255,255,255,.65)">${tasa}% de $${fmt(base)} · ${anios} años ${meses} meses</div></div><div class="al g"><strong>Requisito identificado:</strong> ${requisito.texto}.</div><div class="rmet"><div class="rmc"><div class="rml">Imposiciones</div><div class="rmv">${impos}</div><div class="rms">${anios} años y ${meses} meses</div></div><div class="rmc"><div class="rml">Coeficiente anual</div><div class="rmv" style="color:var(--blue)">${coef.toFixed(4)}</div><div class="rms">Art. 13, C.D. 100</div></div><div class="rmc"><div class="rml">Mensual</div><div class="rmv">$${fmt(pension)}</div><div class="rms">Base × coeficiente</div></div><div class="rmc"><div class="rml">Anual referencial</div><div class="rmv">$${fmt(pension*12)}</div><div class="rms">12 meses</div></div></div><div class="nota">Estimación con los años completos de imposición. El IESS determina la base oficial, mejoras, mínimos, máximos, cesantía y demás condiciones del expediente.</div></div>`;}
 function buildCoefTable(){const body=document.getElementById('coef-body');if(!body)return;const er=parseInt(document.getElementById('edad_resaltar')?.value)||50;let rows='';for(let e=39;e<=99;e++){rows+=`<tr${e===er?' style="background:var(--gold3);font-weight:800;color:var(--amb)"':''}><td>${e}</td><td>${f4(COEF_H[e])}</td><td>${f4(COEF_M[e])}</td><td>${COEF_CT218[e]?f4(COEF_CT218[e]):'—'}</td></tr>`}body.innerHTML=rows;}
 updTP();updCoef();buildCoefTable();
     </script>
@@ -304,7 +313,7 @@ updTP();updCoef();buildCoefTable();
 
             if (mobileMenu && navLinks && menuIcon) {
                 mobileMenu.addEventListener('click', function(e) {
-                    e.stopPropagation(); 
+                    e.stopPropagation();
                     navLinks.classList.toggle('active');
                     if (navLinks.classList.contains('active')) {
                         menuIcon.classList.remove('fa-bars');
@@ -323,7 +332,7 @@ updTP();updCoef();buildCoefTable();
                         menuIcon.classList.add('fa-bars');
                     });
                 });
-                
+
                 document.addEventListener('click', function(event) {
                     const isClickInsideMenu = navLinks.contains(event.target);
                     const isClickOnToggle = mobileMenu.contains(event.target);
@@ -334,7 +343,7 @@ updTP();updCoef();buildCoefTable();
                     }
                 });
             }
-            
+
             const header = document.querySelector('header');
             if (header) {
                 window.addEventListener('scroll', () => {
@@ -347,7 +356,7 @@ updTP();updCoef();buildCoefTable();
             }
         });
     </script>
-        <div id="legalModal" class="modal">
+        <div id="legalModal" class="modal" hidden aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('legalModal')">&times;
             </span>
@@ -372,12 +381,13 @@ updTP();updCoef();buildCoefTable();
         }
     </script>
 <div class="whatsapp-wrapper">
-        <div class="whatsapp-label">¿Necesitas ayuda?<span>Escríbenos</span></div>
-        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-label">¿Necesita ayuda?<span>Escríbanos</span></div>
+        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp" rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-whatsapp"></i>
         </a>
     </div>
     <script src="js/cursor-follower.js" defer></script>
+    <script src="js/site-accessibility.js" defer></script>
 </body>
 </html>
 

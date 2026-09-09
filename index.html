@@ -15,9 +15,9 @@
     <meta name="description"
         content="Estudio Jurídico en Guayaquil con experiencia en derecho penal, civil, corporativo y más. Lisboa Legal Group, excelencia y compromiso con su caso.">
     <title>Lisboa Legal Group | Abogados en Guayaquil, Ecuador</title>
-    
+
     <!-- Schema.org JSON-LD Structured Data -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -108,23 +108,27 @@
     <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/">
     <meta property="og:type" content="website">
 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lisboa Legal Group | Abogados en Guayaquil, Ecuador">
+    <meta name="twitter:description" content="Estudio Jurídico en Guayaquil con experiencia en derecho penal, civil, corporativo y más. Lisboa Legal Group, excelencia y compromiso con su caso.">
+    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header>
         <div class="container navbar">
             <!-- Logo principal fuertemente destacado -->
-            <a href="index.html" class="logo-container">
-                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img">
+            <a href="./" class="logo-container">
+                <img src="logo-full.png" alt="Lisboa Legal Group Logo" class="logo-img" width="192" height="192" decoding="async">
             </a>
-            <div class="menu-toggle" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Abrir menú principal" aria-expanded="false" aria-controls="primary-navigation"><i class="fas fa-bars" aria-hidden="true"></i></button>
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="primary-navigation">
                     <li>
-                        <a href="index.html">Inicio</a>
+                        <a href="./">Inicio</a>
                     </li>
                     <li>
                         <a href="areas-de-practica.html">Áreas de Práctica</a>
@@ -141,25 +145,25 @@
                 </ul>
             </nav>
             <div style="display: flex; align-items: center; gap: 20px;">
-                <div class="lang-switch">
-                    <a href="#" class="active">ES</a> | <a href="#">EN</a>
-                </div>
+                <div class="lang-switch" aria-label="Idioma del sitio"><span lang="es" aria-current="true">ES</span></div>
                 <a href="#contacto" class="btn btn-gold mobile-hidden">Consulta</a>
             </div>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <video autoplay loop muted playsinline class="hero-video" style="background-color: var(--primary-blue);">
+    <main id="main-content">
+
+    <section id="inicio" class="hero hero-static">
+        <video class="hero-video" autoplay loop muted playsinline preload="metadata" poster="oficina-aerea.webp" aria-hidden="true" tabindex="-1">
             <source src="videolisboa.mp4" type="video/mp4">
         </video>
         <div class="container hero-container">
             <div class="hero-text" data-aos="fade-up" data-aos-duration="1200">
-                <img src="logo-full.png" alt="Lisboa Legal Group" class="hero-logo-large">
+                <img src="logo-full.png" alt="Lisboa Legal Group" class="hero-logo-large" width="192" height="192" decoding="async">
                 <h1>Liderazgo Legal. <br>
-                    <span>Impacto Global.</span>
+                    <span>Estrategia que protege.</span>
                 </h1>
-                <p>Protegiendo sus intereses con excelencia jurídica, enfoque estratégico y tecnología de vanguardia.
+                <p>Protegemos sus intereses con rigor jurídico, enfoque estratégico y atención personalizada.
                 </p>
                 <div class="hero-ctas"
                     style="margin-top: 15px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
@@ -176,7 +180,7 @@
         <div class="container">
             <div class="why-header" data-aos="fade-down">
                 <div class="why-subtitle">
-                    <i class="fas fa-university">
+                    <i aria-hidden="true" class="fas fa-university">
                     </i>Nuestra Propuesta de Valor
                 </div>
                 <h2 class="why-title">Comprometidos con<br>la excelencia jurídica</h2>
@@ -185,36 +189,32 @@
                 <!-- Columna 1 -->
                 <div class="why-card" data-aos="fade-up">
                     <div class="why-icon">
-                        <i class="fas fa-balance-scale-right">
+                        <i aria-hidden="true" class="fas fa-balance-scale-right">
                         </i>
                     </div>
                     <h3>Excelencia Jurídica</h3>
-                    <p>Mantenemos los más altos estándares éticos y profesionales,
-                        ofreciendo soluciones técnicas de altísima complejidad con precisión y resultados contundentes
-                        en cada caso,
-                        asesoría o litigio. </p>
+                    <p>Trabajamos con estándares éticos y profesionales, análisis técnico y comunicación clara para
+                        orientar cada asesoría o litigio con rigor.</p>
                 </div>
                 <!-- Columna 2 -->
                 <div class="why-card" data-aos="fade-up">
                     <div class="why-icon">
-                        <i class="fas fa-chess-knight">
+                        <i aria-hidden="true" class="fas fa-chess-knight">
                         </i>
                     </div>
                     <h3>Enfoque Estratégico</h3>
-                    <p>Diseñamos estrategias legales a la medida que trascienden el ámbito jurídico. Entendemos su
-                        negocio y objetivos para mitigar riesgos,
-                        maximizar recursos y asegurar victorias clave.</p>
+                    <p>Diseñamos estrategias legales a la medida. Comprendemos su negocio y sus objetivos para mitigar
+                        riesgos, priorizar recursos y fortalecer su posición jurídica.</p>
                 </div>
                 <!-- Columna 3 -->
                 <div class="why-card" data-aos="fade-up">
                     <div class="why-icon">
-                        <i class="fas fa-network-wired">
+                        <i aria-hidden="true" class="fas fa-network-wired">
                         </i>
                     </div>
                     <h3>Tecnología Aplicada</h3>
-                    <p>Implementamos IA avanzada y estrictos protocolos de protección de datos para agilizar el análisis
-                        de casos,
-                        garantizar la seguridad de la información confidencial y optimizar su defensa legal. </p>
+                    <p>Utilizamos herramientas tecnológicas con revisión profesional para organizar información y
+                        apoyar el análisis, aplicando criterios de minimización y confidencialidad.</p>
                 </div>
             </div>
 
@@ -222,16 +222,16 @@
             <div class="stats-counter-container" data-aos="fade-up">
                 <div class="stats-counter-grid">
                     <div class="stats-counter-item">
-                        <div class="stats-counter-number" data-target="100">0+</div>
-                        <div class="stats-counter-label">Clientes Atendidos</div>
+                        <div class="stats-counter-number" data-target="100">100+</div>
+                        <div class="stats-counter-label">Clientes atendidos</div>
                     </div>
                     <div class="stats-counter-item">
-                        <div class="stats-counter-number" data-target="10">0+</div>
-                        <div class="stats-counter-label">Áreas de Práctica</div>
+                        <div class="stats-counter-number" data-target="10">10+</div>
+                        <div class="stats-counter-label">Áreas de práctica</div>
                     </div>
                     <div class="stats-counter-item">
-                        <div class="stats-counter-number" data-target="6">0+</div>
-                        <div class="stats-counter-label">Miembros del Equipo</div>
+                        <div class="stats-counter-number" data-target="6">6+</div>
+                        <div class="stats-counter-label">Miembros del equipo</div>
                     </div>
                 </div>
             </div>
@@ -272,20 +272,20 @@
                 <h2>Áreas de Práctica</h2>
                 <div class="line">
                 </div>
-                <p style="margin-top: 20px; font-size: 1.1rem;">Seleccione un área para descubrir cómo garantizamos
-                    resultados mediante la excelencia.</p>
+                <p style="margin-top: 20px; font-size: 1.1rem;">Seleccione un área para conocer nuestro enfoque y los
+                    asuntos en los que podemos orientarle.</p>
             </div>
             <div class="services-grid">
                 <!-- 1. Derecho Penal -->
                 <a href="derecho-penal.html" class="service-link">
                     <div class="service-card" data-aos="fade-up" style="background-image: url('derecho_penal.webp');">
                         <div class="service-content">
-                            <i class="fas fa-gavel">
+                            <i aria-hidden="true" class="fas fa-gavel">
                             </i>
                             <h3>Derecho Penal</h3>
                             <p>Expertos en litigación penal con capacidad operativa a nivel nacional e internacional.
                                 Ofrecemos soluciones jurídicas de alta complejidad para los sectores público y privado,
-                                garantizando una protección legal efectiva y resultados basados en la experiencia.</p>
+                                con una estrategia orientada a proteger sus derechos e intereses.</p>
                         </div>
                     </div>
                 </a>
@@ -294,12 +294,12 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('img_derecho-civil_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-balance-scale">
+                            <i aria-hidden="true" class="fas fa-balance-scale">
                             </i>
                             <h3>Derecho Civil</h3>
                             <p>Especialistas en la protección de su patrimonio,
                                 obligaciones y contratos. Gestionamos todo tipo de controversias civiles y comerciales,
-                                garantizando la máxima seguridad y defensa de sus intereses empresariales y personales.
+                                con atención a la seguridad jurídica y la defensa de sus intereses empresariales y personales.
                             </p>
                         </div>
                     </div>
@@ -309,7 +309,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('img_derecho-de-familia_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-users">
+                            <i aria-hidden="true" class="fas fa-users">
                             </i>
                             <h3>Derecho de Familia</h3>
                             <p>Asesoramiento integral y sensible en procedimientos de divorcio,
@@ -324,7 +324,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('img_derecho-constitucional_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-landmark">
+                            <i aria-hidden="true" class="fas fa-landmark">
                             </i>
                             <h3>Derecho Constitucional</h3>
                             <p>Defensa férrea de sus derechos fundamentales. Patrocinio de alto nivel en acciones de
@@ -339,7 +339,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('derecho_administrativo.webp');">
                         <div class="service-content">
-                            <i class="fas fa-file-signature">
+                            <i aria-hidden="true" class="fas fa-file-signature">
                             </i>
                             <h3>Derecho Administrativo</h3>
                             <p>Representación experta ante instituciones estatales. Brindamos gestión en contratación
@@ -354,7 +354,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('img_compliance_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-shield-alt">
+                            <i aria-hidden="true" class="fas fa-shield-alt">
                             </i>
                             <h3>Compliance</h3>
                             <p>Diseño,
@@ -371,7 +371,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('img_herencias-y-sucesiones_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-scroll">
+                            <i aria-hidden="true" class="fas fa-scroll">
                             </i>
                             <h3>Derecho de Sucesiones</h3>
                             <p>Planificación patrimonial y hereditaria a la medida de su legado. Otorgamos asistencia
@@ -386,7 +386,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('img_derecho-laboral_1.webp');">
                         <div class="service-content">
-                            <i class="fas fa-handshake">
+                            <i aria-hidden="true" class="fas fa-handshake">
                             </i>
                             <h3>Derecho Laboral</h3>
                             <p>Estrategias efectivas para la correcta gestión de sus relaciones de trabajo. Asesoría
@@ -402,7 +402,7 @@
                     <div class="service-card" data-aos="fade-up"
                         style="background-image: url('derecho_societario.webp');">
                         <div class="service-content">
-                            <i class="fas fa-building">
+                            <i aria-hidden="true" class="fas fa-building">
                             </i>
                             <h3>Derecho Societario</h3>
                             <p>Estructuración corporativa y gobernanza integral. Desde la constitución,
@@ -420,14 +420,13 @@
         <div class="container presence-container">
             <div class="presence-text" data-aos="fade-right">
                 <div class="subtitle-tag">
-                    <i class="fas fa-building">
-                    </i>Oficinas estratégicamente ubicadas
+                    <i aria-hidden="true" class="fas fa-building">
+                    </i>Sede en Guayaquil
                 </div>
-                <h2>Presencia en todo el territorio nacional</h2>
-                <p>Somos una firma líder en la región con operaciones propias y contamos con exclusivas oficinas
-                    ubicadas estratégicamente en edificios corporativos para ofrecer la mejor atención personalizada y
-                    profesional.</p>
-                <a href="#contacto" class="btn btn-red">Contáctanos</a>
+                <h2>Atención jurídica desde Guayaquil</h2>
+                <p>Atendemos desde nuestra sede en Guayaquil y evaluamos la cobertura de cada asunto dentro de Ecuador
+                    según su materia, jurisdicción y necesidades.</p>
+                <a href="#contacto" class="btn btn-red">Contáctenos</a>
             </div>
             <div class="locations-grid">
                 <!-- Tarjeta de ubicación Guayaquil -->
@@ -456,7 +455,7 @@
                         onmouseover="this.style.transform='translateY(-5px)';"
                         onmouseout="this.style.transform='translateY(0)';">
                             <img loading="lazy" src="Daniel Modelo.webp" alt="Daniel Espinoza" class="member-img"
-                                style="   object-fit: cover; object-position: top; margin-bottom: 20px;">
+                                width="1024" height="1536" decoding="async">
                         <h3 style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 5px; font-family: 'Golos Text', sans-serif;">Daniel Espinoza</h3>
                         <p
                             style="color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
@@ -470,7 +469,7 @@
                         onmouseout="this.style.transform='translateY(0)';">
                             <img loading="lazy" src="Nueva foto karo.webp"
                                 alt="Karol Carvajal" class="member-img"
-                                style="   object-fit: cover; object-position: top; margin-bottom: 20px; background-color: var(--bg-light);">
+                                width="1024" height="1536" decoding="async">
                         <h3 style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 5px; font-family: 'Golos Text', sans-serif;">Karol Carvajal</h3>
                         <p
                             style="color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
@@ -484,7 +483,7 @@
                         onmouseout="this.style.transform='translateY(0)';">
                             <img loading="lazy" src="gustavo.webp"
                                 alt="Gustavo San Andrés" class="member-img"
-                                style="   object-fit: cover; object-position: top; margin-bottom: 20px; background-color: var(--bg-light);">
+                                width="1024" height="1536" decoding="async">
                         <h3 style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 5px; font-family: 'Golos Text', sans-serif;">Gustavo San Andrés</h3>
                         <p
                             style="color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
@@ -512,21 +511,20 @@
                     style="text-align: left; padding: 40px; background: var(--white); border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;"
                     onmouseover="this.style.transform='translateY(-5px)';"
                     onmouseout="this.style.transform='translateY(0)';">
-                    <i class="fas fa-certificate"
+                    <i aria-hidden="true" class="fas fa-certificate"
                         style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">
                     </i>
                     <h3
                         style="font-size: 1.4rem; color: var(--primary-blue); margin-bottom: 15px; font-family: 'Golos Text', sans-serif;">
-                        Certificaciones</h3>
-                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Operamos bajo estrictos estándares
-                        internacionales de calidad y cumplimiento,
-                        garantizando auditorías transparentes y procesos certificados.</p>
+                        Procesos documentados</h3>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;">Aplicamos procedimientos internos de
+                        revisión, control de conflictos y seguimiento de asuntos para sostener un servicio consistente.</p>
                 </div>
                 <div class="culture-card" data-aos="fade-up"
                     style="text-align: left; padding: 40px; background: var(--white); border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;"
                     onmouseover="this.style.transform='translateY(-5px)';"
                     onmouseout="this.style.transform='translateY(0)';">
-                    <i class="fas fa-balance-scale"
+                    <i aria-hidden="true" class="fas fa-balance-scale"
                         style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">
                     </i>
                     <h3
@@ -540,7 +538,7 @@
                     style="text-align: left; padding: 40px; background: var(--white); border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.3s;"
                     onmouseover="this.style.transform='translateY(-5px)';"
                     onmouseout="this.style.transform='translateY(0)';">
-                    <i class="fas fa-hands-helping"
+                    <i aria-hidden="true" class="fas fa-hands-helping"
                         style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px;">
                     </i>
                     <h3
@@ -557,38 +555,37 @@
         style="background-color: var(--primary-blue); color: var(--white);">
         <div class="container">
             <div class="section-title" data-aos="zoom-in">
-                <h2 style="color: var(--white);">Respaldados por la Confianza</h2>
+                <h2 style="color: var(--white);">Nuestro compromiso de servicio</h2>
                 <div class="line">
                 </div>
             </div>
             <div class="testimonials-container" data-aos="zoom-in"
                 style="max-width: 900px; margin: 0 auto 60px auto; text-align: left; background: rgba(255,255,255,0.03); padding: 50px; border-radius: 12px; border: 1px solid rgba(212, 175, 55, 0.2);">
-                <i class="fas fa-quote-left"
+                <i aria-hidden="true" class="fas fa-quote-left"
                     style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 20px; opacity: 0.5;">
                 </i>
-                <p style="font-size: 1.3rem; font-style: italic; line-height: 1.8; margin-bottom: 30px;">"La asesoría de
-                    Lisboa Legal Group fue determinante para nuestra reestructuración corporativa. Su nivel de análisis
-                    estratégico y precisión jurídica los distingue como una de las firmas más competentes de la región."
-                </p>
+                <p style="font-size: 1.3rem; line-height: 1.8; margin-bottom: 30px;">Cada asunto exige escucha,
+                    análisis riguroso y una estrategia comprensible para el cliente. Nuestro compromiso es informar con
+                    claridad, anticipar riesgos y actuar con responsabilidad profesional.</p>
                 <div>
                     <h4
                         style="color: var(--accent-gold); font-family: 'Golos Text', sans-serif; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">
-                        Director Ejecutivo</h4>
-                    <span style="font-size: 0.9rem; opacity: 0.8;">Cámara de Comercio Regional</span>
+                        Principio de trabajo</h4>
+                    <span style="font-size: 0.9rem; opacity: 0.8;">Lisboa Legal Group</span>
                 </div>
             </div>
             <!-- Carrusel de logotipos -->
             <div class="clients-logos" data-aos="fade-up"
                 style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; opacity: 0.6; align-items: center;">
-                <i class="fas fa-building" style="font-size: 3.5rem;">
+                <i aria-hidden="true" class="fas fa-building" style="font-size: 3.5rem;">
                 </i>
-                <i class="fas fa-industry" style="font-size: 3.5rem;">
+                <i aria-hidden="true" class="fas fa-industry" style="font-size: 3.5rem;">
                 </i>
-                <i class="fas fa-ship" style="font-size: 3.5rem;">
+                <i aria-hidden="true" class="fas fa-ship" style="font-size: 3.5rem;">
                 </i>
-                <i class="fas fa-landmark" style="font-size: 3.5rem;">
+                <i aria-hidden="true" class="fas fa-landmark" style="font-size: 3.5rem;">
                 </i>
-                <i class="fas fa-hospital" style="font-size: 3.5rem;">
+                <i aria-hidden="true" class="fas fa-hospital" style="font-size: 3.5rem;">
                 </i>
             </div>
         </div>
@@ -604,28 +601,28 @@
             <div class="forms-wrapper">
                 <div class="form-box" data-aos="fade-right">
                     <h3 style="margin-bottom: 25px;">
-                        <i class="fas fa-calendar-alt">
-                        </i>Agendar Cita Formal
+                        <i aria-hidden="true" class="fas fa-calendar-alt">
+                        </i>Solicitar una cita
                     </h3>
-                    <form onsubmit="event.preventDefault(); 
+                    <form onsubmit="event.preventDefault();
             const nombre=document.getElementById('wa-nombre').value;
             const telefono=document.getElementById('wa-tel').value;
             const area=document.getElementById('wa-area').value;
-            const mensaje=`Hola, mi nombre es ${nombre}. Deseo agendar una cita para el área de ${area}. Mi número de contacto es: ${telefono}.`;
+            const mensaje=`Hola, mi nombre es ${nombre}. Deseo solicitar una cita para el área de ${area}. Mi número de contacto es: ${telefono}.`;
             const whatsappUrl=`https://wa.me/593990967952?text=${encodeURIComponent(mensaje)}`;
             window.open(whatsappUrl, '_blank');
             ">
                         <div class="form-group">
-                            <label>Nombre Completo</label>
-                            <input type="text" id="wa-nombre" placeholder="Ej. Juan Pérez" required>
+                            <label for="wa-nombre">Nombre Completo</label>
+                            <input type="text" id="wa-nombre" placeholder="Ej. Juan Pérez" required name="wa-nombre" autocomplete="name">
                         </div>
                         <div class="form-group">
-                            <label>Teléfono</label>
-                            <input type="tel" id="wa-tel" placeholder="+593 99 999 9999" required>
+                            <label for="wa-tel">Teléfono</label>
+                            <input type="tel" id="wa-tel" placeholder="+593 99 999 9999" required name="wa-tel" autocomplete="tel" inputmode="tel">
                         </div>
                         <div class="form-group">
-                            <label>Área de Interés</label>
-                            <select id="wa-area" required>
+                            <label for="wa-area">Área de Interés</label>
+                            <select id="wa-area" required name="wa-area">
                                 <option value="" disabled selected>Seleccione un área...</option>
                                 <option value="Derecho Penal">Derecho Penal</option>
                                 <option value="Derecho Civil">Derecho Civil</option>
@@ -639,14 +636,14 @@
                                 <option value="Otro">Otro</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.1rem;">Confirmar tu
-                            reserva</button>
+                        <p class="form-privacy-note">Al continuar, WhatsApp recibirá su nombre, número y área de consulta para responder su solicitud. Evite incluir información sensible hasta recibir instrucciones. <a href="privacidad.html">Consulte la Política de Privacidad</a>.</p>
+                        <button type="submit" class="btn btn-gold" style="width: 100%; font-size: 1.1rem;">Continuar por WhatsApp</button>
                     </form>
                 </div>
                 <div class="contact-map-wrapper" data-aos="fade-left">
                     <h3>Guayaquil</h3>
                     <div class="map-container">
-                        <iframe
+                        <iframe title="Ubicación de Lisboa Legal Group en Guayaquil"
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.1812146569613!2d-79.88264357525459!3d-2.192023073653161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6e79063fffff%3A0x370e269ec33509f3!2sJos%C3%A9%20V%C3%A9lez%20Villamar%20220%20y%2C%20Guayaquil%20090307!5e0!3m2!1ses-419!2sec!4v1772344811635!5m2!1ses-419!2sec"
                             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
@@ -654,40 +651,43 @@
                     </div>
                     <ul class="contact-info-list">
                         <li>
-                            <i class="fas fa-map-marker-alt">
+                            <i aria-hidden="true" class="fas fa-map-marker-alt">
                             </i>
                             <span>Vélez 220 entre Chile y Chimborazo,
                                 Edificio Finansa</span>
                         </li>
                         <li>
-                            <i class="fas fa-envelope">
+                            <i aria-hidden="true" class="fas fa-envelope">
                             </i>
-                            <span>lisboalegalgroup@gmail.com</span>
+                            <a href="mailto:lisboalegalgroup@gmail.com">lisboalegalgroup@gmail.com</a>
                         </li>
                         <li>
-                            <i class="fas fa-clock">
+                            <i aria-hidden="true" class="fas fa-clock">
                             </i>
                             <span>Lunes a Viernes 9:00 a 17:30</span>
                         </li>
                         <li>
-                            <i class="fas fa-phone-alt">
+                            <i aria-hidden="true" class="fas fa-phone-alt">
                             </i>
-                            <span>0990967952</span>
+                            <a href="tel:+593990967952">099 096 7952</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+        </main>
+
     <footer class="new-footer">
-        <video autoplay loop muted playsinline class="footer-video" style="background-color: var(--primary-blue);">
-            <source src="videolisboa.mp4" type="video/mp4">
-        </video>
+    <video class="footer-video" autoplay loop muted playsinline preload="metadata" poster="oficina-aerea.webp" aria-hidden="true" tabindex="-1">
+        <source src="videolisboa.mp4" type="video/mp4">
+    </video>
+
         <div class="footer-overlay"></div>
         <div class="container footer-content-wrapper">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <img loading="lazy" src="logo-full.png" alt="Lisboa Legal Group" class="footer-logo-new">
+                    <img loading="lazy" src="logo-full.png" alt="Lisboa Legal Group" class="footer-logo-new" width="192" height="192" decoding="async">
                 </div>
                 <div class="footer-locations">
                     <div class="footer-location-title">
@@ -698,9 +698,9 @@
                         <div class="location-col">
                             <h4>MATRIZ GUAYAQUIL</h4>
                             <ul>
-                                <li><i class="fas fa-map-marker-alt"></i> <span>Vélez 220 entre Chile y Chimborazo.<br>Edificio Finansa</span></li>
-                                <li><i class="fas fa-phone-alt"></i> <span>(+593) 9 90967952</span></li>
-                                <li><i class="fas fa-envelope"></i> <span>lisboalegalgroup@gmail.com</span></li>
+                                <li><i aria-hidden="true" class="fas fa-map-marker-alt"></i> <span>Vélez 220 entre Chile y Chimborazo.<br>Edificio Finansa</span></li>
+                                <li><i aria-hidden="true" class="fas fa-phone-alt"></i> <span>(+593) 9 90967952</span></li>
+                                <li><i aria-hidden="true" class="fas fa-envelope"></i> <a href="mailto:lisboalegalgroup@gmail.com">lisboalegalgroup@gmail.com</a></li>
                             </ul>
                         </div>
                     </div>
@@ -712,19 +712,19 @@
                 <div class="footer-copy">
                     <p>2026. Todos los derechos reservados</p>
                     <div class="footer-links-new">
-                        <a onclick="openModal('legalModal')">Aviso Legal</a> | <a href="privacidad.html">Política de Privacidad</a>
+                        <a href="aviso-legal.html">Aviso legal</a> | <a href="privacidad.html">Política de Privacidad</a>
                     </div>
                 </div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank" aria-label="Facebook" class="social-square"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank" aria-label="Instagram" class="social-square"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank" aria-label="LinkedIn" class="social-square"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/593990967952" target="_blank" aria-label="WhatsApp" class="social-square"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61581507116446" target="_blank" aria-label="Facebook" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/lisboalegalgroup/" target="_blank" aria-label="Instagram" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/lisboa-legal-group/?viewAsMember=true" target="_blank" aria-label="LinkedIn" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/593990967952" target="_blank" aria-label="WhatsApp" class="social-square" rel="noopener noreferrer"><i aria-hidden="true" class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
         </div>
     </footer>
-    <div id="legalModal" class="modal">
+    <div id="legalModal" class="modal" hidden aria-hidden="true">
         <div class="modal-content">
             <span class="close-btn" onclick="closeModal('legalModal')">&times;
             </span>
@@ -734,9 +734,9 @@
         </div>
     </div>
     <div class="whatsapp-wrapper">
-        <div class="whatsapp-label">¿Necesitas ayuda?<span>Escríbenos</span></div>
-        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp">
-            <i class="fab fa-whatsapp"></i>
+        <div class="whatsapp-label">¿Necesita ayuda?<span>Escríbanos</span></div>
+        <a href="https://wa.me/593990967952" target="_blank" class="whatsapp-float" aria-label="Chat en WhatsApp" rel="noopener noreferrer">
+            <i aria-hidden="true" class="fab fa-whatsapp"></i>
         </a>
     </div>
     <script> // Funciones de modales
@@ -847,7 +847,7 @@
             const heroSection = document.querySelector('.hero');
             const heroText = document.querySelector('.hero-text');
             const heroImg = document.querySelector('.hero-image-wrapper');
-            
+
             if (heroSection) {
                 heroSection.style.perspective = "1200px";
                 if (heroText) heroText.style.transformStyle = "preserve-3d";
@@ -856,7 +856,7 @@
                 heroSection.addEventListener('mousemove', (e) => {
                     const x = (e.clientX / window.innerWidth - 0.5) * 2;
                     const y = (e.clientY / window.innerHeight - 0.5) * 2;
-                    
+
                     if(heroText) {
                         heroText.style.transform = `translateZ(60px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
                     }
@@ -874,7 +874,7 @@
                         heroImg.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
                         heroImg.style.transform = `translateZ(0) rotateX(0deg) rotateY(0deg)`;
                     }
-                    
+
                     setTimeout(() => {
                         if(heroText) heroText.style.transition = 'none';
                         if(heroImg) heroImg.style.transition = 'none';
@@ -886,17 +886,17 @@
             const parallaxElements = document.querySelectorAll('.culture-card, .blog-card, .form-box');
             const containers = document.querySelectorAll('.services-grid, .blog-grid, .forms-wrapper, .culture-grid');
             containers.forEach(c => c.style.perspective = '1200px');
-            
+
             window.addEventListener('scroll', () => {
                 const scrolled = window.scrollY;
-                
+
                 parallaxElements.forEach(el => {
                     const rect = el.getBoundingClientRect();
                     if(rect.top < window.innerHeight && rect.bottom > 0) {
                         const distanceFromCenter = (window.innerHeight / 2) - (rect.top + rect.height / 2);
                         const zOffset = Math.max(0, 40 - Math.abs(distanceFromCenter) * 0.08);
                         const yOffset = distanceFromCenter * -0.05;
-                        
+
                         if (!el.matches(':hover')) {
                            el.style.transform = `translateY(${yOffset}px) translateZ(${zOffset}px)`;
                         }
@@ -908,16 +908,16 @@
             const statsSection = document.querySelector('.stats-counter-container');
             if (statsSection) {
                 const counters = document.querySelectorAll('.stats-counter-number');
-                
+
                 const animateCounter = (counter) => {
                     const target = parseInt(counter.getAttribute('data-target'));
                     const duration = 1200; // Duración total en ms
                     const stepTime = 25; // Intervalo en ms
                     const totalSteps = duration / stepTime;
                     const increment = target / totalSteps;
-                    
+
                     let current = 0;
-                    
+
                     const timer = setInterval(() => {
                         current += increment;
                         if (current >= target) {
@@ -943,6 +943,7 @@
         });
     </script>
     <script src="js/cursor-follower.js" defer></script>
+    <script src="js/site-accessibility.js" defer></script>
 </body>
 
 </html>

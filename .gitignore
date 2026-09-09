@@ -1,0 +1,11 @@
+# Informes y archivos de trabajo locales: no deben publicarse en GitHub Pages.
+output/
+tmp/
+AUDITORIA_WEB_PROFESIONAL.md
+
+# Material interno y herramientas de generación.
+.vscode/
+tools/
+*.docx
+restore.txt
+build_*.py
