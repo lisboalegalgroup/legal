@@ -113,9 +113,346 @@
     <meta name="twitter:title" content="Lisboa Legal Group | Abogados en Guayaquil, Ecuador">
     <meta name="twitter:description" content="Estudio Jurídico en Guayaquil con experiencia en derecho penal, civil, corporativo y más. Lisboa Legal Group, excelencia y compromiso con su caso.">
     <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
+
+    <!-- Fullscreen Animated Preloader Premium
+         Este bloque es autónomo y puede separarse posteriormente en CSS/JS propios. -->
+    <style>
+        :root {
+            --preloader-primary: #2f8cff;
+            --preloader-secondary: #8d4dff;
+            --preloader-accent: #d9ad35;
+            --preloader-background: #050505;
+            --preloader-glow-intensity: 0.34;
+            --preloader-logo-size: clamp(128px, 18vw, 176px);
+            --preloader-font: "Golos Text", Arial, sans-serif;
+            --preloader-animation-duration: 2.8s;
+            --preloader-exit-duration: 720ms;
+            --preloader-progress-width: min(320px, 72vw);
+            --preloader-progress-height: 3px;
+        }
+
+        /* El preloader permanece oculto si JavaScript está desactivado. */
+        #site-preloader {
+            display: none;
+        }
+
+        html.preloader-enabled {
+            overflow: hidden;
+        }
+
+        html.preloader-enabled #site-preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 100000;
+            display: grid;
+            place-items: center;
+            min-height: 100dvh;
+            overflow: hidden;
+            isolation: isolate;
+            padding: 24px;
+            color: #fff;
+            background: var(--preloader-background);
+            font-family: var(--preloader-font);
+            opacity: 1;
+            visibility: visible;
+            transition:
+                opacity var(--preloader-exit-duration) cubic-bezier(.4, 0, .2, 1),
+                visibility 0s linear var(--preloader-exit-duration);
+        }
+
+        html.preloader-enabled body > header,
+        html.preloader-enabled body > main,
+        html.preloader-enabled body > footer,
+        html.preloader-enabled body > .whatsapp-float {
+            opacity: 0;
+        }
+
+        body.preloader-page-ready > header,
+        body.preloader-page-ready > main,
+        body.preloader-page-ready > footer,
+        body.preloader-page-ready > .whatsapp-float {
+            animation: preloader-page-reveal 680ms ease-out both;
+        }
+
+        #site-preloader.is-leaving {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        #site-preloader.is-leaving .preloader-core {
+            opacity: 0;
+            transform: translateY(-8px) scale(.985);
+        }
+
+        .preloader-glow {
+            position: absolute;
+            z-index: -1;
+            width: min(58vw, 680px);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            filter: blur(86px);
+            opacity: var(--preloader-glow-intensity);
+            pointer-events: none;
+            will-change: transform;
+        }
+
+        .preloader-glow--blue {
+            top: 8%;
+            left: -18%;
+            background: radial-gradient(circle, rgba(0, 118, 255, .82) 0%, rgba(0, 84, 255, .18) 43%, transparent 72%);
+            animation: preloader-glow-blue 8s ease-in-out infinite alternate;
+        }
+
+        .preloader-glow--violet {
+            right: -20%;
+            bottom: 2%;
+            background: radial-gradient(circle, rgba(136, 67, 255, .78) 0%, rgba(112, 54, 255, .16) 46%, transparent 72%);
+            animation: preloader-glow-violet 9s ease-in-out infinite alternate;
+        }
+
+        .preloader-core {
+            width: min(92vw, 520px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition:
+                opacity 420ms ease,
+                transform 560ms cubic-bezier(.22, 1, .36, 1);
+        }
+
+        .preloader-logo-frame {
+            position: relative;
+            width: var(--preloader-logo-size);
+            aspect-ratio: 1;
+            display: grid;
+            place-items: center;
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 28px;
+            background:
+                linear-gradient(145deg, rgba(47, 140, 255, .15), rgba(141, 77, 255, .1)),
+                rgba(255, 255, 255, .055);
+            box-shadow:
+                0 22px 80px rgba(0, 0, 0, .52),
+                0 0 44px rgba(47, 140, 255, .14),
+                inset 0 1px 0 rgba(255, 255, 255, .18);
+            -webkit-backdrop-filter: blur(18px);
+            backdrop-filter: blur(18px);
+            opacity: 0;
+            transform: scale(.84) translateY(10px);
+            animation:
+                preloader-logo-intro 820ms cubic-bezier(.22, 1, .36, 1) 80ms forwards,
+                preloader-logo-breathe var(--preloader-animation-duration) ease-in-out 950ms infinite;
+        }
+
+        .preloader-logo-frame::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            z-index: -1;
+            border-radius: inherit;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(47, 140, 255, .72), rgba(255, 255, 255, .08) 44%, rgba(141, 77, 255, .7));
+            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .preloader-logo {
+            width: 84%;
+            height: 84%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, .34));
+        }
+
+        .preloader-brand {
+            margin-top: 28px;
+            opacity: 0;
+            transform: translateY(10px);
+            animation: preloader-copy-in 700ms ease-out 360ms forwards;
+        }
+
+        .preloader-brand-name {
+            margin: 0;
+            color: #f4c958;
+            font-size: clamp(.98rem, 2.8vw, 1.2rem);
+            font-weight: 700;
+            letter-spacing: .24em;
+            line-height: 1.4;
+        }
+
+        .preloader-brand-tagline {
+            margin: 9px 0 0;
+            color: rgba(219, 230, 246, .72);
+            font-size: clamp(.56rem, 1.8vw, .68rem);
+            font-weight: 600;
+            letter-spacing: .2em;
+            line-height: 1.7;
+        }
+
+        .preloader-progress-group {
+            width: var(--preloader-progress-width);
+            margin-top: 30px;
+            opacity: 0;
+            transform: translateY(8px);
+            animation: preloader-copy-in 620ms ease-out 560ms forwards;
+        }
+
+        .preloader-progress-track {
+            position: relative;
+            width: 100%;
+            height: var(--preloader-progress-height);
+            overflow: hidden;
+            border-radius: 999px;
+            background: rgba(173, 188, 211, .16);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, .5);
+        }
+
+        .preloader-progress-fill {
+            width: 0%;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, var(--preloader-primary), #56b7ff 58%, var(--preloader-secondary));
+            box-shadow:
+                0 0 10px rgba(47, 140, 255, .82),
+                0 0 22px rgba(47, 140, 255, .44);
+            transform-origin: left center;
+            transition: width 120ms linear;
+        }
+
+        .preloader-progress-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            margin-top: 12px;
+            color: rgba(210, 220, 235, .62);
+            font-size: .63rem;
+            font-weight: 600;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+        }
+
+        .preloader-percentage {
+            min-width: 3.2em;
+            color: #75baff;
+            font-variant-numeric: tabular-nums;
+            text-align: right;
+        }
+
+        @keyframes preloader-logo-intro {
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        @keyframes preloader-logo-breathe {
+            0%, 100% { box-shadow: 0 22px 80px rgba(0, 0, 0, .52), 0 0 36px rgba(47, 140, 255, .12), inset 0 1px 0 rgba(255, 255, 255, .18); }
+            50% { box-shadow: 0 22px 90px rgba(0, 0, 0, .56), 0 0 58px rgba(113, 79, 255, .24), inset 0 1px 0 rgba(255, 255, 255, .22); }
+        }
+
+        @keyframes preloader-copy-in {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes preloader-glow-blue {
+            to { transform: translate3d(8%, 5%, 0) scale(1.08); }
+        }
+
+        @keyframes preloader-glow-violet {
+            to { transform: translate3d(-8%, -5%, 0) scale(1.06); }
+        }
+
+        @keyframes preloader-page-reveal {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            :root {
+                --preloader-logo-size: 136px;
+                --preloader-progress-width: min(292px, 78vw);
+            }
+
+            .preloader-logo-frame { border-radius: 24px; }
+            .preloader-brand { margin-top: 24px; }
+            .preloader-progress-group { margin-top: 26px; }
+            .preloader-brand-name { letter-spacing: .18em; }
+            .preloader-brand-tagline { max-width: 310px; letter-spacing: .15em; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            :root {
+                --preloader-exit-duration: 180ms;
+            }
+
+            .preloader-glow,
+            .preloader-logo-frame,
+            .preloader-brand,
+            .preloader-progress-group,
+            body.preloader-page-ready > header,
+            body.preloader-page-ready > main,
+            body.preloader-page-ready > footer,
+            body.preloader-page-ready > .whatsapp-float {
+                animation: none !important;
+                transform: none !important;
+            }
+
+            .preloader-logo-frame,
+            .preloader-brand,
+            .preloader-progress-group {
+                opacity: 1;
+            }
+
+            .preloader-progress-fill {
+                transition: none;
+            }
+        }
+    </style>
+
+    <!-- Activación temprana: si JavaScript está deshabilitado, esta clase nunca se agrega
+         y el contenido normal se muestra sin bloqueo. -->
+    <script>
+        (() => {
+            document.documentElement.classList.add('preloader-enabled');
+            window.__lisboaPreloaderFailSafe = window.setTimeout(() => {
+                document.documentElement.classList.remove('preloader-enabled');
+                document.getElementById('site-preloader')?.remove();
+            }, 8000);
+        })();
+    </script>
 </head>
 
 <body>
+    <!-- Pantalla de precarga: el porcentaje es una estimación visual limitada a 95 %
+         hasta recibir el evento real window.load. -->
+    <div id="site-preloader" role="region" aria-label="Preparando Lisboa Legal Group">
+        <span class="preloader-glow preloader-glow--blue" aria-hidden="true"></span>
+        <span class="preloader-glow preloader-glow--violet" aria-hidden="true"></span>
+
+        <div class="preloader-core">
+            <div class="preloader-logo-frame" aria-hidden="true">
+                <!-- Sustituya este src por cualquier logotipo PNG o SVG. -->
+                <img class="preloader-logo" src="logo-full.png" alt="" width="192" height="192">
+            </div>
+
+            <div class="preloader-brand">
+                <p class="preloader-brand-name">LISBOA LEGAL GROUP</p>
+                <p class="preloader-brand-tagline">ABOGADOS Y CONSULTORES EMPRESARIALES</p>
+            </div>
+
+            <div class="preloader-progress-group">
+                <div class="preloader-progress-track" role="progressbar" aria-label="Progreso visual estimado de carga" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="preloader-progress-fill" aria-hidden="true"></div>
+                </div>
+                <div class="preloader-progress-meta">
+                    <span>Carga visual estimada</span>
+                    <span class="preloader-percentage">0 %</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <noscript><style>#site-preloader{display:none!important}</style></noscript>
+
     <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
     <header>
@@ -941,6 +1278,148 @@
                 statsObserver.observe(statsSection);
             }
         });
+    </script>
+    <script>
+        /* Control del Fullscreen Animated Preloader Premium.
+           La progresión de 0 a 95 % es una ESTIMACIÓN visual, no una medición falsa
+           de bytes descargados. El 100 % solo se muestra después de window.load o
+           al activarse el cierre de seguridad para evitar un bloqueo permanente. */
+        (() => {
+            if (window.__lisboaPreloaderInitialized) return;
+            window.__lisboaPreloaderInitialized = true;
+
+            const preloader = document.getElementById('site-preloader');
+            const track = preloader?.querySelector('[role="progressbar"]');
+            const fill = preloader?.querySelector('.preloader-progress-fill');
+            const percentage = preloader?.querySelector('.preloader-percentage');
+
+            if (!preloader || !track || !fill || !percentage) {
+                document.documentElement.classList.remove('preloader-enabled');
+                return;
+            }
+
+            document.documentElement.setAttribute('aria-busy', 'true');
+            const backgroundContent = Array.from(document.body.children).filter((element) => (
+                element !== preloader && !['SCRIPT', 'NOSCRIPT', 'STYLE'].includes(element.tagName)
+            ));
+            backgroundContent.forEach((element) => { element.inert = true; });
+
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const startedAt = performance.now();
+            const minimumVisibleTime = reducedMotion ? 80 : 900;
+            const maximumWaitTime = 6500;
+            let displayedProgress = 0;
+            let pageLoaded = document.readyState === 'complete';
+            let hasFinished = false;
+            let animationFrame = 0;
+
+            /* Hitos visuales solicitados. Se interpolan para evitar saltos bruscos. */
+            const estimatedMilestones = [
+                { time: 0, value: 0 },
+                { time: 260, value: 25 },
+                { time: 640, value: 50 },
+                { time: 1080, value: 75 },
+                { time: 1680, value: 95 }
+            ];
+
+            const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+
+            function estimatedTarget(elapsed) {
+                for (let index = 1; index < estimatedMilestones.length; index += 1) {
+                    const previous = estimatedMilestones[index - 1];
+                    const next = estimatedMilestones[index];
+                    if (elapsed <= next.time) {
+                        const ratio = clamp((elapsed - previous.time) / (next.time - previous.time), 0, 1);
+                        const eased = 1 - Math.pow(1 - ratio, 3);
+                        return previous.value + (next.value - previous.value) * eased;
+                    }
+                }
+                return 95;
+            }
+
+            function renderProgress(value) {
+                const safeValue = clamp(value, 0, 100);
+                const roundedValue = Math.round(safeValue);
+                fill.style.width = `${safeValue}%`;
+                percentage.textContent = `${roundedValue} %`;
+                track.setAttribute('aria-valuenow', String(roundedValue));
+            }
+
+            function animateEstimate(now) {
+                if (hasFinished) return;
+                const elapsed = now - startedAt;
+                const target = estimatedTarget(elapsed);
+                displayedProgress += (target - displayedProgress) * (reducedMotion ? 1 : .11);
+                displayedProgress = Math.min(displayedProgress, 95);
+                renderProgress(displayedProgress);
+
+                if (pageLoaded && elapsed >= minimumVisibleTime) {
+                    completeProgress();
+                    return;
+                }
+
+                animationFrame = requestAnimationFrame(animateEstimate);
+            }
+
+            function completeProgress() {
+                if (hasFinished) return;
+                hasFinished = true;
+                cancelAnimationFrame(animationFrame);
+                window.clearTimeout(window.__lisboaPreloaderFailSafe);
+                window.clearTimeout(forcedCompletion);
+
+                const from = displayedProgress;
+                const duration = reducedMotion ? 0 : 380;
+                const completionStartedAt = performance.now();
+
+                function completeFrame(now) {
+                    const ratio = duration === 0 ? 1 : clamp((now - completionStartedAt) / duration, 0, 1);
+                    const eased = 1 - Math.pow(1 - ratio, 3);
+                    displayedProgress = from + (100 - from) * eased;
+                    renderProgress(displayedProgress);
+
+                    if (ratio < 1) {
+                        requestAnimationFrame(completeFrame);
+                        return;
+                    }
+
+                    window.setTimeout(exitPreloader, reducedMotion ? 30 : 240);
+                }
+
+                requestAnimationFrame(completeFrame);
+            }
+
+            function exitPreloader() {
+                document.body.classList.add('preloader-page-ready');
+                preloader.classList.add('is-leaving');
+                document.documentElement.removeAttribute('aria-busy');
+                backgroundContent.forEach((element) => { element.inert = false; });
+
+                requestAnimationFrame(() => {
+                    document.documentElement.classList.remove('preloader-enabled');
+                });
+
+                window.setTimeout(() => {
+                    preloader.remove();
+                    document.body.classList.remove('preloader-page-ready');
+                }, reducedMotion ? 220 : 780);
+            }
+
+            function markPageLoaded() {
+                pageLoaded = true;
+                if (performance.now() - startedAt >= minimumVisibleTime) completeProgress();
+            }
+
+            if (pageLoaded) {
+                markPageLoaded();
+            } else {
+                window.addEventListener('load', markPageLoaded, { once: true });
+            }
+
+            /* Cierre independiente de recursos externos lentos o fallidos. */
+            const forcedCompletion = window.setTimeout(completeProgress, maximumWaitTime);
+            animationFrame = requestAnimationFrame(animateEstimate);
+        })();
     </script>
     <script src="js/cursor-follower.js" defer></script>
     <script src="js/site-accessibility.js" defer></script>
