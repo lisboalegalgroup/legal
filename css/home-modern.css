@@ -138,7 +138,7 @@
     flex-wrap: wrap;
     gap: 16px;
     justify-content: flex-start;
-    margin-top: 38px;
+    margin-top: 10px;
 }
 
 .home-modern .btn {
@@ -402,9 +402,9 @@
     .home-modern .hero-text { padding: 62px 0 170px; }
     .home-modern .hero h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
     .home-modern .hero-lead { font-size: 1rem; }
-    .home-modern .hero-ctas { align-items: stretch; flex-direction: column; }
+    .home-modern .hero-ctas { align-items: stretch; flex-direction: column; margin-top: 0; }
     .home-modern .hero-ctas .btn { text-align: center; width: 100%; }
-    .home-modern .hero-trust-card { left: 5%; right: 5%; }
+    .home-modern .hero-trust-card { bottom: 16px; left: 5%; right: 5%; }
     .home-modern .why-title br { display: none; }
     .home-modern .why-card { min-height: auto; padding: 30px; }
     .home-modern .stats-counter-grid { grid-template-columns: 1fr; }
