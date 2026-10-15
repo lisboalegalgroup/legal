@@ -1,0 +1,429 @@
+/* Rediseño moderno y aislado de la página principal.
+   Todas las reglas dependen de .home-modern para no afectar páginas internas. */
+
+.home-modern {
+    --hm-navy: #06162d;
+    --hm-navy-soft: #102744;
+    --hm-ink: #112039;
+    --hm-gold: #d4af37;
+    --hm-gold-dark: #ad8722;
+    --hm-ivory: #f6f3ec;
+    --hm-paper: #fffdf8;
+    --hm-line: rgba(17, 32, 57, 0.14);
+    --hm-serif: "Cormorant Garamond", Georgia, serif;
+    background: var(--hm-ivory);
+    color: var(--hm-ink);
+}
+
+.home-modern .container { max-width: 1240px; }
+
+.home-modern h1,
+.home-modern h2,
+.home-modern .why-title,
+.home-modern .service-card h3,
+.home-modern .location-card h3 {
+    font-family: var(--hm-serif);
+    letter-spacing: -0.025em;
+}
+
+.home-modern .section-padding { padding: 110px 0; }
+
+.home-modern .section-eyebrow,
+.home-modern .hero-eyebrow {
+    color: var(--hm-gold-dark);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    line-height: 1.5;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+}
+
+.home-modern header {
+    background: rgba(6, 22, 45, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    backdrop-filter: blur(18px);
+}
+
+.home-modern .navbar { min-height: 88px; }
+.home-modern .logo-img { width: 82px; height: 82px; object-fit: contain; }
+.home-modern .nav-links a { color: rgba(255, 255, 255, 0.88); font-size: 0.9rem; }
+.home-modern .nav-links a::after { background: var(--hm-gold); }
+.home-modern .nav-links a.is-current { color: #f0ce68; }
+.home-modern .nav-links a.is-current::after { transform: scaleX(1); }
+.home-modern .lang-switch { color: #fff; }
+.home-modern header .btn-gold { padding: 14px 24px; }
+
+/* Hero cinematográfico dividido: mensaje a la izquierda, video real a la derecha. */
+.home-modern .hero {
+    background: var(--hm-navy);
+    min-height: 790px;
+    overflow: hidden;
+    padding-top: 88px;
+    position: relative;
+}
+
+.home-modern .hero-video {
+    height: 100%;
+    left: 42%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.72;
+    position: absolute;
+    top: 0;
+    width: 58%;
+}
+
+.home-modern .hero::before {
+    background: linear-gradient(90deg, #06162d 0%, #06162d 39%, rgba(6, 22, 45, 0.93) 48%, rgba(6, 22, 45, 0.42) 72%, rgba(6, 22, 45, 0.12) 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.home-modern .hero::after {
+    background: linear-gradient(180deg, rgba(6, 22, 45, 0.08), rgba(6, 22, 45, 0.62));
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.home-modern .hero-container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    min-height: 702px;
+    position: relative;
+    z-index: 2;
+}
+
+.home-modern .hero-text {
+    margin: 0;
+    max-width: 740px;
+    padding: 80px 0 110px;
+    text-align: left;
+    width: 62%;
+}
+
+.home-modern .hero-logo-large { display: none; }
+.home-modern .hero-eyebrow { color: #ebc85e; }
+
+.home-modern .hero h1 {
+    color: #fff;
+    font-size: clamp(3.7rem, 6vw, 6.5rem);
+    font-weight: 600;
+    line-height: 0.94;
+    margin: 0 0 30px;
+    max-width: 720px;
+    text-shadow: 0 4px 28px rgba(0, 0, 0, 0.28);
+    text-align: left;
+}
+
+.home-modern .hero-lead {
+    color: rgba(255, 255, 255, 0.83);
+    font-size: 1.18rem;
+    line-height: 1.75;
+    margin: 0;
+    max-width: 590px;
+    text-align: left;
+}
+
+.home-modern .hero-eyebrow { text-align: left; }
+
+.home-modern .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-top: 38px;
+}
+
+.home-modern .btn {
+    border-radius: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    padding: 16px 26px;
+    text-transform: uppercase;
+}
+
+.home-modern .btn-gold { background: var(--hm-gold); color: var(--hm-navy); }
+.home-modern .btn-gold:hover { background: #e3c052; transform: translateY(-2px); }
+
+.home-modern .btn-outline-light {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.58);
+    color: #fff;
+}
+
+.home-modern .btn-outline-light:hover { background: #fff; color: var(--hm-navy); }
+
+.home-modern .hero-trust-card {
+    backdrop-filter: blur(15px);
+    background: rgba(6, 22, 45, 0.76);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    bottom: 50px;
+    color: #fff;
+    max-width: 330px;
+    padding: 24px 28px;
+    position: absolute;
+    right: 0;
+}
+
+.home-modern .hero-trust-card span {
+    color: #ebc85e;
+    display: block;
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.home-modern .hero-trust-card strong {
+    font-family: var(--hm-serif);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* Propuesta de valor. */
+.home-modern .why-choose-us { background: var(--hm-ivory); }
+.home-modern .why-header { margin: 0 0 50px; text-align: left; }
+.home-modern .why-subtitle { color: var(--hm-gold-dark); justify-content: flex-start; letter-spacing: 0.18em; text-transform: uppercase; }
+.home-modern .why-title { color: var(--hm-navy); font-size: clamp(2.8rem, 5vw, 4.6rem); line-height: 1; }
+
+.home-modern .why-grid { gap: 22px; }
+.home-modern .why-card {
+    background: var(--hm-paper);
+    border: 1px solid var(--hm-line);
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 310px;
+    padding: 38px;
+    text-align: left;
+}
+
+.home-modern .why-card:hover { border-color: rgba(212, 175, 55, 0.72); box-shadow: 0 18px 50px rgba(6, 22, 45, 0.09); transform: translateY(-5px); }
+.home-modern .why-icon { align-items: center; background: transparent; border: 1px solid rgba(212, 175, 55, 0.62); border-radius: 50%; display: flex; height: 54px; justify-content: center; margin: 0 0 28px; width: 54px; }
+.home-modern .why-icon i { color: var(--hm-gold-dark); font-size: 1.25rem; }
+.home-modern .why-card h3 { color: var(--hm-navy); font-family: var(--hm-serif); font-size: 1.75rem; }
+.home-modern .why-card p { color: #596477; line-height: 1.75; }
+
+.home-modern .stats-counter-container { border: 1px solid var(--hm-line); box-shadow: none; margin-top: 30px; }
+.home-modern .stats-intro { align-items: flex-end; border-bottom: 1px solid var(--hm-line); display: flex; justify-content: space-between; padding: 26px 34px; }
+.home-modern .stats-intro span { color: var(--hm-gold-dark); font-size: .7rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.home-modern .stats-intro p { color: #687385; font-size: .86rem; margin: 0; }
+.home-modern .stats-counter-number { color: var(--hm-navy); font-family: var(--hm-serif); font-size: 3rem; }
+.home-modern .stats-counter-label { color: #647083; }
+
+/* Presentación de la firma. */
+.home-modern .home-about { background: #fff; border: 0; }
+.home-modern .home-about-grid { align-items: stretch; display: grid; grid-template-columns: 0.9fr 1.1fr; min-height: 570px; }
+.home-modern .home-about-copy { align-self: center; padding: 60px 80px 60px 0; }
+.home-modern .home-about h2 { color: var(--hm-navy); font-size: clamp(2.7rem, 4.6vw, 4.3rem); line-height: 1; margin: 0 0 30px; }
+.home-modern .home-about-copy > p:not(.section-eyebrow) { color: #596477; font-size: 1.03rem; line-height: 1.85; }
+.home-modern .home-about-image { background: linear-gradient(rgba(6,22,45,.13), rgba(6,22,45,.2)), url('../derecho-procesal-hero.webp') center / cover no-repeat; min-height: 570px; }
+.home-modern .text-link { border-bottom: 1px solid var(--hm-gold); color: var(--hm-navy); display: inline-flex; font-weight: 700; gap: 12px; margin-top: 18px; padding-bottom: 6px; text-decoration: none; }
+
+/* Áreas de práctica como catálogo editorial. */
+.home-modern #servicios { background: var(--hm-navy); }
+.home-modern #servicios .section-title { margin-left: 0; max-width: 720px; text-align: left; }
+.home-modern #servicios .section-title h2 { color: #fff; font-size: clamp(3rem, 5vw, 4.8rem); }
+.home-modern #servicios .section-title .line { margin-left: 0; }
+.home-modern #servicios .section-title > p:not(.section-eyebrow) { color: rgba(255,255,255,.66); }
+.home-modern #servicios .section-eyebrow { color: #ebc85e; }
+.home-modern .services-grid { gap: 1px; grid-template-columns: repeat(3, 1fr); background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.14); }
+.home-modern .service-card {
+    background-color: var(--hm-navy) !important;
+    background-image: none !important;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 290px;
+}
+.home-modern .service-card::before { background: transparent; }
+.home-modern .service-content { align-items: flex-start; display: flex; flex-direction: column; height: 100%; justify-content: flex-start; padding: 34px; text-align: left; }
+.home-modern .service-content i { color: #ebc85e; font-size: 1.55rem; margin-bottom: 30px; }
+.home-modern .service-card h3 { color: #fff; font-size: 1.85rem; margin-bottom: 14px; }
+.home-modern .service-card p { color: rgba(255,255,255,.62); font-size: .9rem; line-height: 1.65; opacity: 1; transform: none; }
+.home-modern .service-card:hover { background-color: var(--hm-navy-soft) !important; transform: none; }
+.home-modern .service-cta {
+    align-items: center;
+    color: #ebc85e;
+    display: inline-flex;
+    font-size: .7rem;
+    font-weight: 700;
+    gap: 10px;
+    letter-spacing: .12em;
+    margin-top: auto;
+    padding-top: 24px;
+    text-transform: uppercase;
+}
+.home-modern .service-cta i { font-size: .72rem; margin: 0; transition: transform .25s ease; }
+.home-modern .service-link:hover .service-cta i { transform: translateX(5px); }
+
+/* Presencia, equipo y principios. */
+.home-modern .regional-presence-section { background: #fff; }
+.home-modern .presence-container { gap: 80px; }
+.home-modern .presence-text h2 { color: var(--hm-navy); font-family: var(--hm-serif); font-size: clamp(2.7rem, 4vw, 4rem); line-height: 1; }
+.home-modern .presence-text p { color: #596477; line-height: 1.8; }
+.home-modern .subtitle-tag { color: var(--hm-gold-dark); letter-spacing: .15em; text-transform: uppercase; }
+.home-modern .btn-red { background: var(--hm-navy); }
+.home-modern .location-card { border-radius: 0; min-height: 450px; }
+
+.home-modern .team-section { background: var(--hm-ivory); }
+.home-modern #equipo .section-title { margin-left: 0; max-width: 780px; text-align: left; }
+.home-modern #equipo .section-title h2 { color: var(--hm-navy); font-size: clamp(2.8rem, 5vw, 4.7rem); line-height: 1; }
+.home-modern #equipo .section-title .line { margin-left: 0; }
+.home-modern .team-intro { color: #657083; line-height: 1.7; margin-top: 18px; max-width: 680px; }
+.home-modern #equipo .team-grid { gap: 24px !important; max-width: none !important; }
+.home-modern #equipo .team-card { background: transparent; box-shadow: none; padding: 0 0 20px; text-align: left !important; }
+.home-modern #equipo .member-img { background: #d8d9da; border: 0; border-radius: 0; filter: saturate(.82) contrast(1.03); height: auto; margin: 0 0 22px; object-fit: cover; object-position: top; width: 100%; aspect-ratio: 4 / 5; }
+.home-modern #equipo .team-card h3 { color: var(--hm-navy) !important; font-family: var(--hm-serif) !important; font-size: 1.8rem !important; }
+.home-modern #equipo .team-card p { color: var(--hm-gold-dark) !important; font-size: .75rem !important; letter-spacing: .17em !important; }
+
+.home-modern #cultura { background: #fff; }
+.home-modern #cultura .section-title h2 { color: var(--hm-navy); font-size: clamp(2.8rem, 4.5vw, 4rem); }
+.home-modern #cultura .culture-grid { gap: 1px !important; background: var(--hm-line); border: 1px solid var(--hm-line); }
+.home-modern #cultura .culture-card { border-radius: 0 !important; box-shadow: none !important; min-height: 290px; }
+.home-modern #cultura .culture-card h3 { color: var(--hm-navy) !important; font-family: var(--hm-serif) !important; font-size: 1.65rem !important; }
+
+.home-modern #testimonios { background: var(--hm-navy) !important; }
+.home-modern #testimonios .section-title h2 { font-size: clamp(2.8rem, 4.7vw, 4.4rem); }
+.home-modern .testimonials-container { border-radius: 0 !important; }
+.home-modern .clients-logos { display: none !important; }
+
+.home-modern #contacto { background: var(--hm-ivory) !important; }
+.home-modern #contacto .section-title h2 { color: var(--hm-navy); font-size: clamp(3rem, 5vw, 4.7rem); }
+.home-modern #contacto .section-title {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 880px;
+    text-align: center;
+}
+.home-modern .contact-intro { color: #626d7d; line-height: 1.7; margin: 20px auto 0; max-width: 720px; }
+.home-modern .contact-actions {
+    background: var(--hm-navy);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 24px;
+}
+.home-modern .contact-actions > a {
+    align-items: center;
+    border-right: 1px solid rgba(255,255,255,.14);
+    color: #fff;
+    display: flex;
+    gap: 18px;
+    min-height: 104px;
+    padding: 24px 30px;
+    text-decoration: none;
+    transition: background .25s ease;
+}
+.home-modern .contact-actions > a:last-child { border-right: 0; }
+.home-modern .contact-actions > a:hover { background: var(--hm-navy-soft); }
+.home-modern .contact-actions i { color: #ebc85e; font-size: 1.25rem; }
+.home-modern .contact-actions span { font-family: var(--hm-serif); font-size: 1.25rem; line-height: 1.1; }
+.home-modern .contact-actions small { color: rgba(255,255,255,.58); display: block; font-family: "Golos Text", sans-serif; font-size: .64rem; font-weight: 700; letter-spacing: .12em; margin-bottom: 7px; text-transform: uppercase; }
+.home-modern .forms-wrapper { align-items: stretch; gap: 24px; }
+.home-modern .form-box,
+.home-modern .contact-map-wrapper { background: #fff; border: 1px solid var(--hm-line); border-radius: 0; box-shadow: none; padding: 38px; }
+.home-modern .form-box input,
+.home-modern .form-box select { background: #fbfaf6; border: 1px solid rgba(17,32,57,.2); border-radius: 0; }
+.home-modern .map-container { border-radius: 0; }
+
+/* El video original permanece visible en el pie de página. */
+.home-modern .new-footer { min-height: 480px; }
+.home-modern .footer-overlay { background: linear-gradient(90deg, rgba(6,22,45,.97), rgba(6,22,45,.82)); }
+.home-modern .footer-logo-new { height: 150px; width: 150px; }
+.home-modern .new-footer .footer-top { display: grid; grid-template-columns: .7fr 1.35fr .8fr; }
+.home-modern .new-footer .footer-brand,
+.home-modern .new-footer .footer-locations { flex: initial; min-width: 0; }
+.home-modern .footer-navigation h3 { color: #fff; font-size: 1.25rem; margin: 0 0 10px; }
+.home-modern .footer-navigation .line { background: var(--hm-gold); height: 2px; margin-bottom: 22px; width: 48px; }
+.home-modern .footer-navigation ul { list-style: none; margin: 0; padding: 0; }
+.home-modern .footer-navigation li { margin-bottom: 11px; }
+.home-modern .footer-navigation a { color: rgba(255,255,255,.72); font-size: .88rem; text-decoration: none; transition: color .2s ease, padding-left .2s ease; }
+.home-modern .footer-navigation a:hover { color: #ebc85e; padding-left: 4px; }
+
+.home-modern a:focus-visible,
+.home-modern button:focus-visible,
+.home-modern input:focus-visible,
+.home-modern select:focus-visible {
+    outline: 3px solid #f0ce68;
+    outline-offset: 4px;
+}
+
+@keyframes home-gold-line {
+    from { transform: scaleX(.25); }
+    to { transform: scaleX(1); }
+}
+
+.home-modern .section-title .line,
+.home-modern .footer-navigation .line {
+    animation: home-gold-line .7s ease-out both;
+    transform-origin: left center;
+}
+
+@media (max-width: 1050px) {
+    .home-modern .hero-trust-card { right: 24px; }
+    .home-modern .home-about-copy { padding-right: 48px; }
+    .home-modern .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .home-modern .section-padding { padding: 78px 0; }
+    .home-modern .navbar { min-height: 76px; }
+    .home-modern .logo-img { height: 70px; width: 70px; }
+    .home-modern .menu-toggle { color: #fff; }
+    .home-modern .nav-links { background: var(--hm-navy); }
+    .home-modern .nav-links a { color: #fff; }
+    .home-modern .hero { min-height: 720px; padding-top: 76px; }
+    .home-modern .hero-video { left: 0; opacity: .52; width: 100%; }
+    .home-modern .hero::before { background: linear-gradient(90deg, rgba(6,22,45,.96), rgba(6,22,45,.76)); }
+    .home-modern .hero-container { min-height: 644px; }
+    .home-modern .hero-text { padding: 75px 0 155px; width: 100%; }
+    .home-modern .hero h1 { font-size: clamp(3.25rem, 10vw, 5.2rem); max-width: 650px; }
+    .home-modern .hero-trust-card { bottom: 28px; left: 24px; max-width: 360px; right: auto; }
+    .home-modern .home-about-grid { grid-template-columns: 1fr; }
+    .home-modern .home-about-copy { padding: 0 0 55px; }
+    .home-modern .home-about-image { min-height: 430px; }
+    .home-modern .presence-container { gap: 50px; }
+    .home-modern .new-footer .footer-top { grid-template-columns: 1fr 1fr; }
+    .home-modern .footer-navigation { grid-column: 2; }
+}
+
+@media (max-width: 680px) {
+    .home-modern .section-padding { padding: 64px 0; }
+    .home-modern .hero { min-height: 710px; }
+    .home-modern .hero-container { min-height: 634px; }
+    .home-modern .hero-text { padding: 62px 0 170px; }
+    .home-modern .hero h1 { font-size: clamp(3rem, 15vw, 4.4rem); }
+    .home-modern .hero-lead { font-size: 1rem; }
+    .home-modern .hero-ctas { align-items: stretch; flex-direction: column; }
+    .home-modern .hero-ctas .btn { text-align: center; width: 100%; }
+    .home-modern .hero-trust-card { left: 5%; right: 5%; }
+    .home-modern .why-title br { display: none; }
+    .home-modern .why-card { min-height: auto; padding: 30px; }
+    .home-modern .stats-counter-grid { grid-template-columns: 1fr; }
+    .home-modern .stats-intro { align-items: flex-start; flex-direction: column; gap: 10px; padding: 24px; }
+    .home-modern .home-about-image { min-height: 330px; }
+    .home-modern .services-grid { grid-template-columns: 1fr; }
+    .home-modern .service-card { min-height: 260px; }
+    .home-modern .contact-actions { grid-template-columns: 1fr; }
+    .home-modern .contact-actions > a { border-bottom: 1px solid rgba(255,255,255,.14); border-right: 0; min-height: 88px; }
+    .home-modern .contact-actions > a:last-child { border-bottom: 0; }
+    .home-modern #equipo .team-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+    .home-modern #equipo .member-img { aspect-ratio: 4 / 5; }
+    .home-modern .form-box,
+    .home-modern .contact-map-wrapper { padding: 26px; }
+    .home-modern .new-footer .footer-top { grid-template-columns: 1fr; }
+    .home-modern .footer-navigation { grid-column: auto; text-align: left; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .home-modern .hero-video,
+    .home-modern .footer-video { display: none; }
+}

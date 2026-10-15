@@ -39,7 +39,7 @@
           "alternateName": "Estudio Jurídico Lisboa Legal Group",
           "url": "https://lisboalegalgroup.github.io/legal/",
           "logo": "https://lisboalegalgroup.github.io/legal/logo-full.png",
-          "image": "https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp",
+          "image": "https://lisboalegalgroup.github.io/legal/derecho-procesal-hero.webp",
           "description": "Estudio Jurídico en Guayaquil, Ecuador especializado en derecho penal, laboral, civil, de familia, corporativo, consultoría tributaria y asesoría legal estratégica.",
           "telephone": "+593990967952",
           "email": "lisboalegalgroup@gmail.com",
@@ -93,18 +93,20 @@
       ]
     }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <meta property="og:site_name" content="Lisboa Legal Group">
     <link rel="apple-touch-icon" href="https://lisboalegalgroup.github.io/legal/apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.png">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/home-modern.css">
 
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Lisboa Legal Group | Abogados en Guayaquil, Ecuador">
     <meta property="og:description" content="Estudio Jurídico en Guayaquil con experiencia en derecho penal, civil, corporativo y más. Lisboa Legal Group, excelencia y compromiso con su caso.">
-    <meta property="og:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
+    <meta property="og:image" content="https://lisboalegalgroup.github.io/legal/derecho-procesal-hero.webp">
+    <meta property="og:image:alt" content="Lisboa Legal Group, firma jurídica en Guayaquil">
     <meta property="og:url" content="https://lisboalegalgroup.github.io/legal/">
     <meta property="og:type" content="website">
 
@@ -112,7 +114,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lisboa Legal Group | Abogados en Guayaquil, Ecuador">
     <meta name="twitter:description" content="Estudio Jurídico en Guayaquil con experiencia en derecho penal, civil, corporativo y más. Lisboa Legal Group, excelencia y compromiso con su caso.">
-    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/Daniel%20Modelo.webp">
+    <meta name="twitter:image" content="https://lisboalegalgroup.github.io/legal/derecho-procesal-hero.webp">
 
     <!-- Fullscreen Animated Preloader Premium
          Este bloque es autónomo y puede separarse posteriormente en CSS/JS propios. -->
@@ -413,16 +415,26 @@
          y el contenido normal se muestra sin bloqueo. -->
     <script>
         (() => {
+            let shouldShowPreloader = true;
+            try {
+                shouldShowPreloader = sessionStorage.getItem('lisboa-preloader-seen') !== '1';
+            } catch (error) {
+                shouldShowPreloader = true;
+            }
+
+            window.__lisboaSkipPreloader = !shouldShowPreloader;
+            if (!shouldShowPreloader) return;
+
             document.documentElement.classList.add('preloader-enabled');
             window.__lisboaPreloaderFailSafe = window.setTimeout(() => {
                 document.documentElement.classList.remove('preloader-enabled');
                 document.getElementById('site-preloader')?.remove();
-            }, 8000);
+            }, 4000);
         })();
     </script>
 </head>
 
-<body>
+<body class="home-modern">
     <!-- Pantalla de precarga: el porcentaje es una estimación visual limitada a 95 %
          hasta recibir el evento real window.load. -->
     <div id="site-preloader" role="region" aria-label="Preparando Lisboa Legal Group">
@@ -497,20 +509,18 @@
         <div class="container hero-container">
             <div class="hero-text" data-aos="fade-up" data-aos-duration="1200">
                 <img src="logo-full.png" alt="Lisboa Legal Group" class="hero-logo-large" width="192" height="192" decoding="async">
-                <h1>Liderazgo Legal. <br>
-                    <span>Estrategia que protege.</span>
-                </h1>
-                <p>Protegemos sus intereses con rigor jurídico, enfoque estratégico y atención personalizada.
-                </p>
-                <div class="hero-ctas"
-                    style="margin-top: 15px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                    <a href="#servicios" class="btn btn-gold">Nuestros Servicios</a>
-                    <a href="#contacto" class="btn"
-                        style="background-color: transparent; border: 2px solid var(--white); color: var(--white); transition: 0.3s;"
-                        onmouseover="this.style.backgroundColor='var(--white)'; this.style.color='var(--primary-blue)';"
-                        onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--white)';">Contacto</a>
+                <p class="hero-eyebrow">Firma jurídica · Guayaquil, Ecuador</p>
+                <h1>Estrategia jurídica que protege lo que más importa.</h1>
+                <p class="hero-lead">Asesoría legal integral para personas y empresas, con rigor, visión y compromiso.</p>
+                <div class="hero-ctas">
+                    <a href="#contacto" class="btn btn-gold">Solicitar consulta</a>
+                    <a href="#quienes-somos" class="btn btn-outline-light">Conocer la firma</a>
                 </div>
             </div>
+            <aside class="hero-trust-card" aria-label="Compromiso de la firma">
+                <span>Comprometidos con su tranquilidad</span>
+                <strong>Soluciones claras para decisiones importantes.</strong>
+            </aside>
         </div>
     </section>
     <section class="why-choose-us section-padding">
@@ -518,9 +528,9 @@
             <div class="why-header" data-aos="fade-down">
                 <div class="why-subtitle">
                     <i aria-hidden="true" class="fas fa-university">
-                    </i>Nuestra Propuesta de Valor
+                    </i>Nuestra forma de trabajar
                 </div>
-                <h2 class="why-title">Comprometidos con<br>la excelencia jurídica</h2>
+                <h2 class="why-title">Criterio legal, estrategia<br>y acompañamiento cercano.</h2>
             </div>
             <div class="why-grid">
                 <!-- Columna 1 -->
@@ -557,6 +567,10 @@
 
             <!-- Contador de Estadísticas -->
             <div class="stats-counter-container" data-aos="fade-up">
+                <div class="stats-intro">
+                    <span>La firma en cifras</span>
+                    <p>Experiencia multidisciplinaria y atención enfocada en cada cliente.</p>
+                </div>
                 <div class="stats-counter-grid">
                     <div class="stats-counter-item">
                         <div class="stats-counter-number" data-target="100">100+</div>
@@ -577,35 +591,23 @@
     </section>
 
     <!-- QUIÉNES SOMOS -->
-    <section id="quienes-somos" class="section-padding"
-        style="background-color: var(--primary-blue); border-top: 1px solid #eaeaea;">
-        <div class="container">
-            <div class="section-title" style="margin-bottom: 25px;">
-                <h2 style="color: var(--white);">¿Quiénes Somos?</h2>
-                <div class="line">
-                </div>
-                <p style="margin-top: 20px; font-size: 1.1rem; color: #e0e0e0;">Conozca la firma que defiende sus
-                    intereses con
-                    excelencia.</p>
+    <section id="quienes-somos" class="home-about section-padding">
+        <div class="container home-about-grid">
+            <div class="home-about-copy" data-aos="fade-right">
+                <p class="section-eyebrow">Lisboa Legal Group</p>
+                <h2>Una firma preparada para decisiones jurídicas importantes.</h2>
+                <p>En <strong>Lisboa Legal Group</strong> somos una firma de abogados comprometida con la excelencia y la defensa de los intereses de nuestros clientes.</p>
+                <p>Combinamos experiencia, rigor técnico y conocimiento del entorno empresarial para brindar soluciones jurídicas integrales y preventivas, adaptadas a las exigencias corporativas y personales de cada caso.</p>
+                <a href="#equipo" class="text-link">Conozca a nuestros socios <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
             </div>
-            <div style="max-width: 900px; margin: 0 auto; text-align: left;">
-                <p style="font-size: 1.15rem; line-height: 1.8; color: #e0e0e0;">
-                    En <strong style="color: var(--white);">Lisboa Legal Group</strong> somos una firma de abogados
-                    comprometida con la
-                    excelencia y la defensa inquebrantable de los intereses de nuestros clientes. Combinamos
-                    experiencia, rigor técnico y un profundo conocimiento del entorno empresarial para brindar
-                    soluciones jurídicas integrales y preventivas. Nos destacamos por nuestra visión estratégica y
-                    nuestra capacidad para anticipar riesgos,
-                    ofreciendo un servicio personalizado que se adapta a las exigencias corporativas y personales de
-                    cada caso. Su seguridad jurídica es nuestra máxima prioridad.
-                </p>
-            </div>
+            <div class="home-about-image" data-aos="fade-left" role="img" aria-label="Audiencia y estrategia jurídica profesional"></div>
         </div>
     </section>
 
     <section id="servicios" class="section-padding">
         <div class="container">
             <div class="section-title" data-aos="zoom-in">
+                <p class="section-eyebrow">Experiencia multidisciplinaria</p>
                 <h2>Áreas de Práctica</h2>
                 <div class="line">
                 </div>
@@ -620,9 +622,8 @@
                             <i aria-hidden="true" class="fas fa-gavel">
                             </i>
                             <h3>Derecho Penal</h3>
-                            <p>Expertos en litigación penal con capacidad operativa a nivel nacional e internacional.
-                                Ofrecemos soluciones jurídicas de alta complejidad para los sectores público y privado,
-                                con una estrategia orientada a proteger sus derechos e intereses.</p>
+                            <p>Defensa técnica y estrategia procesal para personas, directivos y organizaciones.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -634,10 +635,8 @@
                             <i aria-hidden="true" class="fas fa-balance-scale">
                             </i>
                             <h3>Derecho Civil</h3>
-                            <p>Especialistas en la protección de su patrimonio,
-                                obligaciones y contratos. Gestionamos todo tipo de controversias civiles y comerciales,
-                                con atención a la seguridad jurídica y la defensa de sus intereses empresariales y personales.
-                            </p>
+                            <p>Protección patrimonial, contratos, obligaciones y solución de controversias civiles.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -649,10 +648,8 @@
                             <i aria-hidden="true" class="fas fa-users">
                             </i>
                             <h3>Derecho de Familia</h3>
-                            <p>Asesoramiento integral y sensible en procedimientos de divorcio,
-                                pensiones alimenticias,
-                                tenencia compartida y acuerdos prematrimoniales. Priorizamos el bienestar emocional y
-                                los derechos de su núcleo familiar ante cualquier circunstancia.</p>
+                            <p>Acompañamiento sensible en divorcios, alimentos, tenencia y acuerdos familiares.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -664,10 +661,8 @@
                             <i aria-hidden="true" class="fas fa-landmark">
                             </i>
                             <h3>Derecho Constitucional</h3>
-                            <p>Defensa férrea de sus derechos fundamentales. Patrocinio de alto nivel en acciones de
-                                protección,
-                                hábeas corpus y litigio constitucional frente a las vulneraciones incurridas por parte
-                                del poder público o entidades privadas.</p>
+                            <p>Protección de derechos fundamentales y representación en garantías constitucionales.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -679,10 +674,8 @@
                             <i aria-hidden="true" class="fas fa-file-signature">
                             </i>
                             <h3>Derecho Administrativo</h3>
-                            <p>Representación experta ante instituciones estatales. Brindamos gestión en contratación
-                                pública,
-                                impugnación de actos administrativos,
-                                auditorías y defensas asertivas en procedimientos sancionadores y coactivos.</p>
+                            <p>Asesoría ante instituciones públicas, impugnaciones y procedimientos administrativos.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -694,12 +687,8 @@
                             <i aria-hidden="true" class="fas fa-shield-alt">
                             </i>
                             <h3>Compliance</h3>
-                            <p>Diseño,
-                                auditoría e implementación de programas de cumplimiento normativo y ética empresarial.
-                                Mitigamos riesgos legales,
-                                operativos,
-                                financieros y reputacionales,
-                                blindando el prestigio de su corporación a nivel global.</p>
+                            <p>Programas de cumplimiento y prevención de riesgos legales y reputacionales.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -711,10 +700,8 @@
                             <i aria-hidden="true" class="fas fa-scroll">
                             </i>
                             <h3>Derecho de Sucesiones</h3>
-                            <p>Planificación patrimonial y hereditaria a la medida de su legado. Otorgamos asistencia
-                                legal exhaustiva en testamentos,
-                                partición de herencias,
-                                fideicomisos y resolución extrajudicial y judicial de conflictos sucesorios.</p>
+                            <p>Planificación hereditaria, testamentos, particiones y conflictos sucesorios.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -726,11 +713,8 @@
                             <i aria-hidden="true" class="fas fa-handshake">
                             </i>
                             <h3>Derecho Laboral</h3>
-                            <p>Estrategias efectivas para la correcta gestión de sus relaciones de trabajo. Asesoría
-                                corporativa en contratación,
-                                prevención de conflictos,
-                                auditoría,
-                                manejo de desvinculaciones y representación contundente en litigios laborales.</p>
+                            <p>Relaciones laborales, contratación, prevención de conflictos y litigios.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -742,10 +726,8 @@
                             <i aria-hidden="true" class="fas fa-building">
                             </i>
                             <h3>Derecho Societario</h3>
-                            <p>Estructuración corporativa y gobernanza integral. Desde la constitución,
-                                escisión y fusión de compañías,
-                                hasta alianzas estratégicas para asegurar la solidez comercial,
-                                legal y el crecimiento sostenido de su empresa en el mercado.</p>
+                            <p>Constitución, reorganización y gobierno corporativo para empresas sostenibles.</p>
+                            <span class="service-cta">Conocer esta área <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                         </div>
                     </div>
                 </a>
@@ -782,9 +764,11 @@
     <section id="equipo" class="team-section section-padding bg-marble">
         <div class="container">
             <div class="section-title" data-aos="zoom-in">
-                <h2>Nuestros Socios</h2>
+                <p class="section-eyebrow">Nuestro equipo</p>
+                <h2>Socios que lideran con experiencia y criterio.</h2>
                 <div class="line">
                 </div>
+                <p class="team-intro">Conozca a los profesionales que dirigen cada estrategia con atención personal y compromiso.</p>
             </div>
             <div class="team-grid"
                 style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 0 auto; gap: 50px;">
@@ -933,9 +917,16 @@
     <section id="contacto" class="section-padding" style="background-color: var(--bg-light);">
         <div class="container">
             <div class="section-title" data-aos="zoom-in">
-                <h2>Contáctenos</h2>
+                <p class="section-eyebrow">Conversemos sobre su caso</p>
+                <h2>Una orientación clara comienza con una conversación.</h2>
                 <div class="line">
                 </div>
+                <p class="contact-intro">Elija el canal que prefiera. Nuestro equipo revisará su solicitud y le indicará los próximos pasos.</p>
+            </div>
+            <div class="contact-actions" data-aos="fade-up">
+                <a href="tel:+593990967952"><i class="fas fa-phone-alt" aria-hidden="true"></i><span><small>Llamar ahora</small>099 096 7952</span></a>
+                <a href="https://wa.me/593990967952" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i><span><small>Escribir por</small>WhatsApp</span></a>
+                <a href="mailto:lisboalegalgroup@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i><span><small>Enviar un</small>Correo electrónico</span></a>
             </div>
             <div class="forms-wrapper">
                 <div class="form-box" data-aos="fade-right">
@@ -1044,6 +1035,17 @@
                         </div>
                     </div>
                 </div>
+                <nav class="footer-navigation" aria-label="Enlaces del pie de página">
+                    <h3>Explore</h3>
+                    <div class="line"></div>
+                    <ul>
+                        <li><a href="#quienes-somos">La firma</a></li>
+                        <li><a href="#servicios">Áreas de práctica</a></li>
+                        <li><a href="#equipo">Nuestros socios</a></li>
+                        <li><a href="herramientas-legales.html">Herramientas legales</a></li>
+                        <li><a href="#contacto">Solicitar consulta</a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
@@ -1108,6 +1110,7 @@
                 mobileMenu.addEventListener('click', function (e) {
                     e.stopPropagation(); // Prevenir burbujeo
                     navLinks.classList.toggle('active');
+                    mobileMenu.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
 
                     // Toggle icono Hamburguesa/Cruz
                     if (navLinks.classList.contains('active')) {
@@ -1124,6 +1127,7 @@
                 links.forEach(link => {
                     link.addEventListener('click', () => {
                         navLinks.classList.remove('active');
+                        mobileMenu.setAttribute('aria-expanded', 'false');
                         menuIcon.classList.remove('fa-times');
                         menuIcon.classList.add('fa-bars');
                     });
@@ -1136,6 +1140,7 @@
 
                     if (!isClickInsideMenu && !isClickOnToggle && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
+                        mobileMenu.setAttribute('aria-expanded', 'false');
                         menuIcon.classList.remove('fa-times');
                         menuIcon.classList.add('fa-bars');
                     }
@@ -1168,82 +1173,34 @@
         });
     </script>
 
-    <!-- 3D Effects Scripts -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+    <!-- Interacciones ligeras de navegación y estadísticas -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // 1. Tilt 3D en las Tarjetas de Servicios
-            VanillaTilt.init(document.querySelectorAll(".service-card"), {
-                max: 12,
-                speed: 400,
-                glare: true,
-                "max-glare": 0.2,
-                perspective: 1000,
-                scale: 1.02
-            });
+            const homeSections = Array.from(document.querySelectorAll('main section[id]'));
+            const sectionLinks = Array.from(document.querySelectorAll('.nav-links a[href^="#"]'));
+            const homeLink = document.querySelector('.nav-links a[href="./"]');
 
-            // 2. Parallax de Movimiento 3D en el Hero
-            const heroSection = document.querySelector('.hero');
-            const heroText = document.querySelector('.hero-text');
-            const heroImg = document.querySelector('.hero-image-wrapper');
-
-            if (heroSection) {
-                heroSection.style.perspective = "1200px";
-                if (heroText) heroText.style.transformStyle = "preserve-3d";
-                if (heroImg) heroImg.style.transformStyle = "preserve-3d";
-
-                heroSection.addEventListener('mousemove', (e) => {
-                    const x = (e.clientX / window.innerWidth - 0.5) * 2;
-                    const y = (e.clientY / window.innerHeight - 0.5) * 2;
-
-                    if(heroText) {
-                        heroText.style.transform = `translateZ(60px) rotateX(${-y * 6}deg) rotateY(${x * 6}deg)`;
-                    }
-                    if(heroImg) {
-                        heroImg.style.transform = `translateZ(30px) rotateX(${-y * 3}deg) rotateY(${x * 3}deg)`;
-                    }
+            const updateActiveLink = () => {
+                const marker = window.scrollY + 180;
+                let currentId = '';
+                homeSections.forEach(section => {
+                    if (section.offsetTop <= marker) currentId = section.id;
                 });
 
-                heroSection.addEventListener('mouseleave', () => {
-                    if(heroText) {
-                        heroText.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-                        heroText.style.transform = `translateZ(0) rotateX(0deg) rotateY(0deg)`;
-                    }
-                    if(heroImg) {
-                        heroImg.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
-                        heroImg.style.transform = `translateZ(0) rotateX(0deg) rotateY(0deg)`;
-                    }
-
-                    setTimeout(() => {
-                        if(heroText) heroText.style.transition = 'none';
-                        if(heroImg) heroImg.style.transition = 'none';
-                    }, 600);
+                sectionLinks.forEach(link => {
+                    const isCurrent = link.getAttribute('href') === `#${currentId}`;
+                    link.classList.toggle('is-current', isCurrent);
+                    if (isCurrent) link.setAttribute('aria-current', 'location');
+                    else link.removeAttribute('aria-current');
                 });
-            }
 
-            // 3. Profundidad Dinámica (Z-Layering) en el Scroll
-            const parallaxElements = document.querySelectorAll('.culture-card, .blog-card, .form-box');
-            const containers = document.querySelectorAll('.services-grid, .blog-grid, .forms-wrapper, .culture-grid');
-            containers.forEach(c => c.style.perspective = '1200px');
+                if (homeLink) homeLink.classList.toggle('is-current', window.scrollY < 300);
+            };
 
-            window.addEventListener('scroll', () => {
-                const scrolled = window.scrollY;
+            updateActiveLink();
+            window.addEventListener('scroll', updateActiveLink, { passive: true });
 
-                parallaxElements.forEach(el => {
-                    const rect = el.getBoundingClientRect();
-                    if(rect.top < window.innerHeight && rect.bottom > 0) {
-                        const distanceFromCenter = (window.innerHeight / 2) - (rect.top + rect.height / 2);
-                        const zOffset = Math.max(0, 40 - Math.abs(distanceFromCenter) * 0.08);
-                        const yOffset = distanceFromCenter * -0.05;
-
-                        if (!el.matches(':hover')) {
-                           el.style.transform = `translateY(${yOffset}px) translateZ(${zOffset}px)`;
-                        }
-                    }
-                });
-            });
-
-            // 4. Animación del Contador de Estadísticas (Intersection Observer)
+            // Animación del contador de estadísticas.
             const statsSection = document.querySelector('.stats-counter-container');
             if (statsSection) {
                 const counters = document.querySelectorAll('.stats-counter-number');
@@ -1291,6 +1248,10 @@
             window.__lisboaPreloaderInitialized = true;
 
             const preloader = document.getElementById('site-preloader');
+            if (window.__lisboaSkipPreloader) {
+                preloader?.remove();
+                return;
+            }
             const track = preloader?.querySelector('[role="progressbar"]');
             const fill = preloader?.querySelector('.preloader-progress-fill');
             const percentage = preloader?.querySelector('.preloader-percentage');
@@ -1308,8 +1269,8 @@
 
             const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
             const startedAt = performance.now();
-            const minimumVisibleTime = reducedMotion ? 80 : 900;
-            const maximumWaitTime = 6500;
+            const minimumVisibleTime = reducedMotion ? 50 : 520;
+            const maximumWaitTime = 3000;
             let displayedProgress = 0;
             let pageLoaded = document.readyState === 'complete';
             let hasFinished = false;
@@ -1318,10 +1279,10 @@
             /* Hitos visuales solicitados. Se interpolan para evitar saltos bruscos. */
             const estimatedMilestones = [
                 { time: 0, value: 0 },
-                { time: 260, value: 25 },
-                { time: 640, value: 50 },
-                { time: 1080, value: 75 },
-                { time: 1680, value: 95 }
+                { time: 140, value: 25 },
+                { time: 300, value: 50 },
+                { time: 520, value: 75 },
+                { time: 900, value: 95 }
             ];
 
             const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
@@ -1392,6 +1353,11 @@
             }
 
             function exitPreloader() {
+                try {
+                    sessionStorage.setItem('lisboa-preloader-seen', '1');
+                } catch (error) {
+                    /* La navegación continúa aunque el almacenamiento esté bloqueado. */
+                }
                 document.body.classList.add('preloader-page-ready');
                 preloader.classList.add('is-leaving');
                 document.documentElement.removeAttribute('aria-busy');
