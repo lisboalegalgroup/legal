@@ -1,0 +1,769 @@
+/*
+ * Lisboa Legal Group — sistema visual para páginas interiores.
+ * Se carga después de style.css y queda limitado a body.site-modern.
+ */
+
+.site-modern {
+    --primary-blue: #06162d;
+    --dark-bg: #041126;
+    --accent-gold: #d4af37;
+    --accent-gold-hover: #b99528;
+    --text-dark: #0b1c34;
+    --text-muted: #667085;
+    --bg-light: #f6f3ec;
+    --surface: #fffdf8;
+    --surface-soft: #efe9de;
+    --border-soft: rgba(6, 22, 45, 0.13);
+    --shadow-soft: 0 20px 55px rgba(6, 22, 45, 0.09);
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-family: 'Golos Text', sans-serif;
+}
+
+.site-modern main {
+    background: var(--bg-light);
+}
+
+.site-modern h1,
+.site-modern h2,
+.site-modern h3,
+.site-modern .profile-name,
+.site-modern .profile-lastname {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--primary-blue);
+}
+
+.site-modern p,
+.site-modern li {
+    text-wrap: pretty;
+}
+
+.site-modern a:focus-visible,
+.site-modern button:focus-visible,
+.site-modern input:focus-visible,
+.site-modern select:focus-visible,
+.site-modern textarea:focus-visible {
+    outline: 3px solid rgba(212, 175, 55, 0.55);
+    outline-offset: 3px;
+}
+
+.site-modern .container {
+    max-width: 1220px;
+    padding-inline: clamp(20px, 4vw, 48px);
+}
+
+/* Navegación unificada */
+.site-modern header,
+.site-modern header.scrolled,
+.site-modern.profile-page header,
+.site-modern header[style] {
+    height: 88px !important;
+    background: rgba(4, 17, 38, 0.96) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.15) !important;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+.site-modern .navbar {
+    max-width: 1320px;
+}
+
+.site-modern .logo-img,
+.site-modern header.scrolled .logo-img,
+.site-modern.profile-page header .logo-img {
+    width: auto;
+    height: 64px !important;
+}
+
+.site-modern .nav-links {
+    gap: clamp(16px, 2vw, 28px);
+}
+
+.site-modern .nav-links a {
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.site-modern .nav-links a::after {
+    height: 1px;
+    bottom: -8px;
+}
+
+.site-modern .btn {
+    border-radius: 2px;
+    padding: 13px 25px;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    box-shadow: none;
+}
+
+.site-modern .btn-gold {
+    background: var(--accent-gold);
+    color: var(--primary-blue);
+}
+
+.site-modern .btn-gold:hover {
+    background: #e0bd46;
+    color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(212, 175, 55, 0.2);
+}
+
+/* Encabezados editoriales de páginas */
+.site-modern .area-hero,
+.site-modern .legal-hero,
+.site-modern section.hero[style*="min-height"] {
+    min-height: 470px !important;
+    padding: 160px 0 78px !important;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    text-align: left !important;
+    background-color: var(--primary-blue) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.55);
+}
+
+.site-modern .area-hero::before,
+.site-modern .legal-hero::before,
+.site-modern section.hero[style*="min-height"]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(4, 17, 38, 0.97) 0%, rgba(4, 17, 38, 0.78) 56%, rgba(4, 17, 38, 0.4) 100%),
+        linear-gradient(0deg, rgba(4, 17, 38, 0.56), transparent 55%);
+}
+
+.site-modern .area-hero .container,
+.site-modern .legal-hero > *,
+.site-modern section.hero[style*="min-height"] .hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.site-modern .area-hero .container::before,
+.site-modern section.hero[style*="min-height"] .hero-container::before {
+    content: 'LISBOA LEGAL GROUP';
+    display: block;
+    margin-bottom: 18px;
+    color: var(--accent-gold);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.24em;
+}
+
+.site-modern .area-hero h1,
+.site-modern .legal-hero h1,
+.site-modern section.hero[style*="min-height"] h1,
+.site-modern section.hero[style*="min-height"] h1[style] {
+    max-width: 900px;
+    margin: 0 0 18px !important;
+    color: #fff !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: clamp(2.8rem, 6vw, 5.2rem) !important;
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+}
+
+.site-modern .area-hero p,
+.site-modern section.hero[style*="min-height"] p,
+.site-modern section.hero[style*="min-height"] p[style] {
+    max-width: 720px !important;
+    margin: 0 !important;
+    color: rgba(255, 255, 255, 0.76) !important;
+    font-size: clamp(1rem, 1.7vw, 1.18rem) !important;
+    line-height: 1.75;
+}
+
+.site-modern .legal-hero {
+    justify-content: center;
+    background-image: linear-gradient(90deg, rgba(4,17,38,.95), rgba(4,17,38,.7)), url('../oficina-aerea.webp') !important;
+}
+
+/* Ritmo de secciones y títulos */
+.site-modern .section-padding,
+.site-modern .content-section,
+.site-modern .profile-tabs-section {
+    padding-block: clamp(72px, 8vw, 118px);
+}
+
+.site-modern .section-title {
+    max-width: 760px;
+    margin: 0 auto clamp(42px, 6vw, 70px);
+}
+
+.site-modern .section-title h2 {
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    line-height: 1.05;
+}
+
+.site-modern .section-title .line {
+    width: 52px;
+    height: 2px;
+    margin-top: 20px;
+}
+
+.site-modern .section-title p {
+    color: var(--text-muted);
+    line-height: 1.75;
+}
+
+.site-modern .content-section {
+    background:
+        radial-gradient(circle at 92% 10%, rgba(212, 175, 55, 0.08), transparent 23rem),
+        var(--bg-light);
+}
+
+.site-modern .grid-content {
+    grid-template-columns: minmax(0, 1fr) 300px;
+    gap: clamp(42px, 6vw, 80px);
+}
+
+.site-modern .main-text > h2 {
+    margin: 0 0 22px;
+    font-size: clamp(2rem, 4vw, 3.15rem);
+    line-height: 1.08;
+}
+
+.site-modern .main-text > h2:not(:first-child) {
+    margin-top: 58px;
+}
+
+.site-modern .main-text > p {
+    max-width: 780px;
+    margin-bottom: 18px;
+    color: #4f5d70;
+    font-size: 1.03rem;
+    line-height: 1.86;
+}
+
+/* Tarjetas de servicios y herramientas */
+.site-modern .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.site-modern .service-link {
+    border-radius: 3px;
+}
+
+.site-modern .service-card {
+    height: 310px;
+    min-height: 0;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border: 1px solid rgba(6, 22, 45, 0.12);
+    border-radius: 2px;
+    text-align: left;
+    box-shadow: 0 12px 26px rgba(6, 22, 45, 0.11);
+}
+
+.site-modern .service-card::before {
+    background: linear-gradient(180deg, rgba(4,17,38,.08) 20%, rgba(4,17,38,.94) 100%);
+}
+
+.site-modern .service-link:hover .service-card {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(6, 22, 45, 0.17);
+}
+
+.site-modern .service-link:hover .service-card::before {
+    background: linear-gradient(180deg, rgba(4,17,38,.08), rgba(4,17,38,.9));
+}
+
+.site-modern .service-content {
+    width: 100%;
+    height: auto;
+    padding: 22px 24px 24px;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: left;
+}
+
+.site-modern .service-content i {
+    color: var(--accent-gold);
+    font-size: 1.05rem;
+    margin-bottom: 9px;
+}
+
+.site-modern .service-content h3 {
+    color: #fff;
+    margin-bottom: 9px;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: .06em;
+}
+
+.site-modern .service-content p {
+    color: rgba(255,255,255,.76);
+    font-size: .78rem;
+    line-height: 1.55;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+}
+
+.site-modern .sub-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.site-modern .sub-service-card {
+    overflow: hidden;
+    border: 1px solid var(--border-soft);
+    border-radius: 3px;
+    background: var(--surface);
+    box-shadow: none;
+}
+
+.site-modern .sub-service-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(212,175,55,.6);
+    box-shadow: 0 14px 28px rgba(6,22,45,.09);
+}
+
+.site-modern .sub-service-img-wrapper {
+    height: 155px;
+}
+
+.site-modern .sub-service-img {
+    filter: saturate(.78) contrast(1.04);
+}
+
+.site-modern .sub-service-content {
+    padding: 18px 20px 20px;
+}
+
+.site-modern .sub-service-content h4 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    margin-bottom: 7px;
+    font-size: 1.35rem;
+    line-height: 1.16;
+}
+
+.site-modern .sub-service-content p {
+    color: var(--text-muted);
+    font-size: .86rem;
+    line-height: 1.58;
+}
+
+/* Barra lateral */
+.site-modern .sidebar {
+    position: sticky;
+    top: 118px;
+    align-self: start;
+    padding: 28px;
+    border: 1px solid var(--border-soft);
+    background: rgba(255,253,248,.82);
+    box-shadow: 0 14px 34px rgba(6,22,45,.06);
+}
+
+.site-modern .sidebar h3 {
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(212,175,55,.6);
+    font-size: 1.75rem;
+}
+
+.site-modern .services-menu a {
+    padding: 13px 0;
+    border-bottom-color: rgba(6,22,45,.09);
+    color: #526074;
+    font-size: .9rem;
+}
+
+.site-modern .services-menu a:hover,
+.site-modern .services-menu a.active {
+    padding-left: 12px;
+    color: var(--primary-blue);
+    background: transparent;
+    border-left: 2px solid var(--accent-gold);
+}
+
+/* Llamados a la acción incluidos dentro de las páginas */
+.site-modern .main-text > div[style*="background: var(--primary-blue)"],
+.site-modern .main-text > div[style*="background:var(--primary-blue)"] {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(30px, 5vw, 48px) !important;
+    border: 1px solid rgba(212,175,55,.35);
+    border-radius: 3px !important;
+    background: var(--primary-blue) !important;
+}
+
+.site-modern .main-text > div[style*="background: var(--primary-blue)"]::after,
+.site-modern .main-text > div[style*="background:var(--primary-blue)"]::after {
+    content: '';
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    right: -100px;
+    bottom: -130px;
+    border: 1px solid rgba(212,175,55,.24);
+    border-radius: 50%;
+}
+
+/* Formularios y bloques de contacto */
+.site-modern .forms-wrapper {
+    gap: 28px;
+    align-items: stretch;
+}
+
+.site-modern .form-box,
+.site-modern .contact-map-wrapper {
+    padding: clamp(26px, 4vw, 42px);
+    border: 1px solid var(--border-soft);
+    border-radius: 3px;
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+}
+
+.site-modern .form-box h3,
+.site-modern .contact-map-wrapper h3 {
+    font-size: 2rem;
+}
+
+.site-modern input,
+.site-modern select,
+.site-modern textarea {
+    border: 1px solid rgba(6,22,45,.18);
+    border-radius: 2px;
+    background: #fff;
+}
+
+.site-modern input:focus,
+.site-modern select:focus,
+.site-modern textarea:focus {
+    border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(212,175,55,.14);
+}
+
+.site-modern .map-container {
+    overflow: hidden;
+    border-radius: 2px;
+    filter: saturate(.7) contrast(1.04);
+}
+
+/* Calculadoras: conserva su lógica y mejora su contenedor visual */
+.site-modern .main {
+    max-width: 1120px;
+    padding: clamp(44px, 6vw, 76px) clamp(18px, 3vw, 30px);
+}
+
+.site-modern .card {
+    border: 1px solid var(--border-soft);
+    border-top: 2px solid var(--accent-gold);
+    border-radius: 3px;
+    background: var(--surface);
+    box-shadow: 0 12px 34px rgba(6,22,45,.07);
+}
+
+.site-modern .card h2,
+.site-modern .card h3,
+.site-modern .card-title h3,
+.site-modern .ct h3 {
+    font-family: 'Golos Text', sans-serif;
+    letter-spacing: 0;
+}
+
+.site-modern .calcbtn,
+.site-modern .tab,
+.site-modern button[type="submit"] {
+    border-radius: 2px;
+}
+
+.site-modern .tabs,
+.site-modern .tool-tabs {
+    border-bottom-color: rgba(6,22,45,.13);
+}
+
+.site-modern table {
+    border-collapse: collapse;
+}
+
+.site-modern .tool-footer,
+.site-modern .c-footer {
+    padding: 30px 20px;
+    border-top: 1px solid rgba(212,175,55,.4);
+    background: var(--primary-blue);
+    color: rgba(255,255,255,.7);
+}
+
+.site-modern .tool-footer a,
+.site-modern .c-footer a {
+    color: var(--accent-gold);
+}
+
+/* Perfiles profesionales */
+.site-modern.profile-page main {
+    padding-top: 88px;
+}
+
+.site-modern .profile-hero-section {
+    padding: 58px 0 84px;
+    background:
+        radial-gradient(circle at 80% 22%, rgba(212,175,55,.1), transparent 30rem),
+        var(--primary-blue);
+}
+
+.site-modern .profile-breadcrumb,
+.site-modern .profile-breadcrumb a {
+    color: rgba(255,255,255,.62);
+}
+
+.site-modern .profile-hero-flex {
+    gap: clamp(40px, 7vw, 92px);
+}
+
+.site-modern .profile-hero-left {
+    width: min(42%, 430px);
+}
+
+.site-modern .profile-hero-left img {
+    max-height: 590px;
+    border-radius: 2px;
+    border: 1px solid rgba(212,175,55,.42);
+    object-fit: cover;
+    object-position: center top;
+    box-shadow: 22px 24px 0 rgba(212,175,55,.08);
+}
+
+.site-modern .profile-hero-right {
+    padding-top: 20px;
+}
+
+.site-modern .profile-name,
+.site-modern .profile-lastname {
+    color: #fff;
+    font-size: clamp(3.7rem, 8vw, 7rem);
+    line-height: .78;
+}
+
+.site-modern .profile-role {
+    color: var(--accent-gold);
+    letter-spacing: .18em;
+}
+
+.site-modern .profile-desc {
+    max-width: 570px;
+    color: rgba(255,255,255,.72);
+    line-height: 1.75;
+}
+
+.site-modern .profile-social-icons a {
+    border-color: rgba(212,175,55,.45);
+    border-radius: 50%;
+    color: var(--accent-gold);
+}
+
+.site-modern .profile-tabs-section {
+    background: var(--bg-light);
+}
+
+.site-modern .profile-tabs-nav {
+    gap: 0;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.site-modern .profile-tab-btn {
+    padding: 16px 18px;
+    border-radius: 0;
+    color: var(--text-muted);
+}
+
+.site-modern .profile-tab-btn.active {
+    color: var(--primary-blue);
+    background: transparent;
+    box-shadow: inset 0 -2px 0 var(--accent-gold);
+}
+
+.site-modern .profile-tabs-content {
+    margin-top: 34px;
+    padding: clamp(28px, 5vw, 56px);
+    border: 1px solid var(--border-soft);
+    background: var(--surface);
+}
+
+/* Páginas legales */
+.site-modern .legal-page {
+    max-width: 920px;
+    padding: clamp(58px, 8vw, 100px) 24px;
+}
+
+.site-modern .legal-page h2 {
+    margin-top: 44px;
+    font-size: 2rem;
+}
+
+.site-modern .legal-page p,
+.site-modern .legal-page li {
+    color: #526074;
+    line-height: 1.85;
+}
+
+.site-modern .legal-meta {
+    padding: 24px 26px;
+    border: 1px solid rgba(212,175,55,.38);
+    border-left: 3px solid var(--accent-gold);
+    background: var(--surface);
+}
+
+/* Footer audiovisual común */
+.site-modern .new-footer {
+    min-height: 430px;
+    border-top: 1px solid rgba(212,175,55,.42);
+}
+
+.site-modern .new-footer .footer-overlay {
+    background: linear-gradient(105deg, rgba(4,17,38,.97), rgba(4,17,38,.86));
+}
+
+.site-modern .new-footer .footer-content-wrapper {
+    padding-block: 62px 30px;
+}
+
+.site-modern .new-footer .footer-logo-new {
+    width: 128px;
+    height: auto;
+}
+
+.site-modern .new-footer .footer-location-title h3 {
+    font-size: 2rem;
+}
+
+.site-modern .new-footer .location-col h4 {
+    color: var(--accent-gold);
+    letter-spacing: .14em;
+}
+
+.site-modern .new-footer .social-square {
+    border-radius: 50%;
+}
+
+@media (max-width: 900px) {
+    .site-modern header,
+    .site-modern header.scrolled,
+    .site-modern.profile-page header,
+    .site-modern header[style] {
+        height: 82px !important;
+    }
+
+    .site-modern .logo-img,
+    .site-modern header.scrolled .logo-img,
+    .site-modern.profile-page header .logo-img {
+        height: 58px !important;
+    }
+
+    .site-modern .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        border: 1px solid rgba(255,255,255,.14);
+        color: #fff;
+        background: transparent;
+    }
+
+    .site-modern .nav-links {
+        top: 82px;
+        padding: 26px 24px 34px;
+        border-top: 1px solid rgba(212,175,55,.3);
+        background: rgba(4,17,38,.99);
+    }
+
+    .site-modern .nav-links a {
+        font-size: .95rem;
+    }
+
+    .site-modern .area-hero,
+    .site-modern .legal-hero,
+    .site-modern section.hero[style*="min-height"] {
+        min-height: 430px !important;
+        padding: 145px 0 62px !important;
+    }
+
+    .site-modern .grid-content {
+        grid-template-columns: 1fr;
+    }
+
+    .site-modern .sidebar {
+        position: static;
+    }
+
+    .site-modern .profile-hero-flex {
+        flex-direction: column;
+    }
+
+    .site-modern .profile-hero-left {
+        width: min(100%, 430px);
+    }
+}
+
+@media (max-width: 680px) {
+    .site-modern .container {
+        padding-inline: 20px;
+    }
+
+    .site-modern .area-hero h1,
+    .site-modern .legal-hero h1,
+    .site-modern section.hero[style*="min-height"] h1,
+    .site-modern section.hero[style*="min-height"] h1[style] {
+        font-size: clamp(2.55rem, 13vw, 3.8rem) !important;
+    }
+
+    .site-modern .sub-services-grid,
+    .site-modern .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-modern .sub-service-img-wrapper {
+        height: 175px;
+    }
+
+    .site-modern .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-modern .profile-name,
+    .site-modern .profile-lastname {
+        font-size: clamp(3.4rem, 20vw, 5.2rem);
+    }
+
+    .site-modern .profile-tabs-nav {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        scrollbar-width: thin;
+    }
+
+    .site-modern .profile-tab-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    .site-modern .new-footer .footer-top,
+    .site-modern .new-footer .footer-bottom {
+        text-align: left;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-modern *,
+    .site-modern *::before,
+    .site-modern *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+}
