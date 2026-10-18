@@ -334,13 +334,20 @@
 .home-modern .form-box select { background: #fbfaf6; border: 1px solid rgba(17,32,57,.2); border-radius: 0; }
 .home-modern .map-container { border-radius: 0; }
 
-/* El video original permanece visible en el pie de página. */
-.home-modern .new-footer { min-height: 480px; }
+/* El video original permanece visible en un pie de página más compacto. */
+.home-modern .new-footer { min-height: 0; padding: 30px 0 8px; }
 .home-modern .footer-overlay { background: linear-gradient(90deg, rgba(6,22,45,.97), rgba(6,22,45,.82)); }
-.home-modern .footer-logo-new { height: 150px; width: 150px; }
+.home-modern .footer-logo-new { height: 96px; width: 96px; margin-top: -8px; }
 .home-modern .new-footer .footer-top { display: grid; grid-template-columns: .7fr 1.35fr .8fr; }
 .home-modern .new-footer .footer-brand,
 .home-modern .new-footer .footer-locations { flex: initial; min-width: 0; }
+.home-modern .new-footer .footer-location-title { margin-bottom: 14px; }
+.home-modern .new-footer .footer-location-title h3 { font-size: 1.55rem; }
+.home-modern .new-footer .location-col h4 { margin-bottom: 9px; font-size: .88rem; }
+.home-modern .new-footer .location-col li { margin-bottom: 8px; font-size: .82rem; }
+.home-modern .new-footer .footer-divider { margin: 15px 0 9px; }
+.home-modern .new-footer .footer-copy { margin-top: 0; font-size: .8rem; }
+.home-modern .new-footer .footer-copy p { margin-bottom: 6px; }
 .home-modern .footer-navigation h3 { color: #fff; font-size: 1.25rem; margin: 0 0 10px; }
 .home-modern .footer-navigation .line { background: var(--hm-gold); height: 2px; margin-bottom: 22px; width: 48px; }
 .home-modern .footer-navigation ul { list-style: none; margin: 0; padding: 0; }

@@ -619,7 +619,8 @@
 
 /* Footer audiovisual común */
 .site-modern .new-footer {
-    min-height: 430px;
+    min-height: 0;
+    padding: 26px 0 8px;
     border-top: 1px solid rgba(212,175,55,.42);
 }
 
@@ -628,21 +629,46 @@
 }
 
 .site-modern .new-footer .footer-content-wrapper {
-    padding-block: 62px 30px;
+    padding-block: 8px 0;
 }
 
 .site-modern .new-footer .footer-logo-new {
-    width: 128px;
+    width: 92px;
     height: auto;
+    margin-top: -8px;
 }
 
 .site-modern .new-footer .footer-location-title h3 {
-    font-size: 2rem;
+    font-size: 1.55rem;
+}
+
+.site-modern .new-footer .footer-location-title {
+    margin-bottom: 14px;
 }
 
 .site-modern .new-footer .location-col h4 {
+    margin-bottom: 9px;
+    font-size: .88rem;
     color: var(--accent-gold);
     letter-spacing: .14em;
+}
+
+.site-modern .new-footer .location-col li {
+    margin-bottom: 8px;
+    font-size: .82rem;
+}
+
+.site-modern .new-footer .footer-divider {
+    margin: 15px 0 9px;
+}
+
+.site-modern .new-footer .footer-copy {
+    margin-top: 0;
+    font-size: .8rem;
+}
+
+.site-modern .new-footer .footer-copy p {
+    margin-bottom: 6px;
 }
 
 .site-modern .new-footer .social-square {
