@@ -52,9 +52,27 @@
         });
     }
 
+    function initHeroVideo() {
+        const video = document.querySelector('.hero-video');
+        if (!video) return;
+
+        function markPlaying() {
+            video.classList.add('is-playing');
+        }
+
+        if (video.currentTime > 0 || video.readyState >= 2) {
+            markPlaying();
+        } else {
+            ['playing', 'loadeddata', 'canplay', 'timeupdate'].forEach(function (eventName) {
+                video.addEventListener(eventName, markPlaying, { once: true });
+            });
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         syncMobileMenu();
         enableKeyboardControls();
         improveDynamicRegions();
+        initHeroVideo();
     });
 }());

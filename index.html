@@ -502,8 +502,8 @@
 
     <main id="main-content">
 
-    <section id="inicio" class="hero hero-static">
-        <video class="hero-video" autoplay loop muted playsinline preload="metadata" poster="oficina-aerea.webp" aria-hidden="true" tabindex="-1">
+    <section id="inicio" class="hero">
+        <video class="hero-video" autoplay loop muted playsinline preload="auto" onplaying="this.classList.add('is-playing')" onloadeddata="this.classList.add('is-playing')" aria-hidden="true" tabindex="-1">
             <source src="videolisboa.mp4" type="video/mp4">
         </video>
         <div class="container hero-container">
